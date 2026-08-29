@@ -1,0 +1,26 @@
+import React from "react";
+import ProductItem from "./ProductItem";
+import { catalogByCategory } from "@/lib/catalog";
+
+const Products = async ({ params, searchParams }: { params: { slug?: string[] }, searchParams: { [key: string]: string | string[] | undefined } }) => {
+  const maxPrice = Number(searchParams?.price) || 100000;
+  const products = catalogByCategory(params?.slug).filter(
+    (product) => product.price <= maxPrice
+  );
+
+  return (
+    <div className="grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {products.length > 0 ? (
+        products.map((product) => (
+          <ProductItem key={product.id} product={product} color="black" />
+        ))
+      ) : (
+        <h3 className="col-span-full py-10 text-center text-xl text-brand-ink">
+          No products found for this filter. Call the shop for stock.
+        </h3>
+      )}
+    </div>
+  );
+};
+
+export default Products;

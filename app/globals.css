@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.range{
+    --range-shdw: #C45C26;
+}
+
+.checkbox:checked, .checkbox[checked="true"], .checkbox[aria-checked="true"] {
+    background-repeat: no-repeat;
+    animation: checkmark var(--animation-input, 0.2s) ease-out;
+    background-color: #C45C26;
+    background-image: linear-gradient(-45deg, transparent 65%, #C45C26 65.99%),
+      linear-gradient(45deg, transparent 75%, #C45C26 75.99%),
+      linear-gradient(-45deg, #C45C26 40%, transparent 40.99%),
+      linear-gradient(
+        45deg,
+        #C45C26 30%,
+        white 30.99%,
+        white 40%,
+        transparent 40.99%
+      ),
+      linear-gradient(-45deg, white 50%, #C45C26 50.99%);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe\:animate-marquee,
+  .motion-safe\:animate-pulseSoft {
+    animation: none !important;
+  }
+}
