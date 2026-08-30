@@ -6,6 +6,8 @@
   NODE_VERSION = "20"
   DATABASE_URL = "mysql://placeholder:placeholder@127.0.0.1:3306/placeholder"
   NEXT_PUBLIC_API_BASE_URL = ""
+  NEXTAUTH_SECRET = "netlify-build-placeholder-change-in-dashboard"
+  NEXTAUTH_URL = "http://localhost:3000"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

@@ -3,6 +3,7 @@ import { useWishlistStore } from "@/app/_zustand/wishlistStore";
 import apiClient from "@/lib/api";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect } from "react";
 
 export const WishlistModule = () => {
@@ -70,9 +71,11 @@ export const WishlistModule = () => {
     <ul className="divide-y divide-brand-ink/10">
       {wishlist.map((item) => (
         <li key={item.id} className="flex items-center gap-4 py-4">
-          <img
+          <Image
             src={item.image ? `/${item.image}` : "/product_placeholder.jpg"}
             alt={item.title}
+            width={80}
+            height={80}
             className="size-20 object-cover"
           />
           <Link href={`/product/${item.slug}`} className="font-semibold hover:text-brand-copper">

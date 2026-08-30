@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import ProductItem from "./ProductItem";
 import Heading from "./Heading";
 import { featuredCatalog } from "@/lib/catalog";
@@ -16,12 +17,12 @@ const ProductsSection = async () => {
           ))}
         </div>
         <div className="pb-12 text-center">
-          <a
+          <Link
             href="/shop"
             className="inline-block border border-brand-ink bg-brand-ink px-8 py-3 text-sm font-bold uppercase tracking-wide text-white hover:bg-brand-copper"
           >
             View all shop stock
-          </a>
+          </Link>
         </div>
       </div>
     </section>

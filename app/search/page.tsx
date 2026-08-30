@@ -5,7 +5,7 @@ import { sanitize } from "@/lib/sanitize";
 import { brand } from "@/lib/brand";
 
 interface Props {
-  searchParams: Promise<{ search: string }> | { search: string };
+  searchParams: Promise<{ search?: string }>;
 }
 
 const SearchPage = async ({ searchParams }: Props) => {

@@ -77,12 +77,13 @@ const Header = () => {
       {pathname.startsWith("/admin") === false && (
         <div className="mx-auto flex max-w-screen-2xl flex-col items-stretch gap-4 px-4 py-4 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:py-5">
           <Link href="/" className="flex flex-col items-center gap-1 lg:items-start">
-            <img
+            <Image
               src="/jtc-logo-wordmark.png"
               width={280}
               height={158}
               alt={`${brand.name} logo`}
               className="h-12 w-auto sm:h-14"
+              priority
             />
             <span className="text-center font-display text-2xl leading-none tracking-wide text-brand-ink sm:text-3xl lg:text-left">
               JUNEJA TRADING CORPORATION
