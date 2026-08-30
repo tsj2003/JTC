@@ -1,37 +1,43 @@
-import { PrismaClient } from "@prisma/client"; 
-
-const prismaClientSingleton = () => {
-    // Validate that DATABASE_URL is present
-    if (!process.env.DATABASE_URL) {
-        throw new Error('DATABASE_URL environment variable is required');
-    }
-
-    // Parse DATABASE_URL to check SSL configuration
-    const databaseUrl = process.env.DATABASE_URL;
-    const url = new URL(databaseUrl);
-    
-    // Log SSL configuration for debugging
-    if (process.env.NODE_ENV === "development") {
-        console.log(` Database connection: ${url.protocol}//${url.hostname}:${url.port || '3306'}`);
-        console.log(`🔒 SSL Mode: ${url.searchParams.get('sslmode') || 'not specified'}`);
-    }
-
-    return new PrismaClient({
-        // Add logging for debugging
-        log: process.env.NODE_ENV === "development" 
-            ? ['query', 'info', 'warn', 'error']
-            : ['error', 'warn'],
-    });
-}
-
-type PrismaClientSingleton = ReturnType<typeof prismaClientSingleton>;
+import { PrismaClient } from "@prisma/client";
 
 const globalForPrisma = globalThis as unknown as {
-    prisma: PrismaClientSingleton | undefined;
+  prisma: PrismaClient | undefined;
+};
+
+export function getPrisma(): PrismaClient | null {
+  if (!process.env.DATABASE_URL) {
+    return null;
+  }
+
+  if (globalForPrisma.prisma) {
+    return globalForPrisma.prisma;
+  }
+
+  try {
+    const client = new PrismaClient({
+      log: process.env.NODE_ENV === "development" ? ["error", "warn"] : ["error"],
+    });
+    if (process.env.NODE_ENV !== "production") {
+      globalForPrisma.prisma = client;
+    } else {
+      globalForPrisma.prisma = client;
+    }
+    return client;
+  } catch (error) {
+    console.error("Prisma is unavailable:", error);
+    return null;
+  }
 }
 
-const prisma = globalForPrisma.prisma ?? prismaClientSingleton();
+const prisma = new Proxy({} as PrismaClient, {
+  get(_target, prop) {
+    const client = getPrisma();
+    if (!client) {
+      throw new Error("Database is not configured");
+    }
+    const value = (client as unknown as Record<string | symbol, unknown>)[prop];
+    return typeof value === "function" ? value.bind(client) : value;
+  },
+});
 
 export default prisma;
-
-if(process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;

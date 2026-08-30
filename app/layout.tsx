@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_Devanagari, Source_Sans_3, Teko } from "next/font/google";
 import "./globals.css";
-import { getServerSession } from "next-auth/next";
-import "svgmap/dist/svgMap.min.css";
 import SessionProvider from "@/utils/SessionProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -43,16 +41,15 @@ export const viewport: Viewport = {
   themeColor: "#C45C26",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const session = await getServerSession();
   return (
     <html lang="en" data-theme="light">
       <body className={`${display.variable} ${body.variable} ${hindi.variable} font-sans bg-brand-paper text-brand-ink antialiased`}>
-        <SessionProvider session={session}>
+        <SessionProvider session={null}>
           <SessionTimeoutWrapper />
           <Header />
           <Providers>{children}</Providers>
