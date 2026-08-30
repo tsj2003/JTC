@@ -31,6 +31,7 @@ export const brand = {
   hours: "Mon–Sat, 10:00 AM – 8:00 PM",
   finance: "0% Bajaj Finance — Easy EMI, No Cost",
   financeHi: "ब्याज दर पर 0% फाइनेंस सुविधा उपलब्ध",
+  askPrice: "Call for today’s price",
   giftOffer: "₹10,000+ की खरीद पर शानदार गिफ्ट जीतने का मौका",
   brands: [
     "Samsung",

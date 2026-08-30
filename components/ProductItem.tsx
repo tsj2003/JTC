@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import { sanitize } from "@/lib/sanitize";
-import { formatPrice } from "@/lib/brand";
+import { brand } from "@/lib/brand";
 
 const ProductItem = ({
   product,
@@ -43,7 +43,7 @@ const ProductItem = ({
             : "text-lg font-semibold text-white"
         }
       >
-        {formatPrice(product.price)}
+        {brand.askPrice}
       </p>
       <Link
         href={`/product/${product?.slug}`}

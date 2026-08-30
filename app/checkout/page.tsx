@@ -7,7 +7,7 @@ import { useSession } from "next-auth/react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import apiClient from "@/lib/api";
-import { calcGst, calcOrderTotal, formatPrice, SHIPPING_FEE } from "@/lib/brand";
+import { brand } from "@/lib/brand";
 
 const CheckoutPage = () => {
   const { data: session } = useSession();
@@ -377,8 +377,8 @@ const CheckoutPage = () => {
                     <h3>{product?.title}</h3>
                     <p className="text-gray-500">x{product?.amount}</p>
                   </div>
-                  <p className="flex-none text-base font-medium">
-                    {formatPrice(product?.price)}
+                  <p className="flex-none text-base font-medium text-brand-copper">
+                    {brand.askPrice}
                   </p>
                 </li>
               ))}
@@ -386,23 +386,12 @@ const CheckoutPage = () => {
 
             <dl className="hidden space-y-6 border-t border-gray-200 pt-6 text-sm font-medium text-gray-900 lg:block">
               <div className="flex items-center justify-between">
-                <dt className="text-gray-600">Subtotal</dt>
-                <dd>{formatPrice(total)}</dd>
-              </div>
-              <div className="flex items-center justify-between">
                 <dt className="text-gray-600">Delivery in Damoh</dt>
-                <dd>{SHIPPING_FEE === 0 ? "Free" : formatPrice(SHIPPING_FEE)}</dd>
+                <dd>Free</dd>
               </div>
-              <div className="flex items-center justify-between">
-                <dt className="text-gray-600">GST (18%)</dt>
-                <dd>{formatPrice(calcGst(total))}</dd>
-              </div>
-              <div className="flex items-center justify-between border-t border-gray-200 pt-6">
-                <dt className="text-base">Total</dt>
-                <dd className="text-base">
-                  {formatPrice(calcOrderTotal(total))}
-                </dd>
-              </div>
+              <p className="text-sm font-normal text-gray-600">
+                {brand.askPrice}. Confirm GST and total at the Damoh counter.
+              </p>
             </dl>
           </div>
         </section>

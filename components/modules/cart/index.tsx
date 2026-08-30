@@ -4,14 +4,14 @@ import { useProductStore } from "@/app/_zustand/store";
 import toast from "react-hot-toast";
 import Image from "next/image"
 import Link from "next/link";
-import { FaCheck, FaCircleQuestion, FaClock, FaXmark } from "react-icons/fa6";
+import { FaCheck, FaClock, FaXmark } from "react-icons/fa6";
 import QuantityInputCart from "@/components/QuantityInputCart";
 import { sanitize } from "@/lib/sanitize";
-import { calcGst, calcOrderTotal, formatPrice, SHIPPING_FEE } from "@/lib/brand";
+import { brand } from "@/lib/brand";
 
 export const CartModule = () => {
 
-  const { products, removeFromCart, calculateTotals, total } =
+  const { products, removeFromCart, calculateTotals } =
     useProductStore();
 
   const handleRemoveItem = (id: string) => {
@@ -62,8 +62,8 @@ export const CartModule = () => {
                           <p className="ml-4 border-l border-gray-200 pl-4 text-gray-500">{product.size}</p>
                         ) : null}
                       </div> */}
-                    <p className="mt-1 text-sm font-medium text-gray-900">
-                      {formatPrice(product.price)}
+                    <p className="mt-1 text-sm font-medium text-brand-copper">
+                      {brand.askPrice}
                     </p>
                   </div>
 
@@ -117,56 +117,11 @@ export const CartModule = () => {
 
         <dl className="mt-6 space-y-4">
           <div className="flex items-center justify-between">
-            <dt className="text-sm text-gray-600">Subtotal</dt>
-            <dd className="text-sm font-medium text-gray-900">
-              {formatPrice(total)}
-            </dd>
+            <dt className="text-sm text-gray-600">Delivery in Damoh</dt>
+            <dd className="text-sm font-medium text-gray-900">Free</dd>
           </div>
-          <div className="flex items-center justify-between border-t border-gray-200 pt-4">
-            <dt className="flex items-center text-sm text-gray-600">
-              <span>Delivery in Damoh</span>
-              <a
-                href="#"
-                className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-500"
-              >
-                <span className="sr-only">
-                  Learn more about how shipping is calculated
-                </span>
-                <FaCircleQuestion
-                  className="h-5 w-5"
-                  aria-hidden="true"
-                />
-              </a>
-            </dt>
-            <dd className="text-sm font-medium text-gray-900">{SHIPPING_FEE === 0 ? "Free" : formatPrice(SHIPPING_FEE)}</dd>
-          </div>
-          <div className="flex items-center justify-between border-t border-gray-200 pt-4">
-            <dt className="flex text-sm text-gray-600">
-              <span>GST (18%)</span>
-              <a
-                href="#"
-                className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-500"
-              >
-                <span className="sr-only">
-                  Learn more about how tax is calculated
-                </span>
-                <FaCircleQuestion
-                  className="h-5 w-5"
-                  aria-hidden="true"
-                />
-              </a>
-            </dt>
-            <dd className="text-sm font-medium text-gray-900">
-              {formatPrice(calcGst(total))}
-            </dd>
-          </div>
-          <div className="flex items-center justify-between border-t border-gray-200 pt-4">
-            <dt className="text-base font-medium text-gray-900">
-              Order total
-            </dt>
-            <dd className="text-base font-medium text-gray-900">
-              {formatPrice(calcOrderTotal(total))}
-            </dd>
+          <div className="border-t border-gray-200 pt-4 text-sm text-gray-700">
+            Prices are confirmed at Juneja Trading Corporation, Damoh. Call the shop before you visit.
           </div>
         </dl>
         {products.length > 0 && (

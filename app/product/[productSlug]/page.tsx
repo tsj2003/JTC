@@ -7,7 +7,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import React from "react";
 import { sanitize } from "@/lib/sanitize";
-import { brand, formatPrice } from "@/lib/brand";
+import { brand } from "@/lib/brand";
 import { getCatalogBySlug } from "@/lib/catalog";
 
 interface ImageItem {
@@ -62,7 +62,7 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
           </div>
           <div className="flex w-full max-w-xl flex-col gap-5 text-black">
             <h1 className="text-3xl max-sm:text-2xl">{sanitize(product?.title)}</h1>
-            <p className="text-xl font-semibold">{formatPrice(product?.price)}</p>
+            <p className="text-xl font-semibold text-brand-copper">{brand.askPrice}</p>
             <p className="text-brand-copper font-semibold">{brand.finance}</p>
             <StockAvailabillity stock={94} inStock={product?.inStock} />
             <SingleProductDynamicFields product={product} />

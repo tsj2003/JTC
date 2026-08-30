@@ -320,7 +320,7 @@ export const stockProducts: Product[] = [
     manufacturer: "realme",
     categoryId: "earbuds",
     mainImage: "real/stock-30.jpg",
-    description: `realme Buds Wireless 3 Neo Bluetooth neckband. MRP on box ₹2,490. ${shopNote}`,
+    description: `realme Buds Wireless 3 Neo Bluetooth neckband. ${shopNote}`,
     rating: 5,
     featured: true,
   }),

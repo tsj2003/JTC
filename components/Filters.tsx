@@ -14,7 +14,6 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useSortStore } from "@/app/_zustand/sortStore";
 import { usePaginationStore } from "@/app/_zustand/paginationStore";
-import { formatPrice } from "@/lib/brand";
 
 interface InputCategory {
   inStock: { text: string, isChecked: boolean },
@@ -95,31 +94,6 @@ const Filters = () => {
               Out of stock
             </span>
           </label>
-        </div>
-      </div>
-
-      <div className="divider"></div>
-      <div className="flex flex-col gap-y-1">
-        <h3 className="text-xl mb-2">Price</h3>
-        <div>
-          <input
-            type="range"
-            min={0}
-            max={50000}
-            step={500}
-            value={inputCategory.priceFilter.value}
-            className="range"
-            onChange={(e) =>
-              setInputCategory({
-                ...inputCategory,
-                priceFilter: {
-                  text: "price",
-                  value: Number(e.target.value),
-                },
-              })
-            }
-          />
-          <span>{`Max price: ${formatPrice(inputCategory.priceFilter.value)}`}</span>
         </div>
       </div>
 
