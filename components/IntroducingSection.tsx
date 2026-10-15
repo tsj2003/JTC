@@ -16,8 +16,8 @@ const IntroducingSection = () => {
           {brand.nameHi} — {brand.tagline}
         </p>
         <p className="max-w-2xl text-lg font-semibold text-brand-soot max-md:text-base">
-          {brand.finance}. Samsung, LG, Haier and other big brands. Walk in near
-          Ghanta Ghar, NH34, or call {brand.phone}.
+          {brand.finance}. Samsung, LG, Haier and other big brands. Walk in at{" "}
+          {brand.address}, or call {brand.phone}.
         </p>
         <div className="mt-2 flex w-full max-w-md flex-col gap-2 sm:flex-row">
           <Link

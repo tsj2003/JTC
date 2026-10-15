@@ -7,8 +7,11 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import React from "react";
 import { sanitize } from "@/lib/sanitize";
+import { EmiBadge } from "@/components/EmiNotice";
 import { brand } from "@/lib/brand";
 import { getCatalogBySlug } from "@/lib/catalog";
+import { pageMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
 
 interface ImageItem {
   imageID: string;
@@ -18,6 +21,23 @@ interface ImageItem {
 
 interface SingleProductPageProps {
   params: Promise<{  productSlug: string, id: string }>;
+}
+
+export async function generateMetadata({ params }: SingleProductPageProps): Promise<Metadata> {
+  const paramsAwaited = await params;
+  const product = getCatalogBySlug(paramsAwaited?.productSlug);
+  if (!product) {
+    return pageMetadata({
+      title: "Product not found | Juneja Trading Corporation",
+      description: `That product is not on the list at ${brand.nap}.`,
+      path: `/product/${paramsAwaited?.productSlug || ""}`,
+    });
+  }
+  return pageMetadata({
+    title: `${product.title} in Damoh | Juneja Trading Corporation`,
+    description: `${product.description} ${brand.emiAvailable}. ${brand.emiTerms} ${brand.nap}.`,
+    path: `/product/${product.slug}`,
+  });
 }
 
 const SingleProductPage = async ({ params }: SingleProductPageProps) => {
@@ -64,6 +84,7 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
             <h1 className="text-3xl max-sm:text-2xl">{sanitize(product?.title)}</h1>
             <p className="text-xl font-semibold text-brand-copper">{brand.askPrice}</p>
             <p className="text-brand-copper font-semibold">{brand.finance}</p>
+            <EmiBadge />
             <StockAvailabillity stock={94} inStock={product?.inStock} />
             <SingleProductDynamicFields product={product} />
             <a href={brand.phoneHref} className="font-semibold text-brand-copper">

@@ -1,0 +1,24 @@
+import type { MetadataRoute } from "next";
+import { localCatalog } from "@/lib/catalog";
+import { landingList } from "@/lib/landings";
+import { SITE_URL } from "@/lib/seo";
+import { categoryMenuList } from "@/lib/utils";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date();
+  const paths = new Set<string>([
+    "/",
+    "/shop",
+    "/about",
+    "/contact",
+    "/search",
+    ...landingList.map((page) => page.path),
+    ...categoryMenuList.map((item) => item.href),
+    ...localCatalog.map((product) => `/product/${product.slug}`),
+  ]);
+
+  return [...paths].map((path) => ({
+    url: path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`,
+    lastModified,
+  }));
+}

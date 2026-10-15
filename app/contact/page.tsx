@@ -1,11 +1,13 @@
 import { SectionTitle } from "@/components";
 import { brand } from "@/lib/brand";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import WhatsAppGroupButton from "@/components/WhatsAppGroupButton";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: `Visit or call ${brand.name} in Damoh. ${brand.phone}`,
-};
+export const metadata = pageMetadata({
+  title: `Contact ${brand.name}, Azad Market, Damoh 470661`,
+  description: `Visit ${brand.nap}. Call ${brand.phone} or ${brand.phone2}. Email ${brand.email}. Open ${brand.hours}.`,
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
@@ -17,7 +19,7 @@ export default function ContactPage() {
         </p>
         <h2 className="mt-2 font-display text-5xl max-sm:text-4xl">Come to the Damoh shop</h2>
         <p className="mt-4 text-lg text-brand-soot">
-          Walk in on NH34 near Ghanta Ghar, or call before you travel for a
+          Walk in at {brand.nap}, or call before you travel for a
           specific TV, fridge, AC, fan, or PA set.
         </p>
         <div className="mt-10 grid gap-8 lg:grid-cols-2">
@@ -45,7 +47,7 @@ export default function ContactPage() {
               <span className="block text-sm uppercase tracking-widest text-brand-copper">
                 Address
               </span>
-              <span className="text-xl font-semibold">{brand.address}</span>
+              <span className="text-xl font-semibold">{brand.nap}</span>
             </p>
             <p>
               <span className="block text-sm uppercase tracking-widest text-brand-copper">
@@ -61,6 +63,7 @@ export default function ContactPage() {
             >
               Open in Google Maps
             </a>
+            <WhatsAppGroupButton />
           </div>
           <iframe
             title="Juneja Trading Corporation on Google Maps"

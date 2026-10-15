@@ -19,7 +19,7 @@ const Hero = () => {
             ESTD {brand.estYear} · {brand.city}
           </p>
           <h1 className="font-display text-5xl font-semibold leading-[0.95] max-md:text-4xl max-sm:text-3xl">
-            JUNEJA TRADING
+            JUNEJA TRADING{" "}
             <br />
             CORPORATION
           </h1>
@@ -36,7 +36,8 @@ const Hero = () => {
           <p className="font-hindi text-lg text-brand-cream/90">{brand.tagline}</p>
           <p className="max-w-xl text-base text-brand-cream/80 sm:text-lg">
             Samsung, LG, Haier and more on the counter. Fridge, washing machine,
-            LED TV and AC on 0% Bajaj Finance. Walk in near Ghanta Ghar, NH34.
+            LED TV and AC on 0% Bajaj Finance. Walk in at Shop No. 6, Azad Market,
+            Ghanta Ghar, Madiya Pangarha, Damoh, Madhya Pradesh 470661.
           </p>
           <div className="flex flex-col gap-2 sm:flex-row">
             <Link

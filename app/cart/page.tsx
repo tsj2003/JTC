@@ -1,7 +1,15 @@
 import { SectionTitle } from "@/components";
 import { Loader } from "@/components/Loader";
 import { CartModule } from "@/components/modules/cart";
+import { brand } from "@/lib/brand";
+import { pageMetadata } from "@/lib/seo";
 import { Suspense } from "react";
+
+export const metadata = pageMetadata({
+  title: "Cart | Juneja Trading Corporation",
+  description: `Your cart at ${brand.name}, ${brand.city}. ${brand.nap}.`,
+  path: "/cart",
+});
 
 const CartPage = () => {
   return (

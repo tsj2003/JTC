@@ -1,4 +1,11 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
+
+export const metadata = pageMetadata({
+  title: "Page not found | Juneja Trading Corporation",
+  description: "That page is not on the Juneja Trading Corporation site in Damoh.",
+  path: "/404",
+});
 
 export default function NotFound() {
   return (

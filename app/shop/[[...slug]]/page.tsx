@@ -8,24 +8,64 @@ import {
   Products,
   SortBy,
 } from "@/components";
-import React from "react";
+import { EmiSection } from "@/components/EmiNotice";
+import { brand } from "@/lib/brand";
+import { applianceTvCategories } from "@/lib/copy";
 import { sanitize } from "@/lib/sanitize";
+import { pageMetadata } from "@/lib/seo";
+import { categoryMenuList } from "@/lib/utils";
+import type { Metadata } from "next";
+import React from "react";
 
-const improveCategoryText = (text: string): string => {
-  if (text.indexOf("-") !== -1) {
-    return text.split("-").join(" ");
-  }
-  return text;
+const categoryHeading = (category?: string) => {
+  if (!category) return "All products";
+  const known = categoryMenuList.find((item) => item.href === `/shop/${category}`);
+  if (known) return known.title;
+  return category
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug?: string[] }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const category = slug?.[0];
+  if (!category) {
+    return pageMetadata({
+      title: "Shop electronics and electricals in Damoh | Juneja Trading Corporation",
+      description: `Browse LED TVs, appliances, fans and electricals at ${brand.nap}. Open ${brand.hours}. Call ${brand.phone} for today's price. ${brand.emiAvailable}. ${brand.emiTerms}`,
+      path: "/shop",
+    });
+  }
+  const label = categoryHeading(category);
+  const path = `/shop/${(slug ?? [category]).join("/")}`;
+  const emi = applianceTvCategories.has(category)
+    ? ` ${brand.emiAvailable}. ${brand.emiTerms}`
+    : "";
+  return pageMetadata({
+    title: `${label} in Damoh | Juneja Trading Corporation`,
+    description: `Shop ${label} at ${brand.nap}. Call ${brand.phone} or ${brand.phone2} for today's price.${emi}`,
+    path,
+  });
+}
 
 const ShopPage = async ({ params, searchParams }: { params: Promise<{ slug?: string[] }>, searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) => {
   const awaitedParams = await params;
   const awaitedSearchParams = await searchParams;
   
+  const category = awaitedParams?.slug?.[0];
+  const heading = sanitize(categoryHeading(category));
+
   return (
     <div className="bg-white text-black">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-8">
         <Breadcrumb />
+        <h1 className="py-4 text-3xl font-bold uppercase max-sm:text-2xl">{heading}</h1>
+        {category && applianceTvCategories.has(category) ? <EmiSection /> : null}
         <div className="grid gap-8 md:grid-cols-[200px_1fr]">
           <details className="md:hidden">
             <summary className="cursor-pointer py-3 text-base font-semibold">Filters</summary>
@@ -36,11 +76,7 @@ const ShopPage = async ({ params, searchParams }: { params: Promise<{ slug?: str
           </div>
           <div>
             <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-center">
-              <h2 className="text-2xl font-bold uppercase max-sm:text-xl">
-                {awaitedParams?.slug && awaitedParams?.slug[0]?.length > 0
-                  ? sanitize(improveCategoryText(awaitedParams?.slug[0]))
-                  : "All products"}
-              </h2>
+              <p className="text-lg font-semibold uppercase text-brand-soot">{heading}</p>
               <SortBy />
             </div>
             <div className="divider"></div>

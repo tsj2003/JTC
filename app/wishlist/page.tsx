@@ -1,7 +1,15 @@
 import { SectionTitle } from "@/components";
 import { Loader } from "@/components/Loader";
 import { WishlistModule } from "@/components/modules/wishlist";
+import { brand } from "@/lib/brand";
+import { pageMetadata } from "@/lib/seo";
 import { Suspense } from "react";
+
+export const metadata = pageMetadata({
+  title: "Wishlist | Juneja Trading Corporation",
+  description: `Saved products at ${brand.name}, ${brand.nap}.`,
+  path: "/wishlist",
+});
 
 const WishlistPage = () => {
   return (

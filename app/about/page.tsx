@@ -1,13 +1,14 @@
 import { SectionTitle } from "@/components";
 import { brand } from "@/lib/brand";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "About",
-  description: `About ${brand.name}, Damoh shop since ${brand.estYear}.`,
-};
+export const metadata = pageMetadata({
+  title: `About ${brand.name} in Damoh since ${brand.estYear}`,
+  description: `About ${brand.name}, ${brand.nap}. Open ${brand.hours}. ${brand.emiAvailable}. ${brand.emiTerms}`,
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
@@ -24,7 +25,7 @@ export default function AboutPage() {
         <p className="font-hindi mt-1 text-lg text-brand-soot">{brand.tagline}</p>
         <p className="mt-6 text-lg leading-8 text-brand-soot">
           Juneja Trading Corporation has served Damoh since {brand.estYear}. The
-          shop is on NH34 near Ghanta Ghar. Electronics and electricals: LED TV,
+          shop is at {brand.nap}. Electronics and electricals: LED TV,
           fridge, washing machine, AC, sound, solar, torch, fans, lighting, and
           fittings.
         </p>
@@ -53,7 +54,7 @@ export default function AboutPage() {
           </div>
           <div className="border border-brand-ink/10 bg-white p-5">
             <dt className="text-sm text-brand-copper">Address</dt>
-            <dd className="mt-1 font-semibold">{brand.address}</dd>
+            <dd className="mt-1 font-semibold">{brand.nap}</dd>
             <a href={brand.mapsUrl} target="_blank" rel="noreferrer" className="mt-2 inline-block text-brand-copper hover:underline">
               Open in Google Maps
             </a>

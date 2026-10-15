@@ -46,8 +46,11 @@ const HeaderTop = () => {
               className="flex min-h-11 items-center gap-x-2 font-semibold"
             >
               <FaLocationDot className="text-brand-amber" />
-              Map · Ghanta Ghar, {brand.city}
+              Shop No. 6, Azad Market, Madiya Pangarha
             </a>
+          </li>
+          <li className="hidden md:block">
+            <span className="flex min-h-11 items-center font-semibold">{brand.hours}</span>
           </li>
         </ul>
         <ul className="flex items-center gap-x-4 font-semibold">

@@ -3,9 +3,24 @@ import { searchCatalog } from "@/lib/catalog";
 import React from "react";
 import { sanitize } from "@/lib/sanitize";
 import { brand } from "@/lib/brand";
+import { pageMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
 
 interface Props {
   searchParams: Promise<{ search?: string }>;
+}
+
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const sp = await searchParams;
+  const query = sanitize(sp?.search || "");
+  const title = query
+    ? `Search results for ${query} | Juneja Trading Corporation`
+    : "Search the Damoh electronics shop | Juneja Trading Corporation";
+  const description = query
+    ? `Results for ${query} at ${brand.nap}. Call ${brand.phone} for today's price.`
+    : `Search LED TVs, appliances, fans and electricals at ${brand.nap}.`;
+  const path = query ? `/search?search=${encodeURIComponent(query)}` : "/search";
+  return pageMetadata({ title, description, path });
 }
 
 const SearchPage = async ({ searchParams }: Props) => {
