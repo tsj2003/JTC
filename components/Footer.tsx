@@ -16,8 +16,8 @@ const Footer = () => {
         <div className="grid gap-10 lg:grid-cols-3">
           <div>
             <Image
-              src="/jtc-logo-mark.png"
-              alt={`${brand.name} logo`}
+              src={brand.logo}
+              alt={brand.logoAlt}
               width={88}
               height={88}
               className="rounded-sm"

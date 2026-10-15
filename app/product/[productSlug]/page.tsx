@@ -8,9 +8,9 @@ import { notFound } from "next/navigation";
 import React from "react";
 import { sanitize } from "@/lib/sanitize";
 import { EmiBadge } from "@/components/EmiNotice";
-import { brand } from "@/lib/brand";
+import { brand, whatsappEnquiryHref } from "@/lib/brand";
 import { getCatalogBySlug } from "@/lib/catalog";
-import { pageMetadata } from "@/lib/seo";
+import { pageMetadata, SITE_URL } from "@/lib/seo";
 import type { Metadata } from "next";
 
 interface ImageItem {
@@ -35,9 +35,44 @@ export async function generateMetadata({ params }: SingleProductPageProps): Prom
   }
   return pageMetadata({
     title: `${product.title} in Damoh | Juneja Trading Corporation`,
-    description: `${product.description} ${brand.emiAvailable}. ${brand.emiTerms} ${brand.nap}.`,
+    description: `${product.description} ${brand.askPrice}. ${brand.emiAvailable}. ${brand.emiTerms} ${brand.nap}.`,
     path: `/product/${product.slug}`,
+    image: {
+      url: `/${product.mainImage}`,
+      alt: product.imageAlt || `${product.title}, Damoh`,
+    },
   });
+}
+
+function productJsonLd(product: Product) {
+  const data: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.title,
+    description: product.description,
+    image: `${SITE_URL}/${product.mainImage}`,
+    sku: product.slug,
+    category: product.categoryLabel || product.category?.name,
+  };
+  if (product.manufacturer) {
+    data.brand = { "@type": "Brand", name: product.manufacturer };
+  }
+  if (product.mrp) {
+    data.offers = {
+      "@type": "Offer",
+      priceCurrency: "INR",
+      price: String(product.mrp),
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: String(product.mrp),
+        priceCurrency: "INR",
+        priceType: "https://schema.org/MSRP",
+      },
+      availability: "https://schema.org/InStock",
+      url: `${SITE_URL}/product/${product.slug}`,
+    };
+  }
+  return data;
 }
 
 const SingleProductPage = async ({ params }: SingleProductPageProps) => {
@@ -53,8 +88,14 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
     notFound();
   }
 
+  const imageAlt = product.imageAlt || `${product.title}, Damoh`;
+
   return (
     <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd(product)).replace(/</g, "\\u003c") }}
+      />
       <div className="mx-auto max-w-screen-2xl px-4 py-8 sm:px-8">
         <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-start lg:gap-16">
           <div className="w-full max-w-lg">
@@ -62,7 +103,7 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
               src={product?.mainImage ? `/${product?.mainImage}` : "/product_placeholder.jpg"}
               width={500}
               height={500}
-              alt={sanitize(product?.title) || "Product"}
+              alt={sanitize(imageAlt) || "Product"}
               className="h-auto w-full object-contain"
             />
             {Array.isArray(images) && images.length > 0 && (
@@ -73,7 +114,7 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
                     src={`/${imageItem.image}`}
                     width={80}
                     height={80}
-                    alt=""
+                    alt={sanitize(imageAlt) || ""}
                     className="size-20 object-cover"
                   />
                 ))}
@@ -82,7 +123,28 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
           </div>
           <div className="flex w-full max-w-xl flex-col gap-5 text-black">
             <h1 className="text-3xl max-sm:text-2xl">{sanitize(product?.title)}</h1>
+            {product.mrp ? (
+              <p className="text-xl font-semibold text-brand-ink">MRP ₹{product.mrp}</p>
+            ) : null}
             <p className="text-xl font-semibold text-brand-copper">{brand.askPrice}</p>
+            <div className="flex flex-col gap-2 sm:flex-row">
+              <a
+                href={whatsappEnquiryHref(brand.phoneRaw, product.title)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 items-center justify-center bg-[#128C7E] px-5 py-3 text-center text-sm font-bold text-white hover:bg-[#075E54]"
+              >
+                {brand.whatsappEnquiryLabel} {brand.phone}
+              </a>
+              <a
+                href={whatsappEnquiryHref(brand.phone2Raw, product.title)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 items-center justify-center border border-[#128C7E] px-5 py-3 text-center text-sm font-bold text-[#075E54] hover:bg-[#128C7E] hover:text-white"
+              >
+                {brand.whatsappEnquiryLabel} {brand.phone2}
+              </a>
+            </div>
             <p className="text-brand-copper font-semibold">{brand.finance}</p>
             <EmiBadge />
             <StockAvailabillity stock={94} inStock={product?.inStock} />

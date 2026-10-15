@@ -54,24 +54,28 @@ const ProductTabs = ({ product }: { product: Product }) => {
             <table className="table text-xl text-center max-[500px]:text-base">
               <tbody>
                 {/* row 1 */}
-                <tr>
-                  <th>Manufacturer:</th>
-                  <td>{sanitize(product?.manufacturer)}</td>
-                </tr>
-                {/* row 2 */}
+                {product?.manufacturer ? (
+                  <tr>
+                    <th>Manufacturer:</th>
+                    <td>{sanitize(product.manufacturer)}</td>
+                  </tr>
+                ) : null}
                 <tr>
                   <th>Category:</th>
                   <td>
-                    {product?.category?.name
-                      ? sanitize(formatCategoryName(product?.category?.name))
-                      : "No category"}
+                    {product?.categoryLabel
+                      ? sanitize(product.categoryLabel)
+                      : product?.category?.name
+                        ? sanitize(formatCategoryName(product.category.name))
+                        : "No category"}
                   </td>
                 </tr>
-                {/* row 3 */}
-                <tr>
-                  <th>Color:</th>
-                  <td>Silver, LightSlateGray, Blue</td>
-                </tr>
+                {product?.colors ? (
+                  <tr>
+                    <th>Colour:</th>
+                    <td>{sanitize(product.colors)}</td>
+                  </tr>
+                ) : null}
               </tbody>
             </table>
           </div>

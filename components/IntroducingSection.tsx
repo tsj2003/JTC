@@ -7,7 +7,7 @@ const IntroducingSection = () => {
   return (
     <section className="bg-brand-cream py-16">
       <div className="mx-auto flex max-w-3xl flex-col items-center gap-y-4 px-6 text-center">
-        <Image src="/jtc-logo-mark.png" alt="JTC" width={88} height={88} className="rounded-sm" />
+        <Image src={brand.logo} alt={brand.logoAlt} width={88} height={88} className="rounded-sm" />
         <p className="font-hindi text-2xl text-brand-copper sm:text-3xl">{brand.taglineHi}</p>
         <h2 className="font-display text-6xl font-semibold text-brand-ink max-md:text-5xl max-[480px]:text-4xl">
           {brand.shortName} <span className="text-brand-copper">DAMOH</span>

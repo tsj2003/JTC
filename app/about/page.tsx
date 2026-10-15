@@ -15,7 +15,7 @@ export default function AboutPage() {
     <div className="bg-brand-paper">
       <SectionTitle title="About the shop" path="Home | About" />
       <div className="mx-auto max-w-3xl px-4 py-12 text-brand-ink sm:px-6">
-        <Image src="/jtc-logo-mark.png" alt="JTC logo" width={96} height={96} className="rounded-sm" />
+        <Image src={brand.logo} alt={brand.logoAlt} width={96} height={96} className="rounded-sm" />
         <p className="mt-6 font-hindi text-2xl text-brand-copper">{brand.taglineHi}</p>
         <p className="mt-3 text-sm uppercase tracking-[0.3em] text-brand-copper">
           ESTD {brand.estYear} · {brand.city}

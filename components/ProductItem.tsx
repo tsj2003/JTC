@@ -23,7 +23,7 @@ const ProductItem = ({
           fill
           sizes="280px"
           className="object-contain"
-          alt={sanitize(product?.title) || "Product image"}
+          alt={sanitize(product.imageAlt || `${product.title}, Damoh`) || "Product image"}
         />
       </Link>
       <Link
@@ -43,6 +43,7 @@ const ProductItem = ({
             : "text-lg font-semibold text-white"
         }
       >
+        {product.mrp ? <span className="block">MRP ₹{product.mrp}</span> : null}
         {brand.askPrice}
       </p>
       <Link

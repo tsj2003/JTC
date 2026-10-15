@@ -81,11 +81,11 @@ const Header = () => {
         <div className="mx-auto flex max-w-screen-2xl flex-col items-stretch gap-4 px-4 py-4 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:py-5">
           <Link href="/" className="flex flex-col items-center gap-1 lg:items-start">
             <Image
-              src="/jtc-logo-wordmark.png"
-              width={280}
-              height={158}
-              alt={`${brand.name} logo`}
-              className="h-12 w-auto sm:h-14"
+              src={brand.logo}
+              width={96}
+              height={96}
+              alt={brand.logoAlt}
+              className="h-16 w-16 object-contain sm:h-[4.5rem] sm:w-[4.5rem]"
               priority
             />
             <span className="text-center font-display text-2xl leading-none tracking-wide text-brand-ink sm:text-3xl lg:text-left">
@@ -135,11 +135,11 @@ const Header = () => {
         <div className="mx-auto flex h-20 max-w-screen-2xl items-center justify-between px-4 sm:px-8">
           <Link href="/" className="flex flex-col">
             <Image
-              src="/jtc-logo-wordmark.png"
-              width={220}
-              height={124}
-              alt={`${brand.name} logo`}
-              className="h-10 w-auto"
+              src={brand.logo}
+              width={64}
+              height={64}
+              alt={brand.logoAlt}
+              className="h-10 w-10 object-contain"
             />
             <span className="font-display text-lg text-brand-ink">
               JUNEJA TRADING CORPORATION

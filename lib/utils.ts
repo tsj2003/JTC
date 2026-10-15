@@ -20,6 +20,9 @@ export const categoryMenuList = [
   { id: 19, title: "Pumps", src: "/icon-pump.svg", href: "/shop/pumps" },
   { id: 20, title: "Torch", src: "/icon-torch.svg", href: "/shop/torch" },
   { id: 21, title: "Home Decor", src: "/icon-decor.svg", href: "/shop/home-decor" },
+  { id: 22, title: "Sound / Speakers", src: "/icon-pa.svg", href: "/shop/sound-speakers" },
+  { id: 23, title: "Health & Personal Care", src: "/icon-appliance.svg", href: "/shop/health-personal-care" },
+  { id: 24, title: "Home & Kitchen / Bottles", src: "/icon-mixer.svg", href: "/shop/home-kitchen-bottles" },
 ];
 
 export const incentives = [

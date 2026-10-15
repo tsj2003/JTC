@@ -12,6 +12,10 @@ interface Product {
   inStock: number;
   featured?: boolean;
   images?: string[];
+  mrp?: number;
+  imageAlt?: string;
+  categoryLabel?: string;
+  colors?: string;
 }
 
 interface Merchant {

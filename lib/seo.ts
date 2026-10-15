@@ -12,10 +12,12 @@ export function pageMetadata({
   title,
   description,
   path,
+  image,
 }: {
   title: string;
   description: string;
   path: string;
+  image?: { url: string; alt: string };
 }): Metadata {
   const url = path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`;
   return {
@@ -30,9 +32,9 @@ export function pageMetadata({
       type: "website",
       locale: "en_IN",
       images: [
-        {
-          url: "/jtc-logo-wordmark.png",
-          alt: `${brand.name} logo`,
+        image ?? {
+          url: brand.logo,
+          alt: brand.logoAlt,
         },
       ],
     },
@@ -49,8 +51,8 @@ export const storeJsonLd = {
   description: brand.description,
   foundingDate: brand.foundingDate,
   url: `${SITE_URL}/`,
-  logo: `${SITE_URL}/jtc-logo-wordmark.png`,
-  image: `${SITE_URL}/jtc-logo-wordmark.png`,
+  logo: `${SITE_URL}${brand.logo}`,
+  image: `${SITE_URL}${brand.logo}`,
   telephone: ["+91-99267-59557", "+91-83191-71236"],
   email: brand.email,
   address: {
