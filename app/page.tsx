@@ -7,6 +7,7 @@ import ServiceLinks from "@/components/ServiceLinks";
 import ShopGallery from "@/components/ShopGallery";
 import ShopUpdates from "@/components/ShopUpdates";
 import ShopVideos from "@/components/ShopVideos";
+import NewArrivals from "@/components/NewArrivals";
 import VisitBlock from "@/components/VisitBlock";
 import { homeDescription, homeTitle, pageMetadata } from "@/lib/seo";
 
@@ -21,6 +22,7 @@ export default function Home() {
     <>
       <OfferTicker />
       <Hero />
+      <NewArrivals />
       <EmiSection />
       <FestiveHighlights />
       <BrandMarquee />

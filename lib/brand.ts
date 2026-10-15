@@ -1,5 +1,7 @@
 export const brand = {
   name: "Juneja Trading Corporation",
+  logo: "/jtc-logo.webp",
+  logoAlt: "Juneja Trading Corporation logo, Damoh",
   shortName: "JTC",
   nameHi: "जुनेजा ट्रेडिंग कारपोरेशन",
   tagline: "आपकी जरूरत, हमारी जिम्मेदारी",
@@ -37,6 +39,7 @@ export const brand = {
   hoursNote: "Open every day, 10:00–21:30",
   whatsappGroupUrl: "https://chat.whatsapp.com/JWFnoPCzfa2E56kBplbjrk",
   whatsappGroupLabel: "Join our WhatsApp group for new arrivals & offers",
+  whatsappEnquiryLabel: "WhatsApp enquiry",
   emiAvailable: "Bajaj Finance EMI available",
   emiTerms: "EMI subject to Bajaj Finance eligibility and terms",
   finance: "0% Bajaj Finance — Easy EMI, No Cost",
@@ -90,6 +93,11 @@ export const shopUpdates = [
 
 export const GST_RATE = 0.18;
 export const SHIPPING_FEE = 0;
+
+export function whatsappEnquiryHref(phoneRaw: string, productTitle: string) {
+  const text = `Hello Juneja Trading Corporation, I would like to enquire about ${productTitle} in Damoh.`;
+  return `https://wa.me/91${phoneRaw}?text=${encodeURIComponent(text)}`;
+}
 
 export function formatPrice(amount: number | string | null | undefined) {
   const value = Number(amount) || 0;

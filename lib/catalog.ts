@@ -1,6 +1,8 @@
+import { newArrivals } from "@/lib/new-arrivals";
 import { stockProducts } from "@/lib/stock-products";
 
 export const localCatalog: Product[] = [
+  ...newArrivals,
   {
     id: "1",
     title: "Samsung LED TV",
