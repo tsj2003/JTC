@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     title: homeTitle,
     description: homeDescription,
     path: "/",
+    languages: false,
   }),
   icons: {
     icon: [

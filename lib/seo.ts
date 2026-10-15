@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { brand } from "@/lib/brand";
 import { ceilingFansHeading, festiveHeading, festiveItemsHeading } from "@/lib/copy";
+import { landings } from "@/lib/landings";
 
 export const SITE_URL = "https://steady-pika-d49d5d.netlify.app";
 
@@ -8,29 +9,54 @@ export const homeTitle = `${festiveHeading} | ${festiveItemsHeading} | ${ceiling
 
 export const homeDescription = `${festiveHeading}. ${festiveItemsHeading}. ${ceilingFansHeading}. Juneja Trading Corporation, Ghanta Ghar, Damoh: LED TVs, fridges, washing machines, home theatre and PA sound, solar, kisan pumps, electricals, Diwali lights and on-the-spot repair. ${brand.nap}. ${brand.emiAvailable}. ${brand.emiTerms}. Open daily 10:00–21:30.`;
 
+function hreflangFor(path: string): Record<string, string> | undefined {
+  if (path === "/" || path === "/hi") {
+    return {
+      en: `${SITE_URL}/`,
+      hi: `${SITE_URL}/hi`,
+      "x-default": `${SITE_URL}/`,
+    };
+  }
+  const slug = path.startsWith("/hi/") ? path.slice(4) : path.replace(/^\//, "");
+  if (landings[slug] && (path === `/${slug}` || path === `/hi/${slug}`)) {
+    return {
+      en: `${SITE_URL}/${slug}`,
+      hi: `${SITE_URL}/hi/${slug}`,
+      "x-default": `${SITE_URL}/${slug}`,
+    };
+  }
+  return undefined;
+}
+
 export function pageMetadata({
   title,
   description,
   path,
   image,
+  languages: withLanguages = true,
 }: {
   title: string;
   description: string;
   path: string;
   image?: { url: string; alt: string };
+  languages?: boolean;
 }): Metadata {
   const url = path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`;
+  const languages = withLanguages ? hreflangFor(path) : undefined;
   return {
     title: { absolute: title },
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      ...(languages ? { languages } : {}),
+    },
     openGraph: {
       title,
       description,
       url,
       siteName: brand.name,
       type: "website",
-      locale: "en_IN",
+      locale: path === "/hi" || path.startsWith("/hi/") ? "hi_IN" : "en_IN",
       images: [
         image ?? {
           url: brand.logo,
