@@ -1,4 +1,5 @@
 import { brand } from "@/lib/brand";
+import ReviewButton from "./ReviewButton";
 import WhatsAppGroupButton from "./WhatsAppGroupButton";
 
 const VisitBlock = () => {
@@ -15,7 +16,7 @@ const VisitBlock = () => {
           <br />
           {brand.hoursNote} · Home delivery across Damoh
         </address>
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <WhatsAppGroupButton />
           <a
             href={brand.mapsUrl}
@@ -25,6 +26,7 @@ const VisitBlock = () => {
           >
             Open in Google Maps
           </a>
+          <ReviewButton />
         </div>
       </div>
     </section>

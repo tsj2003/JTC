@@ -8,6 +8,7 @@ import { FaRegEnvelope } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa6";
 import { brand } from "@/lib/brand";
+import LanguageToggle from "./LanguageToggle";
 
 const HeaderTop = () => {
   const { data: session }: any = useSession();
@@ -53,6 +54,8 @@ const HeaderTop = () => {
             <span className="flex min-h-11 items-center font-semibold">{brand.hours}</span>
           </li>
         </ul>
+        <div className="flex items-center gap-x-4">
+          <LanguageToggle />
         <ul className="flex items-center gap-x-4 font-semibold">
           {!session ? (
             <>
@@ -77,6 +80,7 @@ const HeaderTop = () => {
             </li>
           )}
         </ul>
+        </div>
       </div>
     </div>
   );

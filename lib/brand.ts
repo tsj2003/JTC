@@ -22,6 +22,9 @@ export const brand = {
   nap: "Juneja Trading Corporation, Shop No. 6, Azad Market, Ghanta Ghar, Madiya Pangarha, Damoh, Madhya Pradesh 470661",
   mapsUrl:
     "https://www.google.com/maps/place/Juneja+Trading+Carporation/@23.8352138,79.4405776,17z",
+  googleReviewUrl:
+    "https://www.google.com/maps/search/?api=1&query=Juneja+Trading+Corporation+Damoh",
+  googleReviewLabel: "Review us on Google",
   mapsEmbed:
     "https://maps.google.com/maps?q=Juneja+Trading+Carporation,+Damoh&ll=23.8352138,79.4405776&z=17&output=embed",
   lat: 23.8352138,

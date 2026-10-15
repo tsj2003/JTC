@@ -4,6 +4,7 @@ import { brand } from "@/lib/brand";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import ReviewButton from "./ReviewButton";
 import WhatsAppGroupButton from "./WhatsAppGroupButton";
 
 const Footer = () => {
@@ -40,8 +41,9 @@ const Footer = () => {
             </p>
             <p className="mt-1 text-sm">{brand.nap}</p>
             <p className="mt-1 text-sm">{brand.hours}</p>
-            <div className="mt-4">
+            <div className="mt-4 flex flex-col items-start gap-3">
               <WhatsAppGroupButton />
+              <ReviewButton variant="dark" />
             </div>
             <a
               href={brand.mapsUrl}

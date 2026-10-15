@@ -9,6 +9,8 @@ import ShopUpdates from "@/components/ShopUpdates";
 import ShopVideos from "@/components/ShopVideos";
 import NewArrivals from "@/components/NewArrivals";
 import VisitBlock from "@/components/VisitBlock";
+import FaqList from "@/components/FaqList";
+import { sharedFaqs } from "@/lib/faqs";
 import { homeDescription, homeTitle, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -34,6 +36,11 @@ export default function Home() {
       <ShopGallery />
       <ShopVideos />
       <Incentives />
+      <section className="bg-brand-paper py-14">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <FaqList faqs={sharedFaqs("en")} heading="FAQ" />
+        </div>
+      </section>
       <VisitBlock />
     </>
   );

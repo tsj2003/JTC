@@ -21,6 +21,7 @@ export type Landing = {
   hindi: string;
   intro?: string;
   showEmi?: boolean;
+  lang?: "en" | "hi";
   sections: LandingSection[];
   faqs: LandingFaq[];
 };
