@@ -8,6 +8,7 @@ const AdminDashboardPage = () => {
     <div className="bg-white flex justify-start max-w-screen-2xl mx-auto max-xl:flex-col">
       <DashboardSidebar />
       <div className="flex flex-col items-center ml-5 gap-y-4 w-full max-xl:ml-0 max-xl:px-2 max-xl:mt-5 max-md:gap-y-1">
+        <h1 className="w-full text-3xl font-semibold text-brand-ink">Admin dashboard</h1>
         <div className="flex justify-between w-full max-md:flex-col max-md:w-full max-md:gap-y-1">
           <StatsElement />
           <StatsElement />

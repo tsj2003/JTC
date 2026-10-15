@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Providers from "@/Providers";
 import SessionTimeoutWrapper from "@/components/SessionTimeoutWrapper";
-import { brand } from "@/lib/brand";
+import { storeJsonLd, SITE_URL, homeDescription, homeTitle, pageMetadata } from "@/lib/seo";
 
 const display = Teko({
   subsets: ["latin"],
@@ -27,11 +27,12 @@ const hindi = Noto_Sans_Devanagari({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: `${brand.name} | Electrical Store in Damoh`,
-    template: `%s | ${brand.name}`,
-  },
-  description: brand.description,
+  metadataBase: new URL(SITE_URL),
+  ...pageMetadata({
+    title: homeTitle,
+    description: homeDescription,
+    path: "/",
+  }),
 };
 
 export const viewport: Viewport = {
@@ -49,6 +50,10 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <body className={`${display.variable} ${body.variable} ${hindi.variable} font-sans bg-brand-paper text-brand-ink antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(storeJsonLd).replace(/</g, "\\u003c") }}
+        />
         <SessionProvider session={null}>
           <SessionTimeoutWrapper />
           <Header />

@@ -1,8 +1,10 @@
 import { navigation } from "@/lib/utils";
+import { serviceLinks } from "@/lib/nav";
 import { brand } from "@/lib/brand";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import WhatsAppGroupButton from "./WhatsAppGroupButton";
 
 const Footer = () => {
   return (
@@ -21,6 +23,7 @@ const Footer = () => {
               className="rounded-sm"
             />
             <p className="mt-4 font-hindi text-xl text-brand-amber">{brand.nameHi}</p>
+            <p className="mt-1 font-hindi text-brand-cream/90">{brand.slogan}</p>
             <p className="mt-1 font-hindi text-brand-cream/90">{brand.tagline}</p>
             <p className="mt-4 max-w-sm text-sm leading-6 text-brand-cream/80">
               {brand.description}
@@ -35,8 +38,11 @@ const Footer = () => {
                 {brand.email}
               </a>
             </p>
-            <p className="mt-1 text-sm">{brand.address}</p>
+            <p className="mt-1 text-sm">{brand.nap}</p>
             <p className="mt-1 text-sm">{brand.hours}</p>
+            <div className="mt-4">
+              <WhatsAppGroupButton />
+            </div>
             <a
               href={brand.mapsUrl}
               target="_blank"
@@ -50,6 +56,13 @@ const Footer = () => {
             <div>
               <h3 className="font-display text-lg tracking-wide text-brand-amber">Shop</h3>
               <ul className="mt-4 space-y-3">
+                {serviceLinks.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className="text-sm hover:text-brand-amber">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
                 {navigation.sale.map((item) => (
                   <li key={item.name}>
                     <Link href={item.href} className="text-sm hover:text-brand-amber">

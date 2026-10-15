@@ -7,9 +7,10 @@ const demoMerchant = [
     id: "1",
     name: "Juneja Trading Corporation",
     description:
-      "Serving Damoh since 1960. Fans, lighting, sound and PA, home appliances, electrical goods. Bajaj Finance EMI.",
+      "Serving Damoh since 1960. Fans, lighting, sound and PA, home appliances, electrical goods. Bajaj Finance EMI available. EMI subject to Bajaj Finance eligibility and terms.",
     phone: "9926759557",
-    address: "NH34, near Ghanta Ghar, Damoh, Madhya Pradesh 470600",
+    address:
+      "Shop No. 6, Azad Market, Ghanta Ghar, Madiya Pangarha, Damoh, Madhya Pradesh 470661",
     status: "active",
     createdAt: new Date(),
     updatedAt: new Date(),

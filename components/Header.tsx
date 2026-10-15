@@ -13,6 +13,9 @@ import toast from "react-hot-toast";
 import { useWishlistStore } from "@/app/_zustand/wishlistStore";
 import apiClient from "@/lib/api";
 import { brand } from "@/lib/brand";
+import { serviceLinks } from "@/lib/nav";
+import FestiveBanner from "./FestiveBanner";
+import WhatsAppGroupButton from "./WhatsAppGroupButton";
 
 const Header = () => {
   const { data: session } = useSession();
@@ -101,6 +104,32 @@ const Header = () => {
             <CartElement />
           </div>
         </div>
+      )}
+      {pathname.startsWith("/admin") === false && (
+        <>
+          <FestiveBanner />
+          <nav aria-label="Shop services" className="border-t border-brand-ink/10">
+            <ul className="mx-auto flex max-w-screen-2xl gap-2 overflow-x-auto px-4 py-3 sm:px-8">
+              {serviceLinks.map((item) => (
+                <li key={item.href} className="shrink-0">
+                  <Link
+                    href={item.href}
+                    className={`inline-flex min-h-11 items-center px-3 text-sm font-semibold ${
+                      pathname === item.href ? "bg-brand-ink text-brand-cream" : "text-brand-ink hover:text-brand-copper"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className="border-t border-brand-ink/10 bg-brand-paper px-4 py-3 sm:px-8">
+            <div className="mx-auto flex max-w-screen-2xl justify-center lg:justify-start">
+              <WhatsAppGroupButton />
+            </div>
+          </div>
+        </>
       )}
       {pathname.startsWith("/admin") === true && (
         <div className="mx-auto flex h-20 max-w-screen-2xl items-center justify-between px-4 sm:px-8">
