@@ -1,4 +1,5 @@
 import { SectionTitle } from "@/components";
+import InsideOurShop from "@/components/InsideOurShop";
 import { brand } from "@/lib/brand";
 import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
@@ -33,7 +34,10 @@ export default function AboutPage() {
           Brands on the counter include {brand.brands.join(", ")}. Fridge,
           washing machine, LED TV and AC can be taken on 0% Bajaj Finance EMI.
         </p>
-        <dl className="mt-10 grid gap-4 sm:grid-cols-2">
+      </div>
+      <InsideOurShop />
+      <div className="mx-auto max-w-3xl px-4 pb-12 text-brand-ink sm:px-6">
+        <dl className="grid gap-4 sm:grid-cols-2">
           <div className="border border-brand-ink/10 bg-white p-5">
             <dt className="text-sm text-brand-copper">Since</dt>
             <dd className="mt-1 font-semibold">{brand.estYear}</dd>

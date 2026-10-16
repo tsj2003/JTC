@@ -35,7 +35,9 @@ export async function generateMetadata({ params }: SingleProductPageProps): Prom
     });
   }
   const priceLabel =
-    publishedPrice(product) != null ? formatPrice(publishedPrice(product)) : brand.askPrice;
+    publishedPrice(product) != null
+      ? formatPrice(publishedPrice(product))
+      : product.priceLabel || brand.askPrice;
   return pageMetadata({
     title: `${product.title} in Damoh | Juneja Trading Corporation`,
     description: `${product.description} ${priceLabel}. ${brand.emiAvailable}. ${brand.emiTerms} ${brand.nap}.`,
@@ -140,7 +142,7 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
             {price != null ? (
               <p className="text-2xl font-semibold text-brand-ink">{formatPrice(price)}</p>
             ) : (
-              <p className="text-xl font-semibold text-brand-copper">{brand.askPrice}</p>
+              <p className="text-xl font-semibold text-brand-copper">{product.priceLabel || brand.askPrice}</p>
             )}
             {product.mrp ? (
               <p className="text-xl font-semibold text-brand-ink">MRP {formatPrice(product.mrp)}</p>

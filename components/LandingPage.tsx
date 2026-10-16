@@ -3,6 +3,7 @@ import { sharedFaqs } from "@/lib/faqs";
 import type { Landing } from "@/lib/landings";
 import { visitLine } from "@/lib/landings";
 import { SITE_URL } from "@/lib/seo";
+import Image from "next/image";
 import Link from "next/link";
 import { EmiSection } from "./EmiNotice";
 import FaqList from "./FaqList";
@@ -69,6 +70,18 @@ const LandingPage = ({ page }: { page: Landing }) => {
           {page.intro ? <p className="mt-4 max-w-2xl text-lg text-brand-cream/85">{page.intro}</p> : null}
         </div>
       </header>
+      {page.image ? (
+        <figure className="bg-brand-cream px-4 py-8 sm:px-6">
+          <Image
+            src={page.image.src}
+            alt={page.image.alt}
+            width={page.image.width}
+            height={page.image.height}
+            sizes="(max-width: 1024px) 100vw, 960px"
+            className="mx-auto h-auto max-h-[70vh] w-auto max-w-full object-contain"
+          />
+        </figure>
+      ) : null}
       {page.showEmi ? <EmiSection /> : null}
       <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
         {page.enquiryName ? (
