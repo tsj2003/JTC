@@ -2,10 +2,10 @@ export const newArrivals: Product[] = [
   {
     id: "61",
     title: "Yoroto YO-J15 Cube Speaker",
-    price: 3149,
+    price: 1700,
     rating: 0,
     description:
-      "Yoroto YO-J15 Cube Speaker at Juneja Trading Corporation, Damoh. Portable multi-connectivity Bluetooth speaker with ring light, TWS function, 50W (1200W PMPO), 8-inch woofer, and a wireless mic included. Price ₹3,149.",
+      "Yoroto YO-J15 Cube Speaker at Juneja Trading Corporation, Damoh. Portable multi-connectivity Bluetooth speaker with ring light, TWS function, 50W (1200W PMPO), 8-inch woofer, and a wireless mic included. Price ₹1,700.",
     mainImage: "products/yoroto-yo-j15-cube-speaker.webp",
     imageAlt:
       "Yoroto YO-J15 cube speaker with ring light and wireless mic at Juneja Trading Corporation, Damoh",
@@ -37,10 +37,10 @@ export const newArrivals: Product[] = [
   {
     id: "63",
     title: "3-in-1 Foot Massager",
-    price: 2249,
+    price: 1000,
     rating: 0,
     description:
-      "3-in-1 Foot Massager at Juneja Trading Corporation, Damoh. Heat therapy, fascial release, and acupoint massage. Price ₹2,249.",
+      "3-in-1 Foot Massager at Juneja Trading Corporation, Damoh. Heat therapy, fascial release, and acupoint massage. Price ₹1,000.",
     mainImage: "products/foot-massager-3in1.webp",
     imageAlt:
       "3-in-1 foot massager with heat therapy at Juneja Trading Corporation, Damoh",
