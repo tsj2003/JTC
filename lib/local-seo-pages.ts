@@ -560,4 +560,143 @@ export const localSeoPages: Record<string, Landing> = {
       },
     ],
   },
+  "kisan-torch-damoh": {
+    slug: "kisan-torch-damoh",
+    path: "/kisan-torch-damoh",
+    title: "Best Kisan Torch in Damoh | JTC Since 1960",
+    description:
+      "Best kisan torch in Damoh at Juneja Trading Corporation, Ghanta Ghar, Azad Market, since 1960. Long-range rechargeable LED torches for farmers and night field work. Call for today's price. Repair on the spot. Open Mon–Sun 10:00–21:30.",
+    h1: "Best kisan torch in Damoh",
+    hindi: "दमोह में किसान टॉर्च — रात के खेत के काम के लिए लंबी रेंज की रिचार्जेबल एलईडी टॉर्च।",
+    intro:
+      "The best kisan torch in Damoh is the long-range rechargeable LED torch farmers pick up for night field work. Juneja Trading Corporation keeps them at Shop No. 6, Azad Market, Ghanta Ghar, Madiya Pangarha, Damoh 470661. The shop has been open since 1960.",
+    sections: [
+      {
+        heading: "Long-range rechargeable LED torches for night field work",
+        paragraphs: [
+          "A kisan torch is not the small light that hangs in a corridor. Farmers around Damoh use a long-range rechargeable LED torch when the pump runs after dark, when a bund has to be walked, or when the far end of the plot has to be seen from the path. The beam has to reach across a field, and the battery has to last the night without a pocket full of cells.",
+          "Juneja Trading Corporation stocks rechargeable LED torches for that work on the kisan and electrical counter at Ghanta Ghar. Household emergency lights and short torches are a different shelf. If the light is for the house during a power cut, ask for an emergency light. If it is for the field, ask for a kisan torch and say how far the beam needs to throw.",
+          "Models on the counter change. Call " +
+            phone +
+            " and describe the job: night irrigation, a long walk between plots, or a light you can charge in the village and carry out. The staff will say what is actually in the shop that day.",
+        ],
+      },
+      {
+        heading: "How to choose, and today's price",
+        paragraphs: [
+          "Tell the counter three things. How far the beam should reach. Whether you can charge it from a wall socket at home, or whether you also need a charging option that works when the line is down. How long you will carry it, because a heavy torch is tiring on a night walk and a light one that dies at midnight is worse.",
+          "There is no published rupee range for a kisan torch. The price moves with the battery, the beam and what arrived that morning. Ask for today's price on the phone or at the counter. The shop will not print a guessed figure. A spare charger is worth asking about in the same visit, so a working torch is not stuck at home for want of a lead.",
+        ],
+      },
+      {
+        heading: "Why Juneja Trading Corporation",
+        paragraphs: [
+          "The shop has served Damoh since 1960. Many torches, chargers and rechargeable lights are repaired on the spot at Ghanta Ghar. Bring the torch if the beam has gone weak or the charger no longer takes a charge. Bajaj Finance EMI available. EMI subject to Bajaj Finance eligibility and terms. Home delivery covers Damoh. Open Monday to Sunday, 10:00 AM to 9:30 PM.",
+          "Customers come from Damoh, Hatta, Pathariya, Tendukheda, Jabera and Batiyagarh. Call before you travel from another town if you need one particular torch switched on and charged for a look. Pumps, motors and sprayers are on the kisan page. A fence energizer for neelgai is on the jhatka machine page.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/kisan-agri-damoh", label: "Kisan pumps and motors in Damoh" },
+      { href: "/jhatka-machine-damoh", label: "Jhatka machine in Damoh" },
+      { href: "/emergency-light-damoh", label: "Emergency lights and household torches" },
+      { href: "/hi/kisan-torch-damoh", label: "यह पेज हिन्दी में" },
+    ],
+    faqs: [
+      {
+        question: "Where can I buy the best kisan torch in Damoh?",
+        answer:
+          "Juneja Trading Corporation, Shop No. 6, Azad Market, Ghanta Ghar, Damoh 470661. Ask for a long-range rechargeable LED torch for night field work. Open every day 10:00 AM to 9:30 PM.",
+      },
+      {
+        question: "Is a kisan torch the same as an emergency light?",
+        answer:
+          "No. An emergency light is for the house during a power cut. A kisan torch is a long-range rechargeable LED torch meant to be carried into the field at night. Both are sold at the Ghanta Ghar shop.",
+      },
+      {
+        question: "Do you repair kisan torches?",
+        answer:
+          "Many torches and chargers are repaired on the spot. Bring the torch to the counter at Azad Market.",
+      },
+      {
+        question: "What does a kisan torch cost in Damoh?",
+        answer:
+          "Call " + phone + " or ask at the counter for today's price. The shop does not publish a fixed range.",
+      },
+    ],
+  },
+  "jhatka-machine-damoh": {
+    slug: "jhatka-machine-damoh",
+    path: "/jhatka-machine-damoh",
+    title: "Jhatka Machine in Damoh | JTC Since 1960",
+    description:
+      "Jhatka machine in Damoh at Juneja Trading Corporation, Ghanta Ghar, since 1960. Solar and electric fence energizers to protect crops from neelgai and animals. Types, voltage, solar models, installation help and repair. Call for today's price. Open Mon–Sun 10:00–21:30.",
+    h1: "Jhatka machine in Damoh",
+    hindi: "दमोह में झटका मशीन — नीलगाय और जानवरों से खेत की सुरक्षा।",
+    intro:
+      "A jhatka machine in Damoh is the fence energizer farmers use to protect crops from neelgai and other animals. Juneja Trading Corporation sells solar and electric energizers from Shop No. 6, Azad Market, Ghanta Ghar, and has traded in Damoh since 1960.",
+    sections: [
+      {
+        heading: "Solar and electric fence energizers",
+        paragraphs: [
+          "A jhatka machine sends a short pulse down a fence wire. The pulse is what turns animals back. It is not a steady current sitting on the wire. Farmers around Damoh ask for one when neelgai, stray cattle or other animals are entering the crop at night.",
+          "Two kinds sit on this counter. An electric energizer runs from a mains point near the fence. A solar energizer carries a panel and a battery, so the fence keeps pulsing where there is no line, or where the line drops in the evening. Some units are battery-only. Say which power you actually have at the field, and the shop will show the matching type from current stock.",
+        ],
+      },
+      {
+        heading: "Types, voltage and solar models",
+        paragraphs: [
+          "The pulse voltage and the energy of the pulse are printed on the energizer. A short fence around a small plot and a long boundary around a large field do not want the same machine. Bring three facts: the length of the fence, how many strands you plan to run, and which animals you are keeping out. Neelgai is the reason most people in this belt ask. The counter reads the label with you and matches a unit to that fence.",
+          "The shop does not publish a voltage range online. The right figure depends on the fence in front of you, and stock changes. Call " +
+            phone +
+            " for the solar and electric models in the shop today, and for today's price. Solar models differ by the panel, the battery and whether the panel is meant to sit on a pole beside the energizer. Confirm the model before you travel from Hatta, Pathariya or Tendukheda.",
+        ],
+      },
+      {
+        heading: "Installation help and repair",
+        paragraphs: [
+          "Installation starts with a conversation at the counter. The staff explain the earth stake, the live wire, the insulators that keep the pulse off the posts, and a warning people can see before they touch the fence. If you want someone from the shop to come to the field, ask. That visit depends on the village and the week, and the charge is confirmed before anyone leaves Ghanta Ghar.",
+          "Repair is done at the shop. Bring the energizer if the pulse has stopped, the battery no longer holds, or the panel is not charging. Many electrical faults are looked at on the spot. A panel or a battery that has to be replaced is a parts question, and the counter will say whether that unit can be repaired.",
+        ],
+      },
+      {
+        heading: "Why JTC, and who the shop serves",
+        paragraphs: [
+          "Juneja Trading Corporation has been at Ghanta Ghar since 1960. The same shop sells the pumps and the kisan torches, so a fence, a night torch and a pump question can be one visit. Bajaj Finance EMI available. EMI subject to Bajaj Finance eligibility and terms. Home delivery across Damoh. Open Monday to Sunday, 10:00 AM to 9:30 PM.",
+          "Address: Shop No. 6, Azad Market, Ghanta Ghar, Madiya Pangarha, Damoh 470661. Serving farmers from Damoh, Hatta, Pathariya, Tendukheda, Jabera and Batiyagarh.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/kisan-agri-damoh", label: "Kisan pumps and motors in Damoh" },
+      { href: "/kisan-torch-damoh", label: "Best kisan torch in Damoh" },
+      { href: "/solar-damoh", label: "Solar panels and solar lights in Damoh" },
+      { href: "/repair-damoh", label: "On-the-spot repair in Damoh" },
+      { href: "/hi/jhatka-machine-damoh", label: "यह पेज हिन्दी में" },
+    ],
+    faqs: [
+      {
+        question: "Where can I buy a jhatka machine in Damoh?",
+        answer:
+          "Juneja Trading Corporation, Shop No. 6, Azad Market, Ghanta Ghar, Damoh 470661. Solar and electric fence energizers for crop protection. Open every day 10:00 AM to 9:30 PM.",
+      },
+      {
+        question: "Should I take a solar or an electric jhatka machine?",
+        answer:
+          "Take an electric energizer if the fence has a reliable mains point. Take a solar model if the field has no line, or the line fails in the evening. Tell the counter the fence length and whether neelgai or other animals are the problem.",
+      },
+      {
+        question: "What voltage do I need?",
+        answer:
+          "Voltage and pulse energy are printed on the unit. The shop matches them to your fence length and the animals you are keeping out. Call " +
+          phone +
+          " for the models in stock. A fixed voltage is not published online.",
+      },
+      {
+        question: "Do you install and repair jhatka machines?",
+        answer:
+          "The counter explains earthing, the live wire and insulators. A field visit is arranged only after you ask and the charge is confirmed. For repair, bring the energizer to the Ghanta Ghar shop.",
+      },
+    ],
+  },
 };
