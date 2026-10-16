@@ -1,3 +1,4 @@
+import { brand } from "@/lib/brand";
 import type { Landing } from "@/lib/landings";
 
 export const localSeoPagesHi: Record<string, Landing> = {
@@ -351,6 +352,7 @@ export const localSeoPagesHi: Record<string, Landing> = {
       { href: "/hi/electricals-damoh", label: "दमोह में इलेक्ट्रिकल" },
       { href: "/hi/emergency-light-damoh", label: "दमोह में इमरजेंसी लाइट" },
       { href: "/product/rr-avidite-neo-9w-led-bulb", label: "आरआर एविडाइट नियो 9W एलईडी बल्ब, थोक रेट उपलब्ध" },
+      { href: "/hi/wholesale-electronics-damoh", label: "दमोह में इलेक्ट्रॉनिक्स थोक" },
       { href: "/led-bulb-wholesale-damoh", label: "This page in English" },
     ],
     faqs: [
@@ -584,11 +586,11 @@ export const localSeoPagesHi: Record<string, Landing> = {
     lang: "hi",
     title: "दमोह में सस्ता और अच्छा स्पीकर | ₹699 से | Bluetooth speaker Damoh | JTC",
     description:
-      "दमोह में सस्ता और अच्छा स्पीकर, घंटा घर। SoRoo K1 ₹699, Yoroto YO-J15 ₹1,700, Zebronics BT2750RUF 4.1 का दाम कॉल पर। best price in Damoh, low price speaker Damoh, Bluetooth speaker Damoh। ईमेल satpaljuneja11@gmail.com।",
+      "दमोह में सस्ता और अच्छा स्पीकर, घंटा घर। SoRoo K1 ₹699, Yoroto YO-J15 ₹1,700, Zebronics BT2750RUF 4.1 का दाम कॉल पर। best price in Damoh, low price speaker Damoh, Bluetooth speaker Damoh। ईमेल tarandeepjuneja11@gmail.com।",
     h1: "दमोह में सस्ता और अच्छा स्पीकर – ₹699 से",
     hindi: "Sasta aur accha speaker Damoh – Speakers from ₹699",
     intro:
-      "जुनेजा ट्रेडिंग कारपोरेशन, घंटा घर, आज़ाद मार्केट पर low price speaker Damoh और Bluetooth speaker Damoh एक ही काउंटर पर हैं। छपे हुए दाम में best price in Damoh SoRoo K1 का ₹699 है। ईमेल satpaljuneja11@gmail.com।",
+      "जुनेजा ट्रेडिंग कारपोरेशन, घंटा घर, आज़ाद मार्केट पर low price speaker Damoh और Bluetooth speaker Damoh एक ही काउंटर पर हैं। छपे हुए दाम में best price in Damoh SoRoo K1 का ₹699 है। ईमेल tarandeepjuneja11@gmail.com।",
     products: [
       {
         name: "SoRoo K1 Series Wireless Speaker",
@@ -629,7 +631,7 @@ export const localSeoPagesHi: Record<string, Landing> = {
         heading: "₹699 से कौन से स्पीकर छपे हैं",
         paragraphs: [
           "SoRoo K1 का दाम ₹699 है और MRP भी ₹699 है। Yoroto YO-J15 का दाम ₹1,700 है। दोनों Bluetooth speaker Damoh काउंटर पर सुन सकते हैं। Zebronics ZEB-BT2750RUF 4.1 होम थिएटर का दाम इस पेज पर नहीं छपा। Call for today's price।",
-          "low price speaker Damoh खोजने वाले अक्सर छोटे ब्लूटूथ स्पीकर और बड़े होम थिएटर को एक साथ पूछते हैं। छपा हुआ best price in Damoh SoRoo का ₹699 है। बड़ा सेट होम थिएटर वाले पेज पर है, उसका दाम काउंटर बताता है। ईमेल satpaljuneja11@gmail.com।",
+          "low price speaker Damoh खोजने वाले अक्सर छोटे ब्लूटूथ स्पीकर और बड़े होम थिएटर को एक साथ पूछते हैं। छपा हुआ best price in Damoh SoRoo का ₹699 है। बड़ा सेट होम थिएटर वाले पेज पर है, उसका दाम काउंटर बताता है। ईमेल tarandeepjuneja11@gmail.com।",
         ],
       },
     ],
@@ -646,7 +648,85 @@ export const localSeoPagesHi: Record<string, Landing> = {
       {
         question: "दमोह में सस्ता स्पीकर कहाँ मिलेगा?",
         answer:
-          "जुनेजा ट्रेडिंग कारपोरेशन, शॉप नंबर 6, आज़ाद मार्केट, घंटा घर, दमोह। SoRoo K1 ₹699। Yoroto YO-J15 ₹1,700। Zebronics BT2750RUF 4.1 का दाम कॉल पर। ईमेल satpaljuneja11@gmail.com।",
+          "जुनेजा ट्रेडिंग कारपोरेशन, शॉप नंबर 6, आज़ाद मार्केट, घंटा घर, दमोह। SoRoo K1 ₹699। Yoroto YO-J15 ₹1,700। Zebronics BT2750RUF 4.1 का दाम कॉल पर। ईमेल " +
+          brand.email +
+          "।",
+      },
+    ],
+  },
+  "wholesale-electronics-damoh": {
+    slug: "wholesale-electronics-damoh",
+    path: "/hi/wholesale-electronics-damoh",
+    lang: "hi",
+    title: "दमोह में इलेक्ट्रॉनिक्स थोक | थोक विक्रेता | जुनेजा ट्रेडिंग कारपोरेशन",
+    description:
+      "दमोह में इलेक्ट्रॉनिक्स थोक, घंटा घर। जुनेजा ट्रेडिंग कारपोरेशन दमोह के बड़े थोक विक्रेताओं में से एक है। दुकानदार और इलेक्ट्रीशियन के लिए एलईडी बल्ब, पंखे, तार, टॉर्च, स्पीकर और दिवाली लाइट का थोक रेट। रेट लिस्ट के लिए कॉल या WhatsApp। ईमेल " +
+      brand.email +
+      "।",
+    h1: "दमोह में इलेक्ट्रॉनिक्स थोक – थोक विक्रेता",
+    hindi: "Wholesale electronics Damoh",
+    intro:
+      "जुनेजा ट्रेडिंग कारपोरेशन दमोह में इलेक्ट्रॉनिक्स का रिटेल और थोक दोनों करता है, और दमोह के बड़े थोक विक्रेताओं में से एक है। दुकानदार और इलेक्ट्रीशियन थोक विक्रेता (thok vikreta) वाला रेट घंटा घर, आज़ाद मार्केट पर पूछते हैं। रेट लिस्ट इस पेज पर नहीं छपी। कॉल या WhatsApp करें।",
+    sections: [
+      {
+        heading: "दुकानदार और इलेक्ट्रीशियन के लिए थोक रेट",
+        paragraphs: [
+          "घर के लिए एक पीस भी मिलता है। दुकानदार या इलेक्ट्रीशियन अक्सर संख्या में माँगते हैं: कमरों की लाइन के लिए एलईडी बल्ब, साइट के लिए पंखे, कॉइल में तार, मौसम के लिए टॉर्च, काउंटर के लिए स्पीकर, और त्योहार पर दिवाली लाइट। ये थोक रेट जुनेजा ट्रेडिंग कारपोरेशन, शॉप नंबर 6, आज़ाद मार्केट, घंटा घर, मड़िया पंगरहा, दमोह 470661 पर बताए जाते हैं। सामान, वॉट या साइज़, और संख्या काउंटर पर कह दें।",
+          "थोक रेट लिस्ट के लिए " +
+            brand.phone +
+            " या " +
+            brand.phone2 +
+            " पर कॉल करें, या इन्हीं नंबरों पर WhatsApp करें। ईमेल " +
+            brand.email +
+            "। ऑनलाइन कोई थोक स्लैब नहीं छपा, क्योंकि रेट हिलता है। जो दाम इस पेज पर नहीं है, वह दाम नहीं है।",
+        ],
+      },
+      {
+        heading: "थोक में क्या मिलता है",
+        items: [
+          "एलईडी बल्ब, बैटन और फिटिंग। बल्ब वाले पेज पर थोक रेट उपलब्ध लिखे हैं। आज का रेट कॉल पर।",
+          "पंखे, कमरे और दुकान के सीलिंग फैन सहित। स्वीप और ब्रांड स्टॉक से पक्का करें।",
+          "तार और केबल। ताँबे का रेट हिलता है, इसलिए कॉइल का रेट फ़ोन या काउंटर पर मिलता है।",
+          "टॉर्च, किसान टॉर्च और रिचार्जेबल लाइट सहित। बता दें कि लाइट दुकान के लिए है, घर के लिए, या रात के खेत के लिए।",
+          "स्पीकर। छपे रिटेल दाम वही हैं: SoRoo K1 ₹699 (MRP ₹699) और Yoroto YO-J15 ₹1,700। Zebronics BT2750RUF 4.1 का दाम कॉल पर। स्पीकर का थोक रेट भी कॉल या WhatsApp पर।",
+          "दिवाली लाइट: झालर, फेयरी लाइट, टॉर्च, इमरजेंसी लाइट, इमरजेंसी बल्ब और एलईडी बल्ब। त्योहार से पहले संख्या बता दें।",
+        ],
+      },
+      {
+        heading: "रेट लिस्ट कैसे माँगें",
+        paragraphs: [
+          "दुकान पर आइए, कॉल कीजिए, या WhatsApp कीजिए। थोक रेट चाहिए, कौन सा सामान, कितनी संख्या, यह कह दें। दुकान सोमवार से रविवार सुबह 10 बजे से रात 9:30 बजे तक खुली है। हट्टा, पथरिया, तेंदूखेड़ा, जबेरा और बटियागढ़ से भी ग्राहक आते हैं। दमोह में होम डिलीवरी है। Bajaj Finance EMI available। EMI subject to Bajaj Finance eligibility and terms।",
+          "दुकान 1960 से दमोह में है। रिटेल और थोक एक ही काउंटर पर हैं। एक टीवी, एक पंखा या एक स्पीकर चाहिए तो रिटेल पेज लागू रहते हैं, और उन पन्नों पर छपे दाम नहीं बदलते।",
+        ],
+      },
+    ],
+    links: [
+      {
+        href: "https://wa.me/919926759557?text=Hello%20Juneja%20Trading%20Corporation%2C%20please%20share%20the%20wholesale%20rate%20list%20for%20Damoh.",
+        label: "थोक रेट लिस्ट के लिए WhatsApp",
+      },
+      { href: "/hi/led-bulb-wholesale-damoh", label: "दमोह में एलईडी बल्ब थोक" },
+      { href: "/hi/ceiling-fans-damoh", label: "दमोह में सीलिंग फैन" },
+      { href: "/hi/electricals-damoh", label: "दमोह में तार और इलेक्ट्रिकल" },
+      { href: "/hi/kisan-torch-damoh", label: "दमोह में टॉर्च" },
+      { href: "/hi/sasta-speaker-damoh", label: "दमोह में स्पीकर" },
+      { href: "/hi/diwali-lights-damoh", label: "दमोह में दिवाली लाइट" },
+      { href: "/wholesale-electronics-damoh", label: "This page in English" },
+    ],
+    faqs: [
+      {
+        question: "दमोह में थोक रेट कौन पूछ सकता है?",
+        answer:
+          "दुकानदार, इलेक्ट्रीशियन, और जिसे संख्या में सामान चाहिए। जुनेजा ट्रेडिंग कारपोरेशन दमोह के बड़े थोक विक्रेताओं में से एक है। रेट लिस्ट के लिए " +
+          brand.phone +
+          " पर कॉल या WhatsApp करें। ईमेल " +
+          brand.email +
+          "।",
+      },
+      {
+        question: "किन सामानों का थोक रेट मिलता है?",
+        answer:
+          "एलईडी बल्ब, पंखे, तार, टॉर्च, स्पीकर और दिवाली लाइट। रेट लिस्ट कॉल या WhatsApp पर मिलती है। इस पेज पर नहीं छपी।",
       },
     ],
   },

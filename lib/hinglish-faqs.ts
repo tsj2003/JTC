@@ -1,3 +1,4 @@
+import { brand } from "@/lib/brand";
 import type { LandingFaq } from "@/lib/landings";
 
 function reply(detail: string): string {
@@ -281,16 +282,24 @@ const topics: Record<string, LandingFaq[]> = {
     {
       question: "Damoh mein sasta speaker kahan milega?",
       answer: reply(
-        "The printed low price is SoRoo K1 at ₹699 (MRP ₹699). Yoroto YO-J15 is ₹1,700. Zebronics BT2750RUF 4.1 is call for today's price. Email satpaljuneja11@gmail.com.",
+        `The printed low price is SoRoo K1 at ₹699 (MRP ₹699). Yoroto YO-J15 is ₹1,700. Zebronics BT2750RUF 4.1 is call for today's price. Email ${brand.email}.`,
       ),
     },
     {
       question: "konsa speaker best hai 2000 ke andar?",
       answer: reply(
-        "Under ₹2,000 the published prices are SoRoo K1 at ₹699 and Yoroto YO-J15 at ₹1,700. Compare both at the counter. Zebronics BT2750RUF 4.1 is call for today's price, so it is not listed as under ₹2,000. Email satpaljuneja11@gmail.com.",
+        `Under ₹2,000 the published prices are SoRoo K1 at ₹699 and Yoroto YO-J15 at ₹1,700. Compare both at the counter. Zebronics BT2750RUF 4.1 is call for today's price, so it is not listed as under ₹2,000. Email ${brand.email}.`,
       ),
     },
   ],
+  "wholesale-electronics-damoh": block(
+    `Wholesale rates for shopkeepers and electricians on LED bulbs, fans, wires, torches, speakers and Diwali lights. JTC is one of the biggest wholesalers in Damoh, a thok vikreta (थोक विक्रेता). The rate list is not printed. Call or WhatsApp 99267 59557. Email ${brand.email}.`,
+    [
+      "Damoh mein wholesale electronics kahan milega?",
+      "thok vikreta Damoh Ghanta Ghar",
+      "wholesale rate list kaise milegi?",
+    ],
+  ),
   "celcore-store-damoh": block(
     "We sell genuine Celcore products with brand warranty. Torches, emergency lights, and LED bulbs are the usual ask. Call for today's price.",
     ["Celcore torch Damoh mein kahan milega?", "kissan torch ki dukan Damoh", "Celcore light ka rate kya hai?"],

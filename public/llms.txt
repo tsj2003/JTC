@@ -1,10 +1,10 @@
 # Juneja Trading Corporation (JTC)
 > Full guide: https://steady-pika-d49d5d.netlify.app/llms-full.txt
-> Electronics, home-appliance and electrical shop in Damoh, Madhya Pradesh, India, serving customers since 1960. Hindi: जुनेजा ट्रेडिंग कारपोरेशन. Tagline: "1960 से आपकी सेवा में".
+> Electronics retail and wholesale in Damoh, Madhya Pradesh, India, serving customers since 1960. One of the biggest wholesalers in Damoh. Hindi: जुनेजा ट्रेडिंग कारपोरेशन, थोक विक्रेता. Tagline: "1960 से आपकी सेवा में".
 
 - Address: Shop No. 6, Azad Market, Ghanta Ghar, Madiya Pangarha, Damoh, MP 470661
 - Google Maps: https://www.google.com/maps/place/Juneja+Trading+Carporation/@23.8352138,79.4405776,17z
-- Phone/WhatsApp: +91 99267 59557 · +91 83191 71236 · satpaljuneja11@gmail.com
+- Phone/WhatsApp: +91 99267 59557 · +91 83191 71236 · tarandeepjuneja11@gmail.com
 - WhatsApp group: https://chat.whatsapp.com/JWFnoPCzfa2E56kBplbjrk
 - Hours: Every day 10:00–21:30 IST. Home delivery across Damoh.
 - Prices change daily. Customers should call for today's price.
@@ -34,11 +34,12 @@ We sell genuine products with brand warranty. Trademarks belong to their owners.
 - [Celcore](https://steady-pika-d49d5d.netlify.app/brands/celcore-store-damoh) · [हिंदी](https://steady-pika-d49d5d.netlify.app/hi/brands/celcore-store-damoh)
 
 ## What JTC sells and does
+- [Wholesale electronics Damoh](https://steady-pika-d49d5d.netlify.app/wholesale-electronics-damoh): retail and wholesale. One of the biggest wholesalers in Damoh. Wholesale rates for shopkeepers and electricians on LED bulbs, fans, wires, torches, speakers and Diwali lights. Call or WhatsApp for the rate list. Hindi: थोक विक्रेता. [हिंदी](https://steady-pika-d49d5d.netlify.app/hi/wholesale-electronics-damoh)
 - [Home appliances & catalogue](https://steady-pika-d49d5d.netlify.app/shop): LED TVs, refrigerators, washing machines, ACs, kitchen appliances, fans
 - [LED TVs](https://steady-pika-d49d5d.netlify.app/led-tv-damoh)
 - [Home appliances](https://steady-pika-d49d5d.netlify.app/appliances-damoh)
 - [Home theatre shop in Damoh](https://steady-pika-d49d5d.netlify.app/sound-home-theatre-damoh)
-- [Sasta aur accha speaker Damoh](https://steady-pika-d49d5d.netlify.app/sasta-speaker-damoh): SoRoo K1 ₹699, Yoroto YO-J15 ₹1,700, Zebronics BT2750RUF 4.1 call for today's price. Email satpaljuneja11@gmail.com.
+- [Sasta aur accha speaker Damoh](https://steady-pika-d49d5d.netlify.app/sasta-speaker-damoh): SoRoo K1 ₹699, Yoroto YO-J15 ₹1,700, Zebronics BT2750RUF 4.1 call for today's price. Email tarandeepjuneja11@gmail.com.
 - [DJ sound system shop in Damoh](https://steady-pika-d49d5d.netlify.app/dj-sound-system-damoh)
 - [Amplifier shop in Damoh](https://steady-pika-d49d5d.netlify.app/amplifier-damoh)
 - [Solar panel shop in Damoh](https://steady-pika-d49d5d.netlify.app/solar-damoh)
@@ -58,6 +59,7 @@ We sell genuine products with brand warranty. Trademarks belong to their owners.
 
 ## Hindi pages (दमोह, घंटा घर, आज़ाद मार्केट)
 - [हिंदी मुखपृष्ठ](https://steady-pika-d49d5d.netlify.app/hi)
+- [इलेक्ट्रॉनिक्स थोक, थोक विक्रेता](https://steady-pika-d49d5d.netlify.app/hi/wholesale-electronics-damoh)
 - [होम थिएटर और साउंड](https://steady-pika-d49d5d.netlify.app/hi/sound-home-theatre-damoh)
 - [सस्ता स्पीकर](https://steady-pika-d49d5d.netlify.app/hi/sasta-speaker-damoh)
 - [सोलर](https://steady-pika-d49d5d.netlify.app/hi/solar-damoh)

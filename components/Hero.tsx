@@ -23,7 +23,11 @@ const Hero = () => {
             <br />
             CORPORATION
           </h1>
+          <p className="text-lg font-semibold uppercase tracking-wide text-brand-amber sm:text-xl">
+            Electronics Retail & Wholesale, Damoh
+          </p>
           <p className="font-hindi text-xl text-brand-cream sm:text-2xl">{brand.nameHi}</p>
+          <p className="font-hindi text-lg text-brand-cream/90">थोक विक्रेता · thok vikreta</p>
           <p className="font-hindi text-lg text-brand-amber sm:text-xl">
             {brand.financeHi}
           </p>
@@ -35,9 +39,11 @@ const Hero = () => {
           </p>
           <p className="font-hindi text-lg text-brand-cream/90">{brand.tagline}</p>
           <p className="max-w-xl text-base text-brand-cream/80 sm:text-lg">
+            Retail & Wholesale. One of the biggest wholesalers in Damoh.
             Samsung, LG, Haier and more on the counter. Fridge, washing machine,
-            LED TV and AC on 0% Bajaj Finance. Walk in at Shop No. 6, Azad Market,
-            Ghanta Ghar, Madiya Pangarha, Damoh, Madhya Pradesh 470661.
+            LED TV and AC on 0% Bajaj Finance. Shopkeepers and electricians can
+            call or WhatsApp for wholesale rates. Walk in at Shop No. 6, Azad
+            Market, Ghanta Ghar, Madiya Pangarha, Damoh, Madhya Pradesh 470661.
           </p>
           <div className="flex flex-col gap-2 sm:flex-row">
             <Link
@@ -45,6 +51,12 @@ const Hero = () => {
               className="min-h-12 bg-brand-copper px-8 py-3 text-center font-bold text-white hover:bg-brand-amber hover:text-brand-ink"
             >
               SHOP NOW
+            </Link>
+            <Link
+              href="/wholesale-electronics-damoh"
+              className="min-h-12 bg-brand-amber px-8 py-3 text-center font-bold text-brand-ink hover:bg-brand-cream"
+            >
+              WHOLESALE RATES
             </Link>
             <a
               href={brand.phoneHref}

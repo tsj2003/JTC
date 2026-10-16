@@ -1,3 +1,4 @@
+import { brand } from "@/lib/brand";
 import type { Landing } from "@/lib/landings";
 
 const phone = "+91 99267 59557";
@@ -412,6 +413,7 @@ export const localSeoPages: Record<string, Landing> = {
       { href: "/ceiling-fans-damoh", label: "Ceiling fan shop in Damoh" },
       { href: "/diwali-lights-damoh", label: "Diwali lights in Damoh" },
       { href: "/product/rr-avidite-neo-9w-led-bulb", label: "RR Avidite Neo 9W LED bulb, wholesale rates available" },
+      { href: "/wholesale-electronics-damoh", label: "Wholesale electronics in Damoh" },
       { href: "/hi/led-bulb-wholesale-damoh", label: "यह पेज हिन्दी में" },
     ],
     faqs: [
@@ -710,11 +712,11 @@ export const localSeoPages: Record<string, Landing> = {
     path: "/sasta-speaker-damoh",
     title: "Sasta aur accha speaker Damoh | Speakers from ₹699 | Bluetooth speaker Damoh | JTC",
     description:
-      "Sasta aur accha speaker Damoh at Juneja Trading Corporation, Ghanta Ghar. SoRoo K1 ₹699, Yoroto YO-J15 ₹1,700, Zebronics ZEB-BT2750RUF 4.1 call for today's price. Best price in Damoh for a low price speaker Damoh and a Bluetooth speaker Damoh. Email satpaljuneja11@gmail.com.",
+      "Sasta aur accha speaker Damoh at Juneja Trading Corporation, Ghanta Ghar. SoRoo K1 ₹699, Yoroto YO-J15 ₹1,700, Zebronics ZEB-BT2750RUF 4.1 call for today's price. Best price in Damoh for a low price speaker Damoh and a Bluetooth speaker Damoh. Email tarandeepjuneja11@gmail.com.",
     h1: "Sasta aur accha speaker Damoh – Speakers from ₹699",
     hindi: "दमोह में सस्ता और अच्छा स्पीकर — ₹699 से।",
     intro:
-      "Juneja Trading Corporation keeps a low price speaker Damoh customers can check on the counter at Ghanta Ghar. The Bluetooth speaker Damoh shelf starts at a printed price, and the best price in Damoh among those printed prices is the SoRoo K1 at ₹699. Email satpaljuneja11@gmail.com or call before you come from another town.",
+      "Juneja Trading Corporation keeps a low price speaker Damoh customers can check on the counter at Ghanta Ghar. The Bluetooth speaker Damoh shelf starts at a printed price, and the best price in Damoh among those printed prices is the SoRoo K1 at ₹699. Email tarandeepjuneja11@gmail.com or call before you come from another town.",
     products: [
       {
         name: "SoRoo K1 Series Wireless Speaker",
@@ -762,7 +764,7 @@ export const localSeoPages: Record<string, Landing> = {
         heading: "Best price in Damoh",
         paragraphs: [
           "People who type best price in Damoh or low price speaker Damoh are usually comparing a small Bluetooth speaker with a larger home theatre. Start with the printed prices: SoRoo K1 ₹699 and Yoroto YO-J15 ₹1,700. Then listen. A cube that fills a shop counter is a different job from a 4.1 set under a television.",
-          "The home theatre page covers soundbars, PA and the larger sets whose prices are quoted at the counter. Bajaj Finance EMI available. EMI subject to Bajaj Finance eligibility and terms. Email satpaljuneja11@gmail.com. Open every day from 10:00 AM to 9:30 PM at Shop No. 6, Azad Market, Ghanta Ghar, Damoh 470661.",
+          "The home theatre page covers soundbars, PA and the larger sets whose prices are quoted at the counter. Bajaj Finance EMI available. EMI subject to Bajaj Finance eligibility and terms. Email tarandeepjuneja11@gmail.com. Open every day from 10:00 AM to 9:30 PM at Shop No. 6, Azad Market, Ghanta Ghar, Damoh 470661.",
         ],
       },
     ],
@@ -780,12 +782,94 @@ export const localSeoPages: Record<string, Landing> = {
       {
         question: "Which speakers have a printed price?",
         answer:
-          "SoRoo K1 is ₹699 (MRP ₹699). Yoroto YO-J15 is ₹1,700. Zebronics ZEB-BT2750RUF 4.1 is call for today's price. Email satpaljuneja11@gmail.com.",
+          "SoRoo K1 is ₹699 (MRP ₹699). Yoroto YO-J15 is ₹1,700. Zebronics ZEB-BT2750RUF 4.1 is call for today's price. Email " +
+          brand.email +
+          ".",
       },
       {
         question: "Where is the speaker counter?",
         answer:
           "Juneja Trading Corporation, Shop No. 6, Azad Market, Ghanta Ghar, Damoh 470661. Open every day 10:00 AM to 9:30 PM.",
+      },
+    ],
+  },
+  "wholesale-electronics-damoh": {
+    slug: "wholesale-electronics-damoh",
+    path: "/wholesale-electronics-damoh",
+    title: "Wholesale electronics Damoh | Retail & Wholesale | Juneja Trading Corporation",
+    description:
+      "Wholesale electronics in Damoh at Juneja Trading Corporation, one of the biggest wholesalers in Damoh. Wholesale rates for shopkeepers and electricians on LED bulbs, fans, wires, torches, speakers and Diwali lights. Call or WhatsApp for the rate list. Email " +
+      brand.email +
+      ".",
+    h1: "Wholesale electronics Damoh",
+    hindi: "दमोह में इलेक्ट्रॉनिक्स थोक — थोक विक्रेता।",
+    intro:
+      "Juneja Trading Corporation is electronics retail and wholesale in Damoh, and one of the biggest wholesalers in Damoh. Shopkeepers and electricians use the same Ghanta Ghar counter for a thok vikreta (थोक विक्रेता) rate. The rate list is not printed on this page. Call or WhatsApp for the wholesale rate list.",
+    sections: [
+      {
+        heading: "Wholesale rates for shopkeepers and electricians",
+        paragraphs: [
+          "A household can buy one piece. A shopkeeper or an electrician usually needs a lot: LED bulbs for a row of rooms, fans for a site, wires by the coil, torches for a season, speakers for a counter, and Diwali lights when the festival orders start. Juneja Trading Corporation quotes those wholesale rates at Shop No. 6, Azad Market, Ghanta Ghar, Madiya Pangarha, Damoh 470661. Tell the counter the item, the wattage or size, and the quantity.",
+          "Call " +
+            brand.phone +
+            " or " +
+            brand.phone2 +
+            ", or WhatsApp either number, and ask for the wholesale rate list. Email " +
+            brand.email +
+            ". No wholesale slab is published online, because the rate moves. A figure that is not on this page is not a price.",
+        ],
+      },
+      {
+        heading: "What the wholesale counter covers",
+        items: [
+          "LED bulbs, battens and fittings. The LED bulb wholesale page is the bulb-only note. Wholesale rates are available. Call for today's rate.",
+          "Fans, including ceiling fans for rooms and shops. Confirm the sweep and the brand in stock.",
+          "Wires and cables. Copper rates move, so the per-coil rate is given on the phone or at the counter.",
+          "Torches, including kisan torches and rechargeable lights. Say whether the light is for a shop, a house or night field work.",
+          "Speakers. Printed retail prices stay SoRoo K1 at ₹699 (MRP ₹699) and Yoroto YO-J15 at ₹1,700. Zebronics BT2750RUF 4.1 is call for today's price. A wholesale speaker rate, when one applies, is also call or WhatsApp.",
+          "Diwali lights: jhalar, fairy lights, torches, emergency lights, emergency bulbs and LED bulbs. Damoh's best for Diwali lighting is still the festive counter. Ask for the lot size before the festival week.",
+        ],
+      },
+      {
+        heading: "How to ask for the rate list",
+        paragraphs: [
+          "Walk in, call, or WhatsApp. Say you want wholesale rates, the items, and how many. The shop is open Monday to Sunday, 10:00 AM to 9:30 PM. Customers also come from Hatta, Pathariya, Tendukheda, Jabera and Batiyagarh. Home delivery covers Damoh. Bajaj Finance EMI available on qualifying retail purchases. EMI subject to Bajaj Finance eligibility and terms.",
+          "The shop has traded in Damoh since 1960. Retail and wholesale share the counter. If you only need one television, one fan or one speaker, the retail pages still apply and the printed prices on those pages do not change.",
+        ],
+      },
+    ],
+    links: [
+      {
+        href: "https://wa.me/919926759557?text=Hello%20Juneja%20Trading%20Corporation%2C%20please%20share%20the%20wholesale%20rate%20list%20for%20Damoh.",
+        label: "WhatsApp for the wholesale rate list",
+      },
+      { href: "/led-bulb-wholesale-damoh", label: "LED bulb wholesale in Damoh" },
+      { href: "/ceiling-fans-damoh", label: "Ceiling fans in Damoh" },
+      { href: "/electricals-damoh", label: "Wires and electricals in Damoh" },
+      { href: "/kisan-torch-damoh", label: "Torches in Damoh" },
+      { href: "/sasta-speaker-damoh", label: "Speakers in Damoh" },
+      { href: "/diwali-lights-damoh", label: "Diwali lights in Damoh" },
+      { href: "/hi/wholesale-electronics-damoh", label: "यह पेज हिन्दी में" },
+    ],
+    faqs: [
+      {
+        question: "Who can ask for a wholesale rate in Damoh?",
+        answer:
+          "Shopkeepers and electricians, and any buyer who needs a quantity. Juneja Trading Corporation is one of the biggest wholesalers in Damoh. Call or WhatsApp " +
+          brand.phone +
+          " for the rate list. Email " +
+          brand.email +
+          ".",
+      },
+      {
+        question: "Which items have wholesale rates?",
+        answer:
+          "LED bulbs, fans, wires, torches, speakers and Diwali lights. The rate list is given by call or WhatsApp. It is not printed on this page.",
+      },
+      {
+        question: "Where is the wholesale counter?",
+        answer:
+          "Juneja Trading Corporation, Shop No. 6, Azad Market, Ghanta Ghar, Madiya Pangarha, Damoh 470661. Open every day 10:00 AM to 9:30 PM.",
       },
     ],
   },

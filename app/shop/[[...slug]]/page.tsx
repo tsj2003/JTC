@@ -54,7 +54,7 @@ export async function generateMetadata({
       ? `${copy.title} | ${copy.titleHi} | Juneja Trading Corporation`
       : `${label} in Damoh | Juneja Trading Corporation`,
     description: copy
-      ? `${copy.title} (${copy.titleHi}) at ${brand.nap}. Call ${brand.phone} for today's price. Open ${brand.hours}.`
+      ? `${copy.title} (${copy.titleHi}) at ${brand.nap}. Retail and wholesale, thok vikreta (थोक विक्रेता). Call or WhatsApp ${brand.phone} for today's price and the wholesale rate list. Open ${brand.hours}.`
       : `Shop ${label} at ${brand.nap}. Call ${brand.phone} or ${brand.phone2} for today's price.${emi}`,
     path,
   });

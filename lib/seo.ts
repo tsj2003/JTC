@@ -7,9 +7,9 @@ import { insideShopPhotos } from "@/lib/shop-photos";
 
 export const SITE_URL = "https://steady-pika-d49d5d.netlify.app";
 
-export const homeTitle = `${festiveHeading} | ${festiveItemsHeading} | ${ceilingFansHeading} | Electronics Shop in Damoh since 1960 | Juneja Trading Corporation (JTC)`;
+export const homeTitle = "Juneja Trading Corporation – Electronics Retail & Wholesale, Damoh";
 
-export const homeDescription = `${festiveHeading}. ${festiveItemsHeading}. ${ceilingFansHeading}. Juneja Trading Corporation, Ghanta Ghar, Damoh: LED TVs, fridges, washing machines, home theatre and PA sound, solar, kisan pumps, electricals, Diwali lights and on-the-spot repair. ${brand.nap}. ${brand.emiAvailable}. ${brand.emiTerms}. Open daily 10:00–21:30.`;
+export const homeDescription = `${festiveHeading}. ${festiveItemsHeading}. ${ceilingFansHeading}. Juneja Trading Corporation is electronics retail and wholesale in Damoh, and one of the biggest wholesalers in Damoh. LED TVs, fridges, washing machines, home theatre and PA sound, solar, kisan pumps, electricals, Diwali lights and on-the-spot repair. Shopkeepers and electricians can call or WhatsApp for the wholesale rate list. ${brand.nap}. Email ${brand.email}. ${brand.emiAvailable}. ${brand.emiTerms}. Open daily 10:00–21:30.`;
 
 function hreflangFor(path: string): Record<string, string> | undefined {
   if (path === "/" || path === "/hi") {
