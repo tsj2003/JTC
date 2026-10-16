@@ -1,7 +1,12 @@
 import { newArrivals } from "@/lib/new-arrivals";
 import { stockProducts } from "@/lib/stock-products";
 
-export const localCatalog: Product[] = [
+function catalogImageAlt(path: string, title: string) {
+  const file = path.split("/").pop()?.replace(/\.(jpe?g|webp|png)$/i, "").replace(/-/g, " ") ?? title;
+  return `${file} at Juneja Trading Corporation, Ghanta Ghar, Damoh`;
+}
+
+const catalogItems: Product[] = [
   ...newArrivals,
   {
     id: "1",
@@ -9,7 +14,7 @@ export const localCatalog: Product[] = [
     price: 24990,
     rating: 5,
     description: "Samsung LED TV. 0% Bajaj Finance EMI. Ask the Damoh shop for current sizes.",
-    mainImage: "products/led-tv.jpg",
+    mainImage: "products/samsung-led-tv-damoh.jpg",
     slug: "samsung-led-tv",
     manufacturer: "Samsung",
     categoryId: "led-tv",
@@ -23,7 +28,7 @@ export const localCatalog: Product[] = [
     price: 18990,
     rating: 5,
     description: "LG fridge with 0% Bajaj Finance EMI. Confirm litres at Juneja Trading Corporation.",
-    mainImage: "products/fridge.jpg",
+    mainImage: "products/refrigerator-damoh.jpg",
     slug: "lg-refrigerator",
     manufacturer: "LG",
     categoryId: "fridge",
@@ -37,7 +42,7 @@ export const localCatalog: Product[] = [
     price: 16490,
     rating: 4,
     description: "Haier washing machine. 0% EMI through Bajaj Finance.",
-    mainImage: "products/washer.jpg",
+    mainImage: "products/haier-washing-machine-damoh.jpg",
     slug: "haier-washing-machine",
     manufacturer: "Haier",
     categoryId: "washing-machine",
@@ -50,7 +55,7 @@ export const localCatalog: Product[] = [
     price: 2499,
     rating: 5,
     description: "Mixer grinder for daily kitchen work.",
-    mainImage: "products/mixer.jpg",
+    mainImage: "products/bajaj-mixer-grinder-damoh.jpg",
     slug: "bajaj-mixer-grinder",
     manufacturer: "Bajaj",
     categoryId: "mixer-juicer",
@@ -63,7 +68,7 @@ export const localCatalog: Product[] = [
     price: 1899,
     rating: 4,
     description: "Home juicer. Ask the counter for wattage and jar size.",
-    mainImage: "products/juicer.jpg",
+    mainImage: "products/home-juicer-damoh.jpg",
     slug: "home-juicer",
     manufacturer: "Bajaj",
     categoryId: "mixer-juicer",
@@ -76,7 +81,7 @@ export const localCatalog: Product[] = [
     price: 2499,
     rating: 5,
     description: "Orient ceiling fan for rooms and shops.",
-    mainImage: "products/ceiling-fan.jpg",
+    mainImage: "products/orient-ceiling-fan-damoh.jpg",
     slug: "orient-ceiling-fan",
     manufacturer: "Orient",
     categoryId: "ceiling-fans",
@@ -89,7 +94,7 @@ export const localCatalog: Product[] = [
     price: 1899,
     rating: 4,
     description: "Table and charging fans for power cuts.",
-    mainImage: "products/table-fan.jpg",
+    mainImage: "products/charging-table-fan-damoh.jpg",
     slug: "charging-table-fan",
     manufacturer: "Saisun",
     categoryId: "table-fans",
@@ -102,7 +107,7 @@ export const localCatalog: Product[] = [
     price: 349,
     rating: 4,
     description: "Rechargeable torch and emergency lights.",
-    mainImage: "products/torch.jpg",
+    mainImage: "products/rechargeable-torch-damoh.jpg",
     slug: "rechargeable-torch",
     manufacturer: "Surya",
     categoryId: "torch",
@@ -115,7 +120,7 @@ export const localCatalog: Product[] = [
     price: 799,
     rating: 5,
     description: "LED bulbs, battens, and room lighting.",
-    mainImage: "products/lighting.jpg",
+    mainImage: "products/led-lighting-damoh.jpg",
     slug: "led-home-lighting",
     manufacturer: "Philips",
     categoryId: "lighting",
@@ -128,7 +133,7 @@ export const localCatalog: Product[] = [
     price: 8999,
     rating: 4,
     description: "Speakers and PA system for shops, mandirs, and functions.",
-    mainImage: "products/speaker.jpg",
+    mainImage: "products/ahuja-pa-sound-system-damoh.jpg",
     slug: "pa-sound-system",
     manufacturer: "Ahuja",
     categoryId: "sound-pa",
@@ -141,7 +146,7 @@ export const localCatalog: Product[] = [
     price: 1299,
     rating: 4,
     description: "Decorative lamps and home decor lighting.",
-    mainImage: "products/decor.jpg",
+    mainImage: "products/home-decor-lights-damoh.jpg",
     slug: "home-decor-lights",
     manufacturer: "Philips",
     categoryId: "home-decor",
@@ -154,7 +159,7 @@ export const localCatalog: Product[] = [
     price: 5499,
     rating: 5,
     description: "Submersible pumpset. Confirm HP at the shop.",
-    mainImage: "products/pump.jpg",
+    mainImage: "products/submersible-pump-damoh.jpg",
     slug: "indo-submersible-pump",
     manufacturer: "Indo",
     categoryId: "pumps",
@@ -167,7 +172,7 @@ export const localCatalog: Product[] = [
     price: 32990,
     rating: 5,
     description: "Haier AC. 0% Bajaj Finance EMI. Ask for tonnage at the counter.",
-    mainImage: "products/fridge.jpg",
+    mainImage: "products/refrigerator-damoh.jpg",
     slug: "haier-air-conditioner",
     manufacturer: "Haier",
     categoryId: "air-conditioner",
@@ -181,7 +186,7 @@ export const localCatalog: Product[] = [
     price: 14990,
     rating: 4,
     description: "Solar panel and battery solutions. Confirm kit at Juneja Trading Corporation.",
-    mainImage: "products/lighting.jpg",
+    mainImage: "products/led-lighting-damoh.jpg",
     slug: "luminous-solar-solution",
     manufacturer: "Luminous",
     categoryId: "solar",
@@ -190,6 +195,15 @@ export const localCatalog: Product[] = [
   },
   ...stockProducts,
 ];
+
+export const localCatalog: Product[] = catalogItems.map((product) => ({
+  ...product,
+  imageAlt:
+    product.imageAlt ?? catalogImageAlt(product.mainImage, product.title),
+  imageAlts:
+    product.imageAlts ??
+    product.images?.map((image) => catalogImageAlt(image, product.title)),
+}));
 
 export function featuredCatalog() {
   const featured = localCatalog.filter((product) => product.featured);

@@ -19,7 +19,7 @@ const ShopGallery = () => {
             >
               <Image
                 src={item.src}
-                alt=""
+                alt={`${item.title} at Juneja Trading Corporation, Ghanta Ghar, Damoh`}
                 fill
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
                 className="object-cover transition duration-200 group-hover:scale-105"

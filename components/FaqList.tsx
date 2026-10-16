@@ -3,14 +3,16 @@ import { faqPageJsonLd } from "@/lib/faqs";
 
 const FaqList = ({
   faqs,
+  extraSchemaFaqs = [],
   heading,
   className = "",
 }: {
   faqs: LandingFaq[];
+  extraSchemaFaqs?: LandingFaq[];
   heading: string;
   className?: string;
 }) => {
-  const jsonLd = faqPageJsonLd(faqs);
+  const jsonLd = faqPageJsonLd([...faqs, ...extraSchemaFaqs]);
   return (
     <section className={className}>
       <script
