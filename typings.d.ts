@@ -14,6 +14,8 @@ interface Product {
   images?: string[];
   mrp?: number;
   imageAlt?: string;
+  imageAlts?: string[];
+  titleHi?: string;
   categoryLabel?: string;
   colors?: string;
 }
