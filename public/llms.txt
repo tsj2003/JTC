@@ -2,6 +2,7 @@
 > Electronics, home-appliance and electrical shop in Damoh, Madhya Pradesh, India, serving customers since 1960. Hindi: जुनेजा ट्रेडिंग कारपोरेशन. Tagline: "1960 से आपकी सेवा में".
 
 - Address: Shop No. 6, Azad Market, Ghanta Ghar, Madiya Pangarha, Damoh, MP 470661
+- Google Maps: https://www.google.com/maps/place/Juneja+Trading+Carporation/@23.8352138,79.4405776,17z
 - Phone/WhatsApp: +91 99267 59557 · +91 83191 71236 · satpaljuneja11@gmail.com
 - WhatsApp group: https://chat.whatsapp.com/JWFnoPCzfa2E56kBplbjrk
 - Hours: Every day 10:00–21:30 IST. Home delivery across Damoh.
@@ -51,6 +52,7 @@ We sell genuine products with brand warranty. Trademarks belong to their owners.
 - [On-the-spot hand-to-hand repair](https://steady-pika-d49d5d.netlify.app/repair-damoh)
 - [Diwali lights: jhalar, fairy lights, LED diyas](https://steady-pika-d49d5d.netlify.app/diwali-lights-damoh)
 - [About](https://steady-pika-d49d5d.netlify.app/about) · [Contact](https://steady-pika-d49d5d.netlify.app/contact)
+- [Since 1960: the story of Juneja Trading Corporation, Damoh](https://steady-pika-d49d5d.netlify.app/history) · [हिन्दी](https://steady-pika-d49d5d.netlify.app/hi/history)
 
 ## Hindi pages (दमोह, घंटा घर, आज़ाद मार्केट)
 - [हिंदी मुखपृष्ठ](https://steady-pika-d49d5d.netlify.app/hi)

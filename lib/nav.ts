@@ -33,5 +33,6 @@ export const serviceLinks = [
   ...categoryLinks,
   { name: "Catalogue", href: "/shop" },
   { name: "About", href: "/about" },
+  { name: "Since 1960", href: "/history" },
   { name: "Contact", href: "/contact" },
 ] as const;

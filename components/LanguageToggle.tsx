@@ -10,6 +10,9 @@ function languagePair(pathname: string) {
   if (pathname === "/hi") {
     return { en: "/", hi: "/hi", onHi: true };
   }
+  if (pathname === "/history" || pathname === "/hi/history") {
+    return { en: "/history", hi: "/hi/history", onHi: pathname.startsWith("/hi") };
+  }
   const brandHi = pathname.match(/^\/hi\/brands\/([^/]+)\/?$/);
   if (brandHi && brandStoreSlugs.has(brandHi[1])) {
     return { en: `/brands/${brandHi[1]}`, hi: `/hi/brands/${brandHi[1]}`, onHi: true };

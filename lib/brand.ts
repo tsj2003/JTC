@@ -10,7 +10,7 @@ export const brand = {
   description:
     "Juneja Trading Corporation, Shop No. 6, Azad Market, Ghanta Ghar, Madiya Pangarha, Damoh, Madhya Pradesh 470661, has served customers since 1960. Electronics and electricals: LED TV, fridge, washing machine, AC, sound, solar, torch, fans, and fittings. 0% Bajaj Finance EMI on big brands. Bajaj Finance EMI available. EMI subject to Bajaj Finance eligibility and terms. Open Mon–Sun 10:00–21:30.",
   estYear: 1960,
-  foundingDate: "1960-08-18",
+  foundingDate: "1960",
   slogan: "1960 से आपकी सेवा में",
   city: "Damoh",
   state: "Madhya Pradesh",

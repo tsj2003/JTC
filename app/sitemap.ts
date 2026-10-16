@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/hi",
     "/shop",
     "/about",
+    "/history",
+    "/hi/history",
     "/contact",
     "/search",
     ...landingList.map((page) => page.path),
