@@ -8,8 +8,9 @@ import { notFound } from "next/navigation";
 import React from "react";
 import { sanitize } from "@/lib/sanitize";
 import { EmiBadge } from "@/components/EmiNotice";
-import { brand, whatsappEnquiryHref } from "@/lib/brand";
+import { brand, formatPrice, whatsappEnquiryHref } from "@/lib/brand";
 import { getCatalogBySlug } from "@/lib/catalog";
+import { publishedPrice } from "@/lib/new-arrivals";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
 import type { Metadata } from "next";
 
@@ -33,9 +34,11 @@ export async function generateMetadata({ params }: SingleProductPageProps): Prom
       path: `/product/${paramsAwaited?.productSlug || ""}`,
     });
   }
+  const priceLabel =
+    publishedPrice(product) != null ? formatPrice(publishedPrice(product)) : brand.askPrice;
   return pageMetadata({
     title: `${product.title} in Damoh | Juneja Trading Corporation`,
-    description: `${product.description} ${brand.askPrice}. ${brand.emiAvailable}. ${brand.emiTerms} ${brand.nap}.`,
+    description: `${product.description} ${priceLabel}. ${brand.emiAvailable}. ${brand.emiTerms} ${brand.nap}.`,
     path: `/product/${product.slug}`,
     image: {
       url: `/${product.mainImage}`,
@@ -57,20 +60,24 @@ function productJsonLd(product: Product) {
   if (product.manufacturer) {
     data.brand = { "@type": "Brand", name: product.manufacturer };
   }
-  if (product.mrp) {
-    data.offers = {
+  const price = publishedPrice(product);
+  if (price != null) {
+    const offer: Record<string, unknown> = {
       "@type": "Offer",
       priceCurrency: "INR",
-      price: String(product.mrp),
-      priceSpecification: {
+      price: String(price),
+      availability: "https://schema.org/InStock",
+      url: `${SITE_URL}/product/${product.slug}`,
+    };
+    if (product.mrp) {
+      offer.priceSpecification = {
         "@type": "UnitPriceSpecification",
         price: String(product.mrp),
         priceCurrency: "INR",
         priceType: "https://schema.org/MSRP",
-      },
-      availability: "https://schema.org/InStock",
-      url: `${SITE_URL}/product/${product.slug}`,
-    };
+      };
+    }
+    data.offers = offer;
   }
   return data;
 }
@@ -89,6 +96,7 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
   }
 
   const imageAlt = product.imageAlt || `${product.title}, Damoh`;
+  const price = publishedPrice(product);
 
   return (
     <div className="bg-white">
@@ -123,10 +131,14 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
           </div>
           <div className="flex w-full max-w-xl flex-col gap-5 text-black">
             <h1 className="text-3xl max-sm:text-2xl">{sanitize(product?.title)}</h1>
+            {price != null ? (
+              <p className="text-2xl font-semibold text-brand-ink">{formatPrice(price)}</p>
+            ) : (
+              <p className="text-xl font-semibold text-brand-copper">{brand.askPrice}</p>
+            )}
             {product.mrp ? (
-              <p className="text-xl font-semibold text-brand-ink">MRP ₹{product.mrp}</p>
+              <p className="text-xl font-semibold text-brand-ink">MRP {formatPrice(product.mrp)}</p>
             ) : null}
-            <p className="text-xl font-semibold text-brand-copper">{brand.askPrice}</p>
             <div className="flex flex-col gap-2 sm:flex-row">
               <a
                 href={whatsappEnquiryHref(brand.phoneRaw, product.title)}
