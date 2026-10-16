@@ -86,7 +86,7 @@ We sell genuine products with brand warranty. Trademarks belong to their owners.
 - Review us on Google: https://www.google.com/maps/search/?api=1&query=Juneja+Trading+Corporation+Damoh
 
 ## Catalogue categories
-Each category page has a Hindi title, a written guide, and an FAQ.
+Each category page has a Hindi title, a written guide, and an FAQ. The homepage category menu links to every one of these pages.
 - [Festive lights](https://steady-pika-d49d5d.netlify.app/shop/festive-lights) — दमोह में दिवाली लाइट और झालर
 - [Earbuds](https://steady-pika-d49d5d.netlify.app/shop/earbuds) — दमोह में ईयरबड्स
 - [LED TV](https://steady-pika-d49d5d.netlify.app/shop/led-tv) — दमोह में एलईडी टीवी
