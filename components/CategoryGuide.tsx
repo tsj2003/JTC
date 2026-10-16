@@ -19,7 +19,22 @@ const CategoryGuide = ({ copy }: { copy: ShopCategoryCopy }) => {
           {paragraph}
         </p>
       ))}
+      <p className="mt-4 text-lg leading-8 text-brand-soot">
+        Juneja Trading Corporation is retail and wholesale in Damoh, and one of the biggest wholesalers in the town.
+        Shopkeepers and electricians ask for the thok vikreta (थोक विक्रेता) counter when they need a wholesale rate on this
+        category. Call or WhatsApp for the rate list. No wholesale price is printed on this page.
+      </p>
       <ul className="mt-6 flex flex-col gap-2">
+        <li>
+          <Link href="/wholesale-electronics-damoh" className="font-semibold text-brand-copper hover:underline">
+            Wholesale electronics in Damoh
+          </Link>
+        </li>
+        <li>
+          <Link href="/hi/wholesale-electronics-damoh" className="font-semibold text-brand-copper hover:underline">
+            दमोह में इलेक्ट्रॉनिक्स थोक
+          </Link>
+        </li>
         {copy.links.map((link) => (
           <li key={link.href}>
             <Link href={link.href} className="font-semibold text-brand-copper hover:underline">

@@ -9,9 +9,9 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "जुनेजा ट्रेडिंग कारपोरेशन, दमोह | घंटा घर, आज़ाद मार्केट | 1960 से",
+  title: "जुनेजा ट्रेडिंग कारपोरेशन – इलेक्ट्रॉनिक्स रिटेल और थोक, दमोह",
   description:
-    "जुनेजा ट्रेडिंग कारपोरेशन, शॉप नंबर 6, आज़ाद मार्केट, घंटा घर, मड़िया पंगरहा, दमोह। सोमवार से रविवार सुबह 10 बजे से रात 9:30 बजे तक। 1960 से। Bajaj Finance EMI available।",
+    "जुनेजा ट्रेडिंग कारपोरेशन, शॉप नंबर 6, आज़ाद मार्केट, घंटा घर, मड़िया पंगरहा, दमोह। रिटेल और थोक, थोक विक्रेता। दुकानदार और इलेक्ट्रीशियन थोक रेट लिस्ट के लिए कॉल या WhatsApp करें। सोमवार से रविवार सुबह 10 बजे से रात 9:30 बजे तक। 1960 से। Bajaj Finance EMI available।",
   path: "/hi",
 });
 
@@ -28,11 +28,22 @@ export default function HindiHomePage() {
           <h1 className="mt-3 font-display text-5xl leading-none sm:text-6xl">
             जुनेजा ट्रेडिंग कारपोरेशन, दमोह
           </h1>
+          <p className="mt-4 text-xl text-brand-amber">इलेक्ट्रॉनिक्स रिटेल और थोक · थोक विक्रेता</p>
           <p className="mt-4 text-xl text-brand-amber">{brand.slogan}</p>
           <p className="mt-4 max-w-2xl text-lg leading-8 text-brand-cream/85">
-            दुकान घंटा घर के पास आज़ाद मार्केट में है: शॉप नंबर 6, आज़ाद मार्केट, घंटा घर, मड़िया
-            पंगरहा, दमोह, मध्य प्रदेश 470661। 1960 से एलईडी टीवी, फ्रिज, वॉशिंग मशीन, साउंड, सोलर,
-            किसान पंप, इलेक्ट्रिकल सामान और हाथों-हाथ रिपेयर।
+            दमोह के बड़े थोक विक्रेताओं में से एक। दुकान घंटा घर के पास आज़ाद मार्केट में है: शॉप
+            नंबर 6, आज़ाद मार्केट, घंटा घर, मड़िया पंगरहा, दमोह, मध्य प्रदेश 470661। 1960 से एलईडी
+            टीवी, फ्रिज, वॉशिंग मशीन, साउंड, सोलर, किसान पंप, इलेक्ट्रिकल सामान और हाथों-हाथ
+            रिपेयर। दुकानदार और इलेक्ट्रीशियन एलईडी बल्ब, पंखे, तार, टॉर्च, स्पीकर और दिवाली लाइट का
+            थोक रेट कॉल या WhatsApp पर पूछें।
+          </p>
+          <p className="mt-6">
+            <Link
+              href="/hi/wholesale-electronics-damoh"
+              className="inline-flex min-h-12 items-center bg-brand-amber px-6 py-3 font-bold text-brand-ink"
+            >
+              थोक रेट
+            </Link>
           </p>
         </div>
       </header>

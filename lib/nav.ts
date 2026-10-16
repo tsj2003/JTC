@@ -1,4 +1,5 @@
 export const categoryLinks = [
+  { name: "Wholesale", href: "/wholesale-electronics-damoh" },
   { name: "Home theatre", href: "/sound-home-theatre-damoh" },
   { name: "Sasta speaker", href: "/sasta-speaker-damoh" },
   { name: "DJ sound", href: "/dj-sound-system-damoh" },
