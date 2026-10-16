@@ -1,5 +1,5 @@
 import { navigation } from "@/lib/utils";
-import { categoryLinks } from "@/lib/nav";
+import { brandLinks, categoryLinks } from "@/lib/nav";
 import { brand } from "@/lib/brand";
 import Image from "next/image";
 import Link from "next/link";
@@ -83,6 +83,16 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
+              <h3 className="mt-8 font-display text-lg tracking-wide text-brand-amber">Brands</h3>
+              <ul className="mt-4 space-y-3">
+                {brandLinks.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className="text-sm hover:text-brand-amber">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
               <h3 className="mt-8 font-display text-lg tracking-wide text-brand-amber">Visit</h3>
               <ul className="mt-4 space-y-3">
                 {navigation.about.map((item) => (
@@ -102,7 +112,8 @@ const Footer = () => {
           </div>
         </div>
         <p className="mt-12 border-t border-white/10 pt-6 text-sm text-brand-cream/60">
-          © {new Date().getFullYear()} {brand.name}, {brand.city}. All rights reserved.
+          © {new Date().getFullYear()} {brand.name}, {brand.city}. All rights reserved. Havells, LG,
+          Haier, Samsung, Sony, Zebronics, Usha, Celcore and other names are trademarks of their owners.
         </p>
       </div>
     </footer>

@@ -3,11 +3,20 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import { brandStoreSlugs } from "@/lib/brand-stores";
 import { landings } from "@/lib/landings";
 
 function languagePair(pathname: string) {
   if (pathname === "/hi") {
     return { en: "/", hi: "/hi", onHi: true };
+  }
+  const brandHi = pathname.match(/^\/hi\/brands\/([^/]+)\/?$/);
+  if (brandHi && brandStoreSlugs.has(brandHi[1])) {
+    return { en: `/brands/${brandHi[1]}`, hi: `/hi/brands/${brandHi[1]}`, onHi: true };
+  }
+  const brandEn = pathname.match(/^\/brands\/([^/]+)\/?$/);
+  if (brandEn && brandStoreSlugs.has(brandEn[1])) {
+    return { en: `/brands/${brandEn[1]}`, hi: `/hi/brands/${brandEn[1]}`, onHi: false };
   }
   const hindiSlug = pathname.match(/^\/hi\/([^/]+)\/?$/);
   if (hindiSlug && landings[hindiSlug[1]]) {

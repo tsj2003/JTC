@@ -3,6 +3,7 @@ import ReviewButton from "@/components/ReviewButton";
 import WhatsAppGroupButton from "@/components/WhatsAppGroupButton";
 import { brand } from "@/lib/brand";
 import { sharedFaqs } from "@/lib/faqs";
+import { hindiBrandStoreList } from "@/lib/brand-stores";
 import { hindiLandings } from "@/lib/hindi-landings";
 import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
@@ -36,7 +37,20 @@ export default function HindiHomePage() {
         </div>
       </header>
       <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-        <h2 className="font-display text-4xl">दमोह की सेवाएँ</h2>
+        <h2 className="font-display text-4xl">जो ब्रांड हम बेचते हैं</h2>
+        <ul className="mt-4 flex flex-wrap gap-3">
+          {hindiBrandStoreList.map((page) => (
+            <li key={page.path}>
+              <Link
+                href={page.path}
+                className="inline-flex min-h-11 items-center border border-brand-ink bg-white px-4 text-sm font-bold text-brand-ink hover:bg-brand-ink hover:text-brand-cream"
+              >
+                {page.enquiryName}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <h2 className="mt-12 font-display text-4xl">दमोह की सेवाएँ</h2>
         <ul className="mt-4 space-y-3 text-lg">
           {pages.map((page) => (
             <li key={page.path}>
