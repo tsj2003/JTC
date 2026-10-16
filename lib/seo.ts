@@ -103,6 +103,13 @@ export const storeJsonLd = {
       contactType: "customer service",
     },
   ],
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: brand.lat,
+    longitude: brand.lng,
+  },
+  hasMap: brand.mapsUrl,
+  openingHours: "Mo-Su 10:00-21:30",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -119,9 +126,9 @@ export const storeJsonLd = {
       closes: "21:30",
     },
   ],
-  areaServed: {
+  areaServed: brand.serviceAreas.map((name) => ({
     "@type": "City",
-    name: "Damoh",
-  },
+    name,
+  })),
   sameAs: [brand.whatsappGroupUrl],
 };

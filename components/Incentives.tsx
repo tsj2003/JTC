@@ -10,7 +10,7 @@ const Incentives = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {incentives.map((incentive) => (
             <div key={incentive.name} className="border border-brand-ink/10 bg-white p-6 text-center">
-              <Image width={48} height={48} className="mx-auto" src={incentive.imageSrc} alt={incentive.name} />
+              <Image width={48} height={48} className="mx-auto" src={incentive.imageSrc} alt="" />
               <h3 className="mt-4 font-semibold text-brand-ink">{incentive.name}</h3>
               <p className="mt-2 text-sm text-brand-soot">{incentive.description}</p>
             </div>

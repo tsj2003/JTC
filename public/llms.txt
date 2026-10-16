@@ -19,11 +19,17 @@
 - [Home appliances & catalogue](https://steady-pika-d49d5d.netlify.app/shop): LED TVs, refrigerators, washing machines, ACs, kitchen appliances, fans
 - [LED TVs](https://steady-pika-d49d5d.netlify.app/led-tv-damoh)
 - [Home appliances](https://steady-pika-d49d5d.netlify.app/appliances-damoh)
-- [Home theatre, soundbars, amplifiers, PA systems](https://steady-pika-d49d5d.netlify.app/sound-home-theatre-damoh)
-- [Solar panels, solar lights, solar fans](https://steady-pika-d49d5d.netlify.app/solar-damoh)
+- [Home theatre shop in Damoh](https://steady-pika-d49d5d.netlify.app/sound-home-theatre-damoh)
+- [DJ sound system shop in Damoh](https://steady-pika-d49d5d.netlify.app/dj-sound-system-damoh)
+- [Amplifier shop in Damoh](https://steady-pika-d49d5d.netlify.app/amplifier-damoh)
+- [Solar panel shop in Damoh](https://steady-pika-d49d5d.netlify.app/solar-damoh)
+- [Inverter and battery shop in Damoh](https://steady-pika-d49d5d.netlify.app/inverter-battery-damoh)
 - [Kisan products: submersible pumps, motors, sprayers](https://steady-pika-d49d5d.netlify.app/kisan-agri-damoh)
 - [Electrical goods: wires, switches, LED lights](https://steady-pika-d49d5d.netlify.app/electricals-damoh)
-- [Ceiling fans](https://steady-pika-d49d5d.netlify.app/ceiling-fans-damoh)
+- [Ceiling fan shop in Damoh](https://steady-pika-d49d5d.netlify.app/ceiling-fans-damoh)
+- [LED bulb wholesale in Damoh](https://steady-pika-d49d5d.netlify.app/led-bulb-wholesale-damoh)
+- [Emergency light shop in Damoh](https://steady-pika-d49d5d.netlify.app/emergency-light-damoh)
+- [TV on EMI in Damoh](https://steady-pika-d49d5d.netlify.app/tv-on-emi-damoh)
 - [On-the-spot hand-to-hand repair](https://steady-pika-d49d5d.netlify.app/repair-damoh)
 - [Diwali lights: jhalar, fairy lights, LED diyas](https://steady-pika-d49d5d.netlify.app/diwali-lights-damoh)
 - [About](https://steady-pika-d49d5d.netlify.app/about) · [Contact](https://steady-pika-d49d5d.netlify.app/contact)
@@ -37,6 +43,12 @@
 - [मौके पर रिपेयर](https://steady-pika-d49d5d.netlify.app/hi/repair-damoh)
 - [दिवाली लाइट](https://steady-pika-d49d5d.netlify.app/hi/diwali-lights-damoh)
 - [सीलिंग फैन](https://steady-pika-d49d5d.netlify.app/hi/ceiling-fans-damoh)
+- [डीजे साउंड](https://steady-pika-d49d5d.netlify.app/hi/dj-sound-system-damoh)
+- [एम्पलीफायर](https://steady-pika-d49d5d.netlify.app/hi/amplifier-damoh)
+- [एलईडी बल्ब थोक](https://steady-pika-d49d5d.netlify.app/hi/led-bulb-wholesale-damoh)
+- [इमरजेंसी लाइट](https://steady-pika-d49d5d.netlify.app/hi/emergency-light-damoh)
+- [इनवर्टर और बैटरी](https://steady-pika-d49d5d.netlify.app/hi/inverter-battery-damoh)
+- [ईएमआई पर टीवी](https://steady-pika-d49d5d.netlify.app/hi/tv-on-emi-damoh)
 - [एलईडी टीवी](https://steady-pika-d49d5d.netlify.app/hi/led-tv-damoh)
 - [घरेलू उपकरण](https://steady-pika-d49d5d.netlify.app/hi/appliances-damoh)
 
@@ -45,7 +57,7 @@
 - Bajaj Finance EMI available. EMI subject to Bajaj Finance eligibility and terms.
 - On-the-spot repair at the counter for many small items.
 - Home delivery across Damoh.
-- Serving Damoh since 1960.
+- Serving Damoh since 1960. Also serves Hatta, Pathariya, Tendukheda, Jabera and Batiyagarh from the Ghanta Ghar shop.
 - Location: Shop No. 6, Azad Market, near Ghanta Ghar, Madiya Pangarha, Damoh, Madhya Pradesh 470661.
 
 ## Reviews

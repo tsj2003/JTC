@@ -5,9 +5,7 @@ import HeaderTop from "./HeaderTop";
 import Image from "next/image";
 import SearchInput from "./SearchInput";
 import Link from "next/link";
-import CartElement from "./CartElement";
-import NotificationBell from "./NotificationBell";
-import HeartElement from "./HeartElement";
+import dynamic from "next/dynamic";
 import { signOut, useSession } from "next-auth/react";
 import toast from "react-hot-toast";
 import { useWishlistStore } from "@/app/_zustand/wishlistStore";
@@ -16,6 +14,10 @@ import { brand } from "@/lib/brand";
 import { serviceLinks } from "@/lib/nav";
 import FestiveBanner from "./FestiveBanner";
 import WhatsAppGroupButton from "./WhatsAppGroupButton";
+
+const CartElement = dynamic(() => import("./CartElement"));
+const NotificationBell = dynamic(() => import("./NotificationBell"));
+const HeartElement = dynamic(() => import("./HeartElement"));
 
 const Header = () => {
   const { data: session } = useSession();
@@ -108,7 +110,7 @@ const Header = () => {
       {pathname.startsWith("/admin") === false && (
         <>
           <FestiveBanner />
-          <nav aria-label="Shop services" className="border-t border-brand-ink/10">
+          <nav aria-label="Categories" className="border-t border-brand-ink/10">
             <ul className="mx-auto flex max-w-screen-2xl gap-2 overflow-x-auto px-4 py-3 sm:px-8">
               {serviceLinks.map((item) => (
                 <li key={item.href} className="shrink-0">

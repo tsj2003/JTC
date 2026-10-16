@@ -144,7 +144,7 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
                 href={whatsappEnquiryHref(brand.phoneRaw, product.title)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-12 items-center justify-center bg-[#128C7E] px-5 py-3 text-center text-sm font-bold text-white hover:bg-[#075E54]"
+                className="inline-flex min-h-12 items-center justify-center bg-[#0E6E62] px-5 py-3 text-center text-sm font-bold text-white hover:bg-[#075E54]"
               >
                 {brand.whatsappEnquiryLabel} {brand.phone}
               </a>
@@ -152,7 +152,7 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
                 href={whatsappEnquiryHref(brand.phone2Raw, product.title)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-12 items-center justify-center border border-[#128C7E] px-5 py-3 text-center text-sm font-bold text-[#075E54] hover:bg-[#128C7E] hover:text-white"
+                className="inline-flex min-h-12 items-center justify-center border border-[#075E54] px-5 py-3 text-center text-sm font-bold text-[#075E54] hover:bg-[#0E6E62] hover:text-white"
               >
                 {brand.whatsappEnquiryLabel} {brand.phone2}
               </a>

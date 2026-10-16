@@ -29,6 +29,7 @@ export const brand = {
     "https://maps.google.com/maps?q=Juneja+Trading+Carporation,+Damoh&ll=23.8352138,79.4405776&z=17&output=embed",
   lat: 23.8352138,
   lng: 79.4405776,
+  serviceAreas: ["Damoh", "Hatta", "Pathariya", "Tendukheda", "Jabera", "Batiyagarh"],
   phone: "+91 99267 59557",
   phoneRaw: "9926759557",
   phoneHref: "tel:+919926759557",

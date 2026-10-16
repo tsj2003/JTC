@@ -2,6 +2,8 @@ import { brand } from "@/lib/brand";
 import { sharedFaqs } from "@/lib/faqs";
 import type { Landing } from "@/lib/landings";
 import { visitLine } from "@/lib/landings";
+import { SITE_URL } from "@/lib/seo";
+import Link from "next/link";
 import { EmiSection } from "./EmiNotice";
 import FaqList from "./FaqList";
 import ReviewButton from "./ReviewButton";
@@ -15,12 +17,49 @@ const LandingPage = ({ page }: { page: Landing }) => {
     lang === "hi"
       ? "हर दिन सुबह 10 बजे से रात 9:30 बजे तक खुला। दमोह में होम डिलीवरी।"
       : visitLine;
+  const homePath = lang === "hi" ? "/hi" : "/";
+  const homeName = lang === "hi" ? "होम" : "Home";
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: homeName,
+        item: `${SITE_URL}${homePath === "/hi" ? "/hi" : "/"}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: page.h1,
+        item: `${SITE_URL}${page.path}`,
+      },
+    ],
+  };
 
   return (
     <article lang={lang} className={`bg-brand-paper text-brand-ink ${lang === "hi" ? "font-hindi" : ""}`}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c") }}
+      />
       <header className="bg-brand-ink px-4 py-12 text-brand-cream sm:px-8">
         <div className="mx-auto max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-amber">
+          <nav aria-label="Breadcrumb" className="text-sm text-brand-cream/80">
+            <ol className="flex flex-wrap items-center gap-2">
+              <li>
+                <Link href={homePath} className="hover:text-brand-amber">
+                  {homeName}
+                </Link>
+              </li>
+              <li aria-hidden="true">/</li>
+              <li aria-current="page" className="text-brand-cream">
+                {page.h1}
+              </li>
+            </ol>
+          </nav>
+          <p className="mt-4 text-xs font-semibold uppercase tracking-[0.3em] text-brand-amber">
             {brand.name} · {brand.city}
           </p>
           <h1 className="mt-3 font-display text-5xl leading-none sm:text-6xl">{page.h1}</h1>
@@ -49,6 +88,22 @@ const LandingPage = ({ page }: { page: Landing }) => {
             ) : null}
           </section>
         ))}
+        {page.links && page.links.length > 0 ? (
+          <section className="mt-12">
+            <h2 className="font-display text-4xl text-brand-ink">
+              {lang === "hi" ? "और पन्ने" : "Related pages"}
+            </h2>
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-lg leading-7">
+              {page.links.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="font-semibold text-brand-copper hover:underline">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
         <FaqList
           faqs={faqs}
           heading={lang === "hi" ? "अक्सर पूछे जाने वाले सवाल" : "FAQ"}
@@ -80,6 +135,17 @@ const LandingPage = ({ page }: { page: Landing }) => {
             </a>
             <ReviewButton />
           </div>
+          <iframe
+            title={
+              lang === "hi"
+                ? "जुनेजा ट्रेडिंग कारपोरेशन, घंटा घर, आज़ाद मार्केट, दमोह का नक्शा"
+                : "Map of Juneja Trading Corporation, Ghanta Ghar, Azad Market, Damoh"
+            }
+            src={brand.mapsEmbed}
+            className="mt-6 h-72 w-full border border-brand-ink/20"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </section>
       </div>
     </article>

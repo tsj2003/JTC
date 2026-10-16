@@ -16,7 +16,6 @@ const OfferTicker = () => {
       <Link
         href="/shop"
         className="flex whitespace-nowrap py-2.5 text-sm font-semibold tracking-wide motion-safe:animate-marquee"
-        aria-label={`${brand.finance}. Call ${brand.phone}`}
       >
         <span className="px-8">{line}</span>
         <span className="px-8" aria-hidden="true">
