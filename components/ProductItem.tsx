@@ -2,7 +2,8 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import { sanitize } from "@/lib/sanitize";
-import { brand } from "@/lib/brand";
+import { brand, formatPrice } from "@/lib/brand";
+import { publishedPrice } from "@/lib/new-arrivals";
 
 const ProductItem = ({
   product,
@@ -11,6 +12,7 @@ const ProductItem = ({
   product: Product;
   color: string;
 }) => {
+  const price = publishedPrice(product);
   return (
     <div className="flex w-full flex-col items-center gap-y-2 border border-brand-ink/10 bg-white p-4">
       <Link href={`/product/${product.slug}`} className="relative h-48 w-full">
@@ -43,8 +45,17 @@ const ProductItem = ({
             : "text-lg font-semibold text-white"
         }
       >
-        {product.mrp ? <span className="block">MRP ₹{product.mrp}</span> : null}
-        {brand.askPrice}
+        {price != null ? (
+          <>
+            <span className="block">{formatPrice(price)}</span>
+            {product.mrp ? <span className="block font-normal">MRP {formatPrice(product.mrp)}</span> : null}
+          </>
+        ) : (
+          <>
+            {product.mrp ? <span className="block">MRP ₹{product.mrp}</span> : null}
+            {brand.askPrice}
+          </>
+        )}
       </p>
       <Link
         href={`/product/${product?.slug}`}
