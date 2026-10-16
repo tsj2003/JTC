@@ -277,6 +277,20 @@ const topics: Record<string, LandingFaq[]> = {
     "We sell genuine Usha products with brand warranty. Fans, mixers, and irons are the usual ask. Call for today's price.",
     ["Usha fan Damoh mein kahan milega?", "Usha ki dukan Ghanta Ghar", "Usha mixer ka rate kya hai Damoh"],
   ),
+  "sasta-speaker-damoh": [
+    {
+      question: "Damoh mein sasta speaker kahan milega?",
+      answer: reply(
+        "The printed low price is SoRoo K1 at ₹699 (MRP ₹699). Yoroto YO-J15 is ₹1,700. Zebronics BT2750RUF 4.1 is call for today's price. Email satpaljuneja11@gmail.com.",
+      ),
+    },
+    {
+      question: "konsa speaker best hai 2000 ke andar?",
+      answer: reply(
+        "Under ₹2,000 the published prices are SoRoo K1 at ₹699 and Yoroto YO-J15 at ₹1,700. Compare both at the counter. Zebronics BT2750RUF 4.1 is call for today's price, so it is not listed as under ₹2,000. Email satpaljuneja11@gmail.com.",
+      ),
+    },
+  ],
   "celcore-store-damoh": block(
     "We sell genuine Celcore products with brand warranty. Torches, emergency lights, and LED bulbs are the usual ask. Call for today's price.",
     ["Celcore torch Damoh mein kahan milega?", "kissan torch ki dukan Damoh", "Celcore light ka rate kya hai?"],

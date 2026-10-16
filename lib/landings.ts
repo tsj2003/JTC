@@ -19,6 +19,18 @@ export type LandingLink = {
   label: string;
 };
 
+export type LandingProduct = {
+  name: string;
+  description: string;
+  image: string;
+  sku: string;
+  brandName?: string;
+  price?: number;
+  mrp?: number;
+  href: string;
+  priceLabel: string;
+};
+
 export type Landing = {
   slug: string;
   path: string;
@@ -32,6 +44,7 @@ export type Landing = {
   sections: LandingSection[];
   faqs: LandingFaq[];
   links?: LandingLink[];
+  products?: LandingProduct[];
   enquiryName?: string;
   trademarkNote?: string;
   image?: { src: string; width: number; height: number; alt: string };

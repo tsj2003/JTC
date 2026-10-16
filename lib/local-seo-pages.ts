@@ -72,6 +72,7 @@ export const localSeoPages: Record<string, Landing> = {
       { href: "/product/zebronics-zeb-bt2750ruf-home-theatre", label: "Zebronics ZEB-BT2750RUF 4.1 home theatre" },
       { href: "/product/yoroto-yo-j15-cube-speaker", label: "Yoroto YO-J15 cube speaker, ₹1,700" },
       { href: "/product/soroo-k1-wireless-speaker", label: "SoRoo K1 wireless speaker, ₹699" },
+      { href: "/sasta-speaker-damoh", label: "Sasta aur accha speaker Damoh – Speakers from ₹699" },
       { href: "/hi/sound-home-theatre-damoh", label: "यह पेज हिन्दी में" },
     ],
     faqs: [
@@ -701,6 +702,90 @@ export const localSeoPages: Record<string, Landing> = {
         question: "Do you install and repair jhatka machines?",
         answer:
           "The counter explains earthing, the live wire and insulators. A field visit is arranged only after you ask and the charge is confirmed. For repair, bring the energizer to the Ghanta Ghar shop.",
+      },
+    ],
+  },
+  "sasta-speaker-damoh": {
+    slug: "sasta-speaker-damoh",
+    path: "/sasta-speaker-damoh",
+    title: "Sasta aur accha speaker Damoh | Speakers from ₹699 | Bluetooth speaker Damoh | JTC",
+    description:
+      "Sasta aur accha speaker Damoh at Juneja Trading Corporation, Ghanta Ghar. SoRoo K1 ₹699, Yoroto YO-J15 ₹1,700, Zebronics ZEB-BT2750RUF 4.1 call for today's price. Best price in Damoh for a low price speaker Damoh and a Bluetooth speaker Damoh. Email satpaljuneja11@gmail.com.",
+    h1: "Sasta aur accha speaker Damoh – Speakers from ₹699",
+    hindi: "दमोह में सस्ता और अच्छा स्पीकर — ₹699 से।",
+    intro:
+      "Juneja Trading Corporation keeps a low price speaker Damoh customers can check on the counter at Ghanta Ghar. The Bluetooth speaker Damoh shelf starts at a printed price, and the best price in Damoh among those printed prices is the SoRoo K1 at ₹699. Email satpaljuneja11@gmail.com or call before you come from another town.",
+    products: [
+      {
+        name: "SoRoo K1 Series Wireless Speaker",
+        description:
+          "Bluetooth speaker with TWS, FM, USB, TF card, AUX and a rechargeable battery. Price ₹699. MRP ₹699.",
+        image: "products/soroo-k1-wireless-speaker-damoh.webp",
+        sku: "soroo-k1-wireless-speaker",
+        brandName: "SoRoo",
+        price: 699,
+        mrp: 699,
+        href: "/product/soroo-k1-wireless-speaker",
+        priceLabel: "₹699",
+      },
+      {
+        name: "Yoroto YO-J15 Cube Speaker",
+        description:
+          "Bluetooth speaker with a ring light, TWS, 50W (1200W PMPO), an 8-inch woofer and a wireless mic. Price ₹1,700.",
+        image: "products/yoroto-yo-j15-cube-speaker-damoh.webp",
+        sku: "yoroto-yo-j15-cube-speaker",
+        brandName: "Yoroto",
+        price: 1700,
+        href: "/product/yoroto-yo-j15-cube-speaker",
+        priceLabel: "₹1,700",
+      },
+      {
+        name: "Zebronics ZEB-BT2750RUF 4.1 Speaker Home Theatre",
+        description:
+          "Zebronics BT2750RUF 4.1 home theatre: 70W RMS, Bluetooth, USB, FM, remote, Made in India. Call for today's price. Hindi: ज़ेब्रोनिक्स ZEB-BT2750RUF 4.1 स्पीकर होम थिएटर.",
+        image: "products/zebronics-home-theatre-zeb-bt2750ruf-damoh.webp",
+        sku: "zebronics-zeb-bt2750ruf-home-theatre",
+        brandName: "Zebronics",
+        href: "/product/zebronics-zeb-bt2750ruf-home-theatre",
+        priceLabel: "Call for today's price",
+      },
+    ],
+    sections: [
+      {
+        heading: "Bluetooth speaker Damoh",
+        paragraphs: [
+          "A Bluetooth speaker Damoh buyer usually wants something that plays from a phone and still has a wired input. The SoRoo K1 and the Yoroto YO-J15 both do that. SoRoo is the low price speaker Damoh page can print at ₹699, and that figure is also the MRP. Yoroto YO-J15 is ₹1,700, still under ₹2,000, with a ring light, TWS and a wireless mic. Those are the only two speaker prices this shop publishes.",
+          "The Zebronics ZEB-BT2750RUF 4.1 is the home-theatre set on the same counter: satellites, a subwoofer, Bluetooth, USB, FM and a remote. It is call for today's price. Do not treat a missing figure as ₹0. Ask on the phone.",
+        ],
+      },
+      {
+        heading: "Best price in Damoh",
+        paragraphs: [
+          "People who type best price in Damoh or low price speaker Damoh are usually comparing a small Bluetooth speaker with a larger home theatre. Start with the printed prices: SoRoo K1 ₹699 and Yoroto YO-J15 ₹1,700. Then listen. A cube that fills a shop counter is a different job from a 4.1 set under a television.",
+          "The home theatre page covers soundbars, PA and the larger sets whose prices are quoted at the counter. Bajaj Finance EMI available. EMI subject to Bajaj Finance eligibility and terms. Email satpaljuneja11@gmail.com. Open every day from 10:00 AM to 9:30 PM at Shop No. 6, Azad Market, Ghanta Ghar, Damoh 470661.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/sound-home-theatre-damoh", label: "Home theatre shop in Damoh" },
+      { href: "/hi/sound-home-theatre-damoh", label: "दमोह में होम थिएटर" },
+      { href: "/brands/zebronics-store-damoh", label: "Zebronics speakers in Damoh" },
+      { href: "/dj-sound-system-damoh", label: "DJ sound system shop in Damoh" },
+      { href: "/product/soroo-k1-wireless-speaker", label: "SoRoo K1, ₹699" },
+      { href: "/product/yoroto-yo-j15-cube-speaker", label: "Yoroto YO-J15, ₹1,700" },
+      { href: "/product/zebronics-zeb-bt2750ruf-home-theatre", label: "Zebronics BT2750RUF 4.1, call for today's price" },
+      { href: "/hi/sasta-speaker-damoh", label: "यह पेज हिन्दी में" },
+    ],
+    faqs: [
+      {
+        question: "Which speakers have a printed price?",
+        answer:
+          "SoRoo K1 is ₹699 (MRP ₹699). Yoroto YO-J15 is ₹1,700. Zebronics ZEB-BT2750RUF 4.1 is call for today's price. Email satpaljuneja11@gmail.com.",
+      },
+      {
+        question: "Where is the speaker counter?",
+        answer:
+          "Juneja Trading Corporation, Shop No. 6, Azad Market, Ghanta Ghar, Damoh 470661. Open every day 10:00 AM to 9:30 PM.",
       },
     ],
   },
