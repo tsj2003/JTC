@@ -3,6 +3,7 @@ import { brand } from "@/lib/brand";
 import { ceilingFansHeading, festiveHeading, festiveItemsHeading } from "@/lib/copy";
 import { brandStoreSlugs } from "@/lib/brand-stores";
 import { landings } from "@/lib/landings";
+import { insideShopPhotos } from "@/lib/shop-photos";
 
 export const SITE_URL = "https://steady-pika-d49d5d.netlify.app";
 
@@ -87,7 +88,24 @@ export const storeJsonLd = {
   foundingDate: brand.foundingDate,
   url: `${SITE_URL}/`,
   logo: `${SITE_URL}${brand.logo}`,
-  image: `${SITE_URL}${brand.logo}`,
+  image: [
+    {
+      "@type": "ImageObject",
+      contentUrl: `${SITE_URL}${brand.logo}`,
+      url: `${SITE_URL}${brand.logo}`,
+      name: brand.logoAlt,
+    },
+    ...insideShopPhotos.map((photo) => ({
+      "@type": "ImageObject",
+      contentUrl: `${SITE_URL}${photo.src}`,
+      url: `${SITE_URL}${photo.src}`,
+      name: photo.alt,
+      caption: photo.alt,
+      description: photo.alt,
+      width: photo.width,
+      height: photo.height,
+    })),
+  ],
   telephone: ["+91-99267-59557", "+91-83191-71236"],
   email: brand.email,
   address: {

@@ -53,7 +53,7 @@ const ProductItem = ({
         ) : (
           <>
             {product.mrp ? <span className="block">MRP ₹{product.mrp}</span> : null}
-            {brand.askPrice}
+            {product.priceLabel || brand.askPrice}
           </>
         )}
       </p>

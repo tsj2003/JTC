@@ -1,6 +1,7 @@
 import { brand } from "@/lib/brand";
 import { ceilingFansHeading, festiveHeading, festiveItemsHeading } from "@/lib/copy";
 import { localSeoPages } from "@/lib/local-seo-pages";
+import { withShopImage } from "@/lib/shop-photos";
 
 export type LandingSection = {
   heading: string;
@@ -33,6 +34,7 @@ export type Landing = {
   links?: LandingLink[];
   enquiryName?: string;
   trademarkNote?: string;
+  image?: { src: string; width: number; height: number; alt: string };
 };
 
 const visitHours = `${brand.hoursNote}. Home delivery across Damoh.`;
@@ -391,10 +393,12 @@ const coreLandings: Record<string, Landing> = {
   },
 };
 
-export const landings: Record<string, Landing> = {
-  ...coreLandings,
-  ...localSeoPages,
-};
+export const landings: Record<string, Landing> = Object.fromEntries(
+  Object.entries({ ...coreLandings, ...localSeoPages }).map(([slug, page]) => [
+    slug,
+    withShopImage(page, "en"),
+  ]),
+);
 
 export const landingList = Object.values(landings);
 

@@ -1,5 +1,24 @@
 export const newArrivals: Product[] = [
   {
+    id: "70",
+    title: "Surya Mosquito Racket Pro",
+    titleHi: "सूर्या मच्छर रैकेट प्रो",
+    price: 0,
+    priceLabel: "Call for price",
+    rating: 0,
+    description:
+      "Surya Mosquito Racket Pro at Juneja Trading Corporation, Damoh. Hindi: सूर्या मच्छर रैकेट प्रो. Lithium-ion battery, USB to Type-C charging, 6 months warranty. Call for price.",
+    mainImage: "products/surya-mosquito-racket-pro.webp",
+    imageAlt:
+      "Surya Mosquito Racket Pro with a lithium-ion battery and USB to Type-C charging at Juneja Trading Corporation, Damoh",
+    slug: "surya-mosquito-racket-pro",
+    manufacturer: "Surya",
+    categoryId: "electrical",
+    category: { name: "electrical" },
+    categoryLabel: "Mosquito racket",
+    inStock: 1,
+  },
+  {
     id: "66",
     title: "Rechargeable LED Searchlight Torch with Solar Panel and Side Lamp",
     titleHi: "रिचार्जेबल एलईडी सर्चलाइट टॉर्च, सोलर पैनल और साइड लैंप के साथ",

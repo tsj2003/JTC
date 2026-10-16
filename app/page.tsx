@@ -5,6 +5,7 @@ import { EmiSection } from "@/components/EmiNotice";
 import FestiveHighlights from "@/components/FestiveHighlights";
 import OfferTicker from "@/components/OfferTicker";
 import ServiceLinks from "@/components/ServiceLinks";
+import InsideOurShop from "@/components/InsideOurShop";
 import ShopGallery from "@/components/ShopGallery";
 import ShopUpdates from "@/components/ShopUpdates";
 import ShopVideos from "@/components/ShopVideos";
@@ -35,6 +36,7 @@ export default function Home() {
       <ServiceLinks />
       <CategoryMenu />
       <ProductsSection />
+      <InsideOurShop />
       <ShopGallery />
       <ShopVideos />
       <Incentives />

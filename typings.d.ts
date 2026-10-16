@@ -16,6 +16,7 @@ interface Product {
   imageAlt?: string;
   imageAlts?: string[];
   titleHi?: string;
+  priceLabel?: string;
   categoryLabel?: string;
   colors?: string;
 }
