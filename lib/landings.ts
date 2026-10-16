@@ -108,6 +108,8 @@ const coreLandings: Record<string, Landing> = {
       "Kisan pump shop in Damoh at Juneja Trading Corporation, Ghanta Ghar, since 1960. Submersible pumps, monoblock pumps, motors, starters and sprayers. Open Mon–Sun 10:00–21:30.",
     h1: "Kisan (farm) products in Damoh",
     hindi: "किसान भाइयों के लिए पंप, मोटर, स्प्रेयर — दमोह में।",
+    intro:
+      "Pumps and motors are on this page. Long-range rechargeable kisan torches and solar or electric jhatka machines (fence energizers) have their own pages, linked below.",
     sections: [
       {
         heading: "What we offer",
@@ -117,9 +119,16 @@ const coreLandings: Record<string, Landing> = {
           "Submersible cable and pipe fittings (confirm with shop)",
           "Battery and manual sprayers (confirm with shop)",
           "Solar pumps and solar DC options",
+          "Long-range rechargeable kisan torches for night field work",
+          "Solar and electric jhatka machines to keep neelgai and other animals out of the crop",
           "Pump and motor repair",
         ],
       },
+    ],
+    links: [
+      { href: "/kisan-torch-damoh", label: "Best kisan torch in Damoh" },
+      { href: "/jhatka-machine-damoh", label: "Jhatka machine in Damoh" },
+      { href: "/hi/kisan-agri-damoh", label: "यह पेज हिन्दी में" },
     ],
     faqs: [
       {
