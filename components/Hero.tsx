@@ -69,7 +69,7 @@ const Hero = () => {
               href={shot.href}
               className="relative aspect-[4/3] overflow-hidden border border-brand-copper/40 bg-brand-soot"
             >
-              <Image src={shot.src} alt={shot.label} fill className="object-cover" sizes="280px" />
+              <Image src={shot.src} alt="" fill className="object-cover" sizes="280px" />
               <span className="absolute bottom-2 left-2 bg-brand-ink/85 px-2 py-1 text-xs text-brand-cream">
                 {shot.label}
               </span>

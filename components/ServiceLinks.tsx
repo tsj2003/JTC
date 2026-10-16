@@ -1,4 +1,4 @@
-import { serviceLinks } from "@/lib/nav";
+import { categoryLinks } from "@/lib/nav";
 import Link from "next/link";
 
 const ServiceLinks = () => {
@@ -7,7 +7,7 @@ const ServiceLinks = () => {
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-8">
         <h2 className="font-display text-4xl text-brand-ink sm:text-5xl">Find it at the shop</h2>
         <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {serviceLinks.map((item) => (
+          {categoryLinks.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}

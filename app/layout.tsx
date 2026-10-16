@@ -11,19 +11,21 @@ import { storeJsonLd, SITE_URL, homeDescription, homeTitle, pageMetadata } from 
 const display = Teko({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["500", "600", "700"],
+  weight: ["600", "700"],
 });
 
 const body = Source_Sans_3({
   subsets: ["latin"],
   variable: "--font-body",
   weight: ["400", "600", "700"],
+  display: "optional",
 });
 
 const hindi = Noto_Sans_Devanagari({
   subsets: ["devanagari"],
   variable: "--font-hindi",
-  weight: ["500", "600", "700"],
+  weight: ["600"],
+  display: "optional",
 });
 
 export const metadata: Metadata = {
@@ -49,7 +51,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#C45C26",
+  themeColor: "#B04614",
 };
 
 export default function RootLayout({

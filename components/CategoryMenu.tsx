@@ -11,7 +11,7 @@ const CategoryMenu = () => {
       <div className="mx-auto grid max-w-screen-2xl grid-cols-2 gap-3 px-4 py-10 sm:grid-cols-3 sm:px-8 md:grid-cols-4">
         {categoryMenuList.map((item) => (
           <CategoryItem title={item.title} key={item.id} href={item.href}>
-            <Image src={item.src} width={48} height={48} alt={item.title} />
+            <Image src={item.src} width={48} height={48} alt="" />
           </CategoryItem>
         ))}
       </div>

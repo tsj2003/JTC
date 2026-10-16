@@ -1,8 +1,9 @@
 import type { Landing } from "@/lib/landings";
+import { localSeoPagesHi } from "@/lib/local-seo-pages-hi";
 
 const shop = "जुनेजा ट्रेडिंग कारपोरेशन, शॉप नंबर 6, आज़ाद मार्केट, घंटा घर, मड़िया पंगरहा, दमोह";
 
-export const hindiLandings: Record<string, Landing> = {
+const coreHindiLandings: Record<string, Landing> = {
   "sound-home-theatre-damoh": {
     slug: "sound-home-theatre-damoh",
     path: "/hi/sound-home-theatre-damoh",
@@ -356,4 +357,9 @@ export const hindiLandings: Record<string, Landing> = {
       },
     ],
   },
+};
+
+export const hindiLandings: Record<string, Landing> = {
+  ...coreHindiLandings,
+  ...localSeoPagesHi,
 };

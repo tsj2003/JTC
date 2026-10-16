@@ -14,7 +14,7 @@ export default function GlobalError({
         <button
           type="button"
           onClick={() => reset()}
-          className="mt-6 bg-[#C45C26] px-5 py-2 font-semibold text-white"
+          className="mt-6 bg-[#B04614] px-5 py-2 font-semibold text-white"
         >
           Retry
         </button>

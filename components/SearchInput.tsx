@@ -20,6 +20,7 @@ const SearchInput = () => {
         type="text"
         value={searchInput}
         onChange={(e) => setSearchInput(e.target.value)}
+        aria-label="Search fans, TV, fridge, AC"
         placeholder="Search fans, TV, fridge, AC..."
         className="input input-bordered w-full rounded-r-none bg-white outline-none focus:outline-none"
       />

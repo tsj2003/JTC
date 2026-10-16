@@ -1,5 +1,5 @@
 import { navigation } from "@/lib/utils";
-import { serviceLinks } from "@/lib/nav";
+import { categoryLinks } from "@/lib/nav";
 import { brand } from "@/lib/brand";
 import Image from "next/image";
 import Link from "next/link";
@@ -56,9 +56,9 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-8 lg:col-span-2">
             <div>
-              <h3 className="font-display text-lg tracking-wide text-brand-amber">Shop</h3>
+              <h3 className="font-display text-lg tracking-wide text-brand-amber">Categories</h3>
               <ul className="mt-4 space-y-3">
-                {serviceLinks.map((item) => (
+                {categoryLinks.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} className="text-sm hover:text-brand-amber">
                       {item.name}
@@ -75,7 +75,15 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-display text-lg tracking-wide text-brand-amber">Visit</h3>
+              <h3 className="font-display text-lg tracking-wide text-brand-amber">Areas we serve</h3>
+              <ul className="mt-4 space-y-2">
+                {brand.serviceAreas.map((area) => (
+                  <li key={area} className="text-sm">
+                    {area}
+                  </li>
+                ))}
+              </ul>
+              <h3 className="mt-8 font-display text-lg tracking-wide text-brand-amber">Visit</h3>
               <ul className="mt-4 space-y-3">
                 {navigation.about.map((item) => (
                   <li key={item.name}>

@@ -1,5 +1,6 @@
 import { brand } from "@/lib/brand";
 import { ceilingFansHeading, festiveHeading, festiveItemsHeading } from "@/lib/copy";
+import { localSeoPages } from "@/lib/local-seo-pages";
 
 export type LandingSection = {
   heading: string;
@@ -10,6 +11,11 @@ export type LandingSection = {
 export type LandingFaq = {
   question: string;
   answer: string;
+};
+
+export type LandingLink = {
+  href: string;
+  label: string;
 };
 
 export type Landing = {
@@ -24,11 +30,12 @@ export type Landing = {
   lang?: "en" | "hi";
   sections: LandingSection[];
   faqs: LandingFaq[];
+  links?: LandingLink[];
 };
 
 const visitHours = `${brand.hoursNote}. Home delivery across Damoh.`;
 
-export const landings: Record<string, Landing> = {
+const coreLandings: Record<string, Landing> = {
   "sound-home-theatre-damoh": {
     slug: "sound-home-theatre-damoh",
     path: "/sound-home-theatre-damoh",
@@ -96,9 +103,9 @@ export const landings: Record<string, Landing> = {
   "kisan-agri-damoh": {
     slug: "kisan-agri-damoh",
     path: "/kisan-agri-damoh",
-    title: "Kisan Products in Damoh: Submersible Pumps, Motors, Sprayers | JTC",
+    title: "Kisan Pump Shop in Damoh | JTC Since 1960",
     description:
-      "Submersible pumps, monoblock pumps, motors, starters, cables and sprayers for farmers in Damoh. Juneja Trading Corporation, Ghanta Ghar, since 1960.",
+      "Kisan pump shop in Damoh at Juneja Trading Corporation, Ghanta Ghar, since 1960. Submersible pumps, monoblock pumps, motors, starters and sprayers. Open Mon–Sun 10:00–21:30.",
     h1: "Kisan (farm) products in Damoh",
     hindi: "किसान भाइयों के लिए पंप, मोटर, स्प्रेयर — दमोह में।",
     sections: [
@@ -128,8 +135,8 @@ export const landings: Record<string, Landing> = {
   "electricals-damoh": {
     slug: "electricals-damoh",
     path: "/electricals-damoh",
-    title: `${ceilingFansHeading} | ${festiveHeading}: ${festiveItemsHeading} | Electrical Shop in Damoh | JTC`,
-    description: `${ceilingFansHeading}. ${festiveHeading}. ${festiveItemsHeading}. Wires and cables, switches, MCBs, extension boards, ceiling and table fans, LED bulbs and fittings in Damoh. Retail and bulk orders at Juneja Trading Corporation.`,
+    title: `Electrical Shop in Damoh | ${ceilingFansHeading} | ${festiveHeading} | JTC Since 1960`,
+    description: `Electrical shop in Damoh. ${ceilingFansHeading}. ${festiveHeading}. ${festiveItemsHeading}. Wires, switches, MCBs, fans and LED bulbs at Juneja Trading Corporation, Ghanta Ghar, since 1960.`,
     h1: "Electrical goods in Damoh",
     hindi: "वायर, स्विच, पंखे, एलईडी लाइट — दमोह की इलेक्ट्रिकल दुकान।",
     sections: [
@@ -179,9 +186,9 @@ export const landings: Record<string, Landing> = {
   "repair-damoh": {
     slug: "repair-damoh",
     path: "/repair-damoh",
-    title: "Electronics & Appliance Repair in Damoh: On-the-Spot | JTC",
+    title: "Electronics Repair Shop in Damoh | JTC Since 1960",
     description:
-      "Hand-to-hand, on-the-spot repair of fans, mixers, irons, sound systems, chargers, lights and more at Juneja Trading Corporation, Ghanta Ghar, Damoh.",
+      "Electronics repair shop in Damoh. On-the-spot repair of fans, mixers, irons, sound systems and lights at Juneja Trading Corporation, Ghanta Ghar, since 1960. Open Mon–Sun 10:00–21:30.",
     h1: "On-the-spot repair in Damoh",
     hindi: "हाथों-हाथ रिपेयरिंग — दमोह, घंटा घर।",
     sections: [
@@ -211,8 +218,8 @@ export const landings: Record<string, Landing> = {
   "diwali-lights-damoh": {
     slug: "diwali-lights-damoh",
     path: "/diwali-lights-damoh",
-    title: `${festiveHeading}: ${festiveItemsHeading} | ${ceilingFansHeading} | JTC`,
-    description: `${festiveHeading}. ${festiveItemsHeading}. ${ceilingFansHeading}. Diwali decoration lights in Damoh: jhalar, LED string and rope lights, fairy lights, meteor lights, LED diyas, lanterns. Retail and wholesale at Juneja Trading Corporation.`,
+    title: `Diwali Lights Shop in Damoh | ${festiveHeading} | JTC Since 1960`,
+    description: `Diwali lights shop in Damoh. ${festiveHeading}. ${festiveItemsHeading}. ${ceilingFansHeading}. Jhalar, fairy lights and LED diyas at Juneja Trading Corporation, Ghanta Ghar, since 1960.`,
     h1: "Diwali lights in Damoh",
     hindi: "दिवाली झालर, फेयरी लाइट, एलईडी दीया — दमोह में।",
     sections: [
@@ -296,8 +303,8 @@ export const landings: Record<string, Landing> = {
   "led-tv-damoh": {
     slug: "led-tv-damoh",
     path: "/led-tv-damoh",
-    title: `LED TVs in Damoh | ${brand.emiAvailable} | Juneja Trading Corporation`,
-    description: `LED and smart TVs in Damoh at ${brand.nap}. ${brand.emiAvailable}. ${brand.emiTerms}. Call ${brand.phone} to confirm screen size and today's stock.`,
+    title: `LED TV Shop in Damoh | ${brand.emiAvailable} | JTC Since 1960`,
+    description: `LED TV shop in Damoh at ${brand.nap}, since 1960. ${brand.emiAvailable}. ${brand.emiTerms}. Call ${brand.phone} to confirm screen size and today's stock.`,
     h1: "LED TVs in Damoh",
     hindi: "एलईडी टीवी — दमोह में।",
     showEmi: true,
@@ -327,8 +334,8 @@ export const landings: Record<string, Landing> = {
   "appliances-damoh": {
     slug: "appliances-damoh",
     path: "/appliances-damoh",
-    title: `Home appliances in Damoh | ${brand.emiAvailable} | Juneja Trading Corporation`,
-    description: `Refrigerators, washing machines, air conditioners and kitchen appliances in Damoh at ${brand.nap}. ${brand.emiAvailable}. ${brand.emiTerms}. Call ${brand.phone} for today's stock.`,
+    title: `Home Appliance Shop in Damoh | ${brand.emiAvailable} | JTC Since 1960`,
+    description: `Home appliance shop in Damoh at ${brand.nap}, since 1960. Refrigerators, washing machines, air conditioners and kitchen appliances. ${brand.emiAvailable}. ${brand.emiTerms}.`,
     h1: "Home appliances in Damoh",
     hindi: "फ्रिज, वॉशिंग मशीन और एसी — दमोह में।",
     showEmi: true,
@@ -358,6 +365,11 @@ export const landings: Record<string, Landing> = {
       },
     ],
   },
+};
+
+export const landings: Record<string, Landing> = {
+  ...coreLandings,
+  ...localSeoPages,
 };
 
 export const landingList = Object.values(landings);

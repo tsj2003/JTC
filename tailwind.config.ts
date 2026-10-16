@@ -12,7 +12,7 @@ const config: Config = {
         "custom-yellow": "#E8A317",
         brand: {
           ink: "#1C1914",
-          copper: "#C45C26",
+          copper: "#B04614",
           amber: "#E8A317",
           cream: "#F6F0E6",
           soot: "#3A342C",

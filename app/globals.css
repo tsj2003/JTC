@@ -9,24 +9,24 @@ body {
 }
 
 .range{
-    --range-shdw: #C45C26;
+    --range-shdw: #B04614;
 }
 
 .checkbox:checked, .checkbox[checked="true"], .checkbox[aria-checked="true"] {
     background-repeat: no-repeat;
     animation: checkmark var(--animation-input, 0.2s) ease-out;
-    background-color: #C45C26;
-    background-image: linear-gradient(-45deg, transparent 65%, #C45C26 65.99%),
-      linear-gradient(45deg, transparent 75%, #C45C26 75.99%),
-      linear-gradient(-45deg, #C45C26 40%, transparent 40.99%),
+    background-color: #B04614;
+    background-image: linear-gradient(-45deg, transparent 65%, #B04614 65.99%),
+      linear-gradient(45deg, transparent 75%, #B04614 75.99%),
+      linear-gradient(-45deg, #B04614 40%, transparent 40.99%),
       linear-gradient(
         45deg,
-        #C45C26 30%,
+        #B04614 30%,
         white 30.99%,
         white 40%,
         transparent 40.99%
       ),
-      linear-gradient(-45deg, white 50%, #C45C26 50.99%);
+      linear-gradient(-45deg, white 50%, #B04614 50.99%);
 }
 
 .no-scrollbar::-webkit-scrollbar {

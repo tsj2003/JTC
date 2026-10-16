@@ -11,3 +11,9 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Trailing-slash duplicates go to the canonical URL without a slash.
+[[redirects]]
+  from = "/*/"
+  to = "/:splat"
+  status = 301
