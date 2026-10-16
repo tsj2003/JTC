@@ -30,6 +30,11 @@ export default function AboutPage() {
           fridge, washing machine, AC, sound, solar, torch, fans, lighting, and
           fittings.
         </p>
+        <p className="mt-4 text-lg leading-8">
+          <Link href="/history" className="font-semibold text-brand-copper hover:underline">
+            Since 1960: the story of Juneja Trading Corporation, Damoh
+          </Link>
+        </p>
         <p className="mt-4 text-lg leading-8 text-brand-soot">
           Brands on the counter include {brand.brands.join(", ")}. Fridge,
           washing machine, LED TV and AC can be taken on 0% Bajaj Finance EMI.

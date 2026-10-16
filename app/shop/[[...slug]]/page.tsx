@@ -12,6 +12,8 @@ import { EmiSection } from "@/components/EmiNotice";
 import { brand } from "@/lib/brand";
 import { applianceTvCategories } from "@/lib/copy";
 import { sanitize } from "@/lib/sanitize";
+import CategoryGuide from "@/components/CategoryGuide";
+import { shopCategoryCopy } from "@/lib/shop-category-copy";
 import { pageMetadata } from "@/lib/seo";
 import { categoryMenuList } from "@/lib/utils";
 import type { Metadata } from "next";
@@ -43,12 +45,17 @@ export async function generateMetadata({
   }
   const label = categoryHeading(category);
   const path = `/shop/${(slug ?? [category]).join("/")}`;
+  const copy = shopCategoryCopy(category);
   const emi = applianceTvCategories.has(category)
     ? ` ${brand.emiAvailable}. ${brand.emiTerms}`
     : "";
   return pageMetadata({
-    title: `${label} in Damoh | Juneja Trading Corporation`,
-    description: `Shop ${label} at ${brand.nap}. Call ${brand.phone} or ${brand.phone2} for today's price.${emi}`,
+    title: copy
+      ? `${copy.title} | ${copy.titleHi} | Juneja Trading Corporation`
+      : `${label} in Damoh | Juneja Trading Corporation`,
+    description: copy
+      ? `${copy.title} (${copy.titleHi}) at ${brand.nap}. Call ${brand.phone} for today's price. Open ${brand.hours}.`
+      : `Shop ${label} at ${brand.nap}. Call ${brand.phone} or ${brand.phone2} for today's price.${emi}`,
     path,
   });
 }
@@ -59,12 +66,18 @@ const ShopPage = async ({ params, searchParams }: { params: Promise<{ slug?: str
   
   const category = awaitedParams?.slug?.[0];
   const heading = sanitize(categoryHeading(category));
+  const copy = shopCategoryCopy(category);
 
   return (
     <div className="bg-white text-black">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-8">
         <Breadcrumb />
         <h1 className="py-4 text-3xl font-bold uppercase max-sm:text-2xl">{heading}</h1>
+        {copy ? (
+          <p lang="hi" className="font-hindi text-xl text-brand-copper">
+            {copy.titleHi}
+          </p>
+        ) : null}
         {category && applianceTvCategories.has(category) ? <EmiSection /> : null}
         <div className="grid gap-8 md:grid-cols-[200px_1fr]">
           <details className="md:hidden">
@@ -85,6 +98,7 @@ const ShopPage = async ({ params, searchParams }: { params: Promise<{ slug?: str
           </div>
         </div>
       </div>
+      {copy ? <CategoryGuide copy={copy} /> : null}
     </div>
   );
 };

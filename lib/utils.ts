@@ -54,6 +54,7 @@ export const navigation = {
   ],
   about: [
     { name: "About Juneja Trading", href: "/about" },
+    { name: "Since 1960", href: "/history" },
     { name: "Visit the Damoh shop", href: "/contact" },
     { name: "Company Profile", href: "/about" },
   ],

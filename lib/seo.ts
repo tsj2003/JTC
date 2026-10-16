@@ -19,6 +19,13 @@ function hreflangFor(path: string): Record<string, string> | undefined {
       "x-default": `${SITE_URL}/`,
     };
   }
+  if (path === "/history" || path === "/hi/history") {
+    return {
+      en: `${SITE_URL}/history`,
+      hi: `${SITE_URL}/hi/history`,
+      "x-default": `${SITE_URL}/history`,
+    };
+  }
   const brandSlug = path.match(/^\/(?:hi\/)?brands\/([^/]+)$/);
   if (brandSlug && brandStoreSlugs.has(brandSlug[1])) {
     return {
@@ -157,5 +164,5 @@ export const storeJsonLd = {
     "@type": "City",
     name,
   })),
-  sameAs: [brand.whatsappGroupUrl],
+  sameAs: [brand.whatsappGroupUrl, brand.mapsUrl],
 };
