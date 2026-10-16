@@ -1,4 +1,5 @@
 # Juneja Trading Corporation (JTC)
+> Full guide: https://steady-pika-d49d5d.netlify.app/llms-full.txt
 > Electronics, home-appliance and electrical shop in Damoh, Madhya Pradesh, India, serving customers since 1960. Hindi: जुनेजा ट्रेडिंग कारपोरेशन. Tagline: "1960 से आपकी सेवा में".
 
 - Address: Shop No. 6, Azad Market, Ghanta Ghar, Madiya Pangarha, Damoh, MP 470661
