@@ -7,12 +7,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { EmiSection } from "./EmiNotice";
 import FaqList from "./FaqList";
+import HinglishFaq from "./HinglishFaq";
+import { hinglishFaqsFor } from "@/lib/hinglish-faqs";
 import ReviewButton from "./ReviewButton";
 import WhatsAppGroupButton from "./WhatsAppGroupButton";
 
 const LandingPage = ({ page }: { page: Landing }) => {
   const lang = page.lang ?? "en";
   const faqs = [...page.faqs, ...sharedFaqs(lang)];
+  const hinglish = hinglishFaqsFor(page.slug);
   const visitHeading = lang === "hi" ? "दुकान पर आइए" : "Visit us";
   const hoursLine =
     lang === "hi"
@@ -151,9 +154,11 @@ const LandingPage = ({ page }: { page: Landing }) => {
         ) : null}
         <FaqList
           faqs={faqs}
+          extraSchemaFaqs={hinglish}
           heading={lang === "hi" ? "अक्सर पूछे जाने वाले सवाल" : "FAQ"}
           className="mt-12"
         />
+        <HinglishFaq faqs={hinglish} />
         <section className="mt-12">
           <h2 className="font-display text-4xl text-brand-ink">{visitHeading}</h2>
           <address className="mt-4 not-italic text-lg leading-8 text-brand-soot">

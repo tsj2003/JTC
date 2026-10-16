@@ -1,8 +1,11 @@
 import FaqList from "@/components/FaqList";
+import HinglishFaq from "@/components/HinglishFaq";
+import { hinglishFaqsFor } from "@/lib/hinglish-faqs";
 import type { ShopCategoryCopy } from "@/lib/shop-category-copy";
 import Link from "next/link";
 
 const CategoryGuide = ({ copy }: { copy: ShopCategoryCopy }) => {
+  const hinglish = hinglishFaqsFor(copy.slug);
   return (
     <section className="mx-auto max-w-3xl px-4 py-12 text-brand-ink sm:px-6" aria-labelledby="category-guide-title">
       <p lang="hi" className="font-hindi text-2xl text-brand-copper">
@@ -25,7 +28,8 @@ const CategoryGuide = ({ copy }: { copy: ShopCategoryCopy }) => {
           </li>
         ))}
       </ul>
-      <FaqList faqs={copy.faqs} heading="FAQ" className="mt-10" />
+      <FaqList faqs={copy.faqs} extraSchemaFaqs={hinglish} heading="FAQ" className="mt-10" />
+      <HinglishFaq faqs={hinglish} />
     </section>
   );
 };

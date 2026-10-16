@@ -14,12 +14,18 @@ function item(opts: {
   featured?: boolean;
   images?: string[];
 }): Product {
+  const altFrom = (path: string) => {
+    const file = path.split("/").pop()?.replace(/\.(jpe?g|webp|png)$/i, "").replace(/-/g, " ") ?? opts.title;
+    return `${file} at Juneja Trading Corporation, Ghanta Ghar, Damoh`;
+  };
   return {
     inStock: 1,
     rating: opts.rating ?? 4,
     featured: opts.featured ?? false,
     category: { name: opts.categoryId },
     ...opts,
+    imageAlt: altFrom(opts.mainImage),
+    imageAlts: opts.images?.map((image) => altFrom(image)),
   };
 }
 
@@ -31,7 +37,7 @@ export const stockProducts: Product[] = [
     slug: "oneplus-buds-pro-3",
     manufacturer: "OnePlus",
     categoryId: "earbuds",
-    mainImage: "real/stock-01.jpg",
+    mainImage: "real/oneplus-buds-pro-3-damoh.jpg",
     description: `OnePlus Buds Pro 3 wireless earbuds. Dynaudio tuning. ${shopNote}`,
     rating: 5,
     featured: true,
@@ -43,7 +49,7 @@ export const stockProducts: Product[] = [
     slug: "mini-massage-gun-mg-203",
     manufacturer: "Generic",
     categoryId: "electrical",
-    mainImage: "real/stock-02.jpg",
+    mainImage: "real/mini-massage-gun-mg-203-damoh.jpg",
     description: `Mini massage gun, 4 speeds, Type-C charge. ${shopNote}`,
   }),
   item({
@@ -53,7 +59,7 @@ export const stockProducts: Product[] = [
     slug: "milky-ball-ww-fairy-lights",
     manufacturer: "JTC Lights",
     categoryId: "festive-lights",
-    mainImage: "real/stock-03.jpg",
+    mainImage: "real/milky-ball-warm-white-fairy-lights-damoh.jpg",
     description: `Milky ball warm white decorative lights. ${shopNote}`,
     featured: true,
   }),
@@ -64,8 +70,8 @@ export const stockProducts: Product[] = [
     slug: "lantern-string-lights",
     manufacturer: "JTC Lights",
     categoryId: "festive-lights",
-    mainImage: "real/stock-04.jpg",
-    images: ["real/stock-04.jpg", "real/stock-05.jpg"],
+    mainImage: "real/lantern-string-lights-damoh.jpg",
+    images: ["real/lantern-string-lights-damoh.jpg", "real/lantern-string-lights-in-shop-damoh.jpg"],
     description: `Multi-colour lantern decorative string lights. ${shopNote}`,
     featured: true,
   }),
@@ -76,7 +82,7 @@ export const stockProducts: Product[] = [
     slug: "usb-fairy-lights-remote",
     manufacturer: "Allixin",
     categoryId: "festive-lights",
-    mainImage: "real/stock-06.jpg",
+    mainImage: "real/usb-fairy-lights-remote-damoh.jpg",
     description: `USB fairy lights with remote and multiple modes. ${shopNote}`,
   }),
   item({
@@ -86,7 +92,7 @@ export const stockProducts: Product[] = [
     slug: "hexcilia-vs-ps-15",
     manufacturer: "Hexcilia",
     categoryId: "festive-lights",
-    mainImage: "real/stock-07.jpg",
+    mainImage: "real/hexcilia-rice-lights-damoh.jpg",
     description: `Hexcilia VS PS-15 8mm super brightness rice lights. ${shopNote}`,
   }),
   item({
@@ -96,7 +102,7 @@ export const stockProducts: Product[] = [
     slug: "mango-fruit-decorative-lights",
     manufacturer: "JTC Lights",
     categoryId: "festive-lights",
-    mainImage: "real/stock-08.jpg",
+    mainImage: "real/mango-fruit-decorative-lights-damoh.jpg",
     description: `Mango and fruit-style decorative lights for festivals. ${shopNote}`,
   }),
   item({
@@ -106,7 +112,7 @@ export const stockProducts: Product[] = [
     slug: "90-led-80ft-lamp-string",
     manufacturer: "JTC Lights",
     categoryId: "festive-lights",
-    mainImage: "real/stock-09.jpg",
+    mainImage: "real/90-led-80ft-lamp-string-damoh.jpg",
     description: `90 actual lamps, about 80 ft length. ${shopNote}`,
     featured: true,
   }),
@@ -117,7 +123,7 @@ export const stockProducts: Product[] = [
     slug: "dura-led-diya",
     manufacturer: "Dura",
     categoryId: "festive-lights",
-    mainImage: "real/stock-10.jpg",
+    mainImage: "real/dura-led-diya-damoh.jpg",
     description: `Dura water-sensor pixel LED diya, 48+ hour backup. ${shopNote}`,
   }),
   item({
@@ -127,7 +133,7 @@ export const stockProducts: Product[] = [
     slug: "maya-burj-khalifa-spectacle",
     manufacturer: "Maya",
     categoryId: "festive-lights",
-    mainImage: "real/stock-11.jpg",
+    mainImage: "real/maya-burj-khalifa-lights-damoh.jpg",
     description: `Maya Burj Khalifa spectacle decorative light set. ${shopNote}`,
   }),
   item({
@@ -137,7 +143,7 @@ export const stockProducts: Product[] = [
     slug: "v-touch-led-rope-light",
     manufacturer: "V Touch",
     categoryId: "festive-lights",
-    mainImage: "real/stock-12.jpg",
+    mainImage: "real/v-touch-led-rope-light-damoh.jpg",
     description: `V Touch 220V SMD LED rope light. 8m / 22m / 45m. IP65. ${shopNote}`,
   }),
   item({
@@ -147,7 +153,7 @@ export const stockProducts: Product[] = [
     slug: "meteor-rain-led-lights",
     manufacturer: "JTC Lights",
     categoryId: "festive-lights",
-    mainImage: "real/stock-13.jpg",
+    mainImage: "real/meteor-rain-led-lights-damoh.jpg",
     description: `Meteor / snowfall LED tubes for trees and outdoor decor. ${shopNote}`,
   }),
   item({
@@ -157,7 +163,7 @@ export const stockProducts: Product[] = [
     slug: "co5po-multi-colour-string-lights",
     manufacturer: "CO5PO",
     categoryId: "festive-lights",
-    mainImage: "real/stock-14.jpg",
+    mainImage: "real/co5po-multi-colour-string-lights-damoh.jpg",
     description: `CO5PO copper-wire multi colour LED string. 15m / 25m / 35m. ${shopNote}`,
   }),
   item({
@@ -167,7 +173,7 @@ export const stockProducts: Product[] = [
     slug: "britex-led-neon-rope-5m",
     manufacturer: "Britex",
     categoryId: "festive-lights",
-    mainImage: "real/stock-15.jpg",
+    mainImage: "real/britex-led-neon-rope-5m-damoh.jpg",
     description: `Britex 5m IC-RGB neon rope, app and IR remote. ${shopNote}`,
   }),
   item({
@@ -177,7 +183,7 @@ export const stockProducts: Product[] = [
     slug: "multi-colour-decoration-lights",
     manufacturer: "JTC Lights",
     categoryId: "festive-lights",
-    mainImage: "real/stock-16.jpg",
+    mainImage: "real/multi-colour-decoration-lights-damoh.jpg",
     description: `Heart, star, flower, snowflake and ball decorative lights. ${shopNote}`,
   }),
   item({
@@ -187,7 +193,7 @@ export const stockProducts: Product[] = [
     slug: "nm-21-15m-multi-colour",
     manufacturer: "Any Lights",
     categoryId: "festive-lights",
-    mainImage: "real/stock-17.jpg",
+    mainImage: "real/nm-21-15m-string-lights-damoh.jpg",
     description: `NM-21 15 metre multi colour festive string lights. ${shopNote}`,
   }),
   item({
@@ -197,7 +203,7 @@ export const stockProducts: Product[] = [
     slug: "nm-series-festive-lighting",
     manufacturer: "Any Lights",
     categoryId: "festive-lights",
-    mainImage: "real/stock-18.jpg",
+    mainImage: "real/nm-series-festive-lighting-damoh.jpg",
     description: `NM-21 to NM-24 festive red, white, warm and cool lights. ${shopNote}`,
   }),
   item({
@@ -207,7 +213,7 @@ export const stockProducts: Product[] = [
     slug: "80-led-multi-colour-string",
     manufacturer: "JTC Lights",
     categoryId: "festive-lights",
-    mainImage: "real/stock-19.jpg",
+    mainImage: "real/80-led-multi-colour-string-damoh.jpg",
     description: `80 LED high-brightness multi colour string lights. ${shopNote}`,
   }),
   item({
@@ -217,7 +223,7 @@ export const stockProducts: Product[] = [
     slug: "co5po-rgb-string-50m",
     manufacturer: "CO5PO",
     categoryId: "festive-lights",
-    mainImage: "real/stock-20.jpg",
+    mainImage: "real/co5po-rgb-string-50m-damoh.jpg",
     description: `CO5PO RGB 12mm cylinder string, 50 metre copper wire. ${shopNote}`,
   }),
   item({
@@ -227,7 +233,7 @@ export const stockProducts: Product[] = [
     slug: "scorpio-led-rope-light",
     manufacturer: "Scorpio",
     categoryId: "festive-lights",
-    mainImage: "real/stock-21.jpg",
+    mainImage: "real/scorpio-led-rope-light-damoh.jpg",
     description: `Scorpio 220V SMD 2835 LED rope. 8m / 22m / 35m. ${shopNote}`,
   }),
   item({
@@ -237,7 +243,7 @@ export const stockProducts: Product[] = [
     slug: "15m-warm-white-led-string",
     manufacturer: "JTC Lights",
     categoryId: "festive-lights",
-    mainImage: "real/stock-22.jpg",
+    mainImage: "real/15m-warm-white-led-string-damoh.jpg",
     description: `15 metre warm white LED string for home and mandap. ${shopNote}`,
   }),
   item({
@@ -247,7 +253,7 @@ export const stockProducts: Product[] = [
     slug: "aihana-led-rope-light",
     manufacturer: "Aihana",
     categoryId: "festive-lights",
-    mainImage: "real/stock-23.jpg",
+    mainImage: "real/aihana-led-rope-light-damoh.jpg",
     description: `Aihana 220V LED strip / rope. 8m / 22m / 35m, IP65. ${shopNote}`,
   }),
   item({
@@ -257,7 +263,7 @@ export const stockProducts: Product[] = [
     slug: "golden-eagle-gel-102",
     manufacturer: "Golden Eagle",
     categoryId: "festive-lights",
-    mainImage: "real/stock-24.jpg",
+    mainImage: "real/golden-eagle-gel-102-led-string-damoh.jpg",
     description: `Golden Eagle GEL-102 10mm rocket warm white LED string. ${shopNote}`,
   }),
   item({
@@ -267,7 +273,7 @@ export const stockProducts: Product[] = [
     slug: "12mm-multi-colour-led-string",
     manufacturer: "JTC Lights",
     categoryId: "festive-lights",
-    mainImage: "real/stock-25.jpg",
+    mainImage: "real/12mm-multi-colour-led-string-damoh.jpg",
     description: `12mm multi colour LED string lights. ${shopNote}`,
   }),
   item({
@@ -277,7 +283,7 @@ export const stockProducts: Product[] = [
     slug: "leeway-glitter-gel-ball",
     manufacturer: "Leeway",
     categoryId: "festive-lights",
-    mainImage: "real/stock-26.jpg",
+    mainImage: "real/leeway-glitter-gel-ball-lights-damoh.jpg",
     description: `Leeway glitter gel ball decoration lights. ${shopNote}`,
   }),
   item({
@@ -287,7 +293,7 @@ export const stockProducts: Product[] = [
     slug: "niwad-patta-led-lighting",
     manufacturer: "JTC Lights",
     categoryId: "festive-lights",
-    mainImage: "real/stock-27.jpg",
+    mainImage: "real/niwad-patta-led-lighting-damoh.jpg",
     description: `Niwad patta / ribbon LED lighting. 15m to 50m. ${shopNote}`,
   }),
   item({
@@ -297,7 +303,7 @@ export const stockProducts: Product[] = [
     slug: "leeway-shiny-jari-ladi",
     manufacturer: "Leeway",
     categoryId: "festive-lights",
-    mainImage: "real/stock-28.jpg",
+    mainImage: "real/leeway-shiny-jari-ladi-damoh.jpg",
     description: `Leeway shiny jari ladi with LED string for festivals. ${shopNote}`,
   }),
   item({
@@ -307,7 +313,7 @@ export const stockProducts: Product[] = [
     slug: "apple-35w-dual-usb-c-adapter",
     manufacturer: "Apple",
     categoryId: "electrical",
-    mainImage: "real/stock-29.jpg",
+    mainImage: "real/apple-35w-dual-usb-c-adapter-damoh.jpg",
     description: `Apple 35W Dual USB-C Port Power Adapter, as shown in shop stock. ${shopNote}`,
     rating: 5,
     featured: true,
@@ -319,7 +325,7 @@ export const stockProducts: Product[] = [
     slug: "realme-buds-wireless-3-neo",
     manufacturer: "realme",
     categoryId: "earbuds",
-    mainImage: "real/stock-30.jpg",
+    mainImage: "real/realme-buds-wireless-3-neo-damoh.jpg",
     description: `realme Buds Wireless 3 Neo Bluetooth neckband. ${shopNote}`,
     rating: 5,
     featured: true,
@@ -331,12 +337,12 @@ export const stockProducts: Product[] = [
     slug: "hd-silicon-extension-board",
     manufacturer: "HD Silicon",
     categoryId: "electrical",
-    mainImage: "real/stock-32.jpg",
+    mainImage: "real/hd-silicon-extension-board-damoh.jpg",
     images: [
-      "real/stock-32.jpg",
-      "real/stock-31.jpg",
-      "real/stock-33.jpg",
-      "real/stock-34.jpg",
+      "real/hd-silicon-extension-board-damoh.jpg",
+      "real/extension-boards-damoh.jpg",
+      "real/diamond-extension-board-damoh.jpg",
+      "real/hd-13-extension-board-damoh.jpg",
     ],
     description: `HD Silicon HD-13, Diamond, Creta and Deluxe multi-socket boards. ${shopNote}`,
   }),
@@ -347,8 +353,8 @@ export const stockProducts: Product[] = [
     slug: "indoor-led-digital-standee",
     manufacturer: "JTC Display",
     categoryId: "led-display",
-    mainImage: "real/stock-35.jpg",
-    images: ["real/stock-35.jpg", "real/stock-36.jpg"],
+    mainImage: "real/indoor-led-digital-standee-damoh.jpg",
+    images: ["real/indoor-led-digital-standee-damoh.jpg", "real/led-kiosk-standee-damoh.jpg"],
     description: `Indoor LED kiosk / digital standee for shops and restaurants. Confirm size at the shop. ${shopNote}`,
     featured: true,
   }),
@@ -359,7 +365,7 @@ export const stockProducts: Product[] = [
     slug: "samcon-digital-home-ups-4cfl",
     manufacturer: "Samcon",
     categoryId: "solar",
-    mainImage: "real/stock-37.jpg",
+    mainImage: "real/samcon-digital-home-ups-damoh.jpg",
     description: `Samcon digital home UPS (4CFL) solar power generation unit. ${shopNote}`,
   }),
   item({
@@ -369,7 +375,7 @@ export const stockProducts: Product[] = [
     slug: "samcon-speaker-horn-p-100",
     manufacturer: "Samcon",
     categoryId: "sound-pa",
-    mainImage: "real/stock-38.jpg",
+    mainImage: "real/samcon-speaker-horn-p-100-damoh.jpg",
     description: `Samcon unit horn combination speaker P-100. ${shopNote}`,
   }),
   item({
@@ -379,7 +385,7 @@ export const stockProducts: Product[] = [
     slug: "12v-35w-dc-street-light",
     manufacturer: "JTC Lights",
     categoryId: "solar",
-    mainImage: "real/stock-39.jpg",
+    mainImage: "real/12v-35w-dc-street-light-damoh.jpg",
     description: `12 Volt DC 35 watt LED street light. ${shopNote}`,
   }),
   item({
@@ -389,7 +395,7 @@ export const stockProducts: Product[] = [
     slug: "banjara-radio-dj-bass-player",
     manufacturer: "Banjara Radio",
     categoryId: "sound-pa",
-    mainImage: "real/stock-40.jpg",
+    mainImage: "real/banjara-radio-dj-bass-player-damoh.jpg",
     description: `Banjara Radio DJ Bass Bluetooth / USB / TF digital player. ${shopNote}`,
   }),
   item({
@@ -399,7 +405,7 @@ export const stockProducts: Product[] = [
     slug: "advantech-8080-car-music-player",
     manufacturer: "Advantech",
     categoryId: "sound-pa",
-    mainImage: "real/stock-41.jpg",
+    mainImage: "real/advantech-8080-car-music-player-damoh.jpg",
     description: `Advantech 8080 Class D car stereo, Bluetooth, USB, FM. ${shopNote}`,
   }),
   item({
@@ -409,8 +415,8 @@ export const stockProducts: Product[] = [
     slug: "sun-direct-sun-hd-dish",
     manufacturer: "Sun Direct",
     categoryId: "dth",
-    mainImage: "real/stock-43.jpg",
-    images: ["real/stock-43.jpg", "real/stock-42.jpg"],
+    mainImage: "real/sun-direct-sun-hd-dish-damoh.jpg",
+    images: ["real/sun-direct-sun-hd-dish-damoh.jpg", "real/sun-direct-dish-damoh.jpg"],
     description: `Sun Direct Sun HD DTH dish antenna. ${shopNote}`,
   }),
   item({
@@ -420,8 +426,8 @@ export const stockProducts: Product[] = [
     slug: "dish-tv-d2h-hd-dish",
     manufacturer: "Dish TV",
     categoryId: "dth",
-    mainImage: "real/stock-44.jpg",
-    images: ["real/stock-44.jpg", "real/stock-45.jpg", "real/stock-49.jpg"],
+    mainImage: "real/dish-tv-d2h-hd-dish-damoh.jpg",
+    images: ["real/dish-tv-d2h-hd-dish-damoh.jpg", "real/d2h-hd-home-dish-damoh.jpg", "real/dish-tv-stock-damoh.jpg"],
     description: `Dish TV / d2h HD Home dish antenna. ${shopNote}`,
   }),
   item({
@@ -431,8 +437,8 @@ export const stockProducts: Product[] = [
     slug: "jbb-16-amp-power-house",
     manufacturer: "JBB",
     categoryId: "electrical",
-    mainImage: "real/stock-47.jpg",
-    images: ["real/stock-47.jpg", "real/stock-46.jpg"],
+    mainImage: "real/jbb-16-amp-power-house-damoh.jpg",
+    images: ["real/jbb-16-amp-power-house-damoh.jpg", "real/jbb-16a-box-damoh.jpg"],
     description: `JBB 6-to-16 Amp power house extension cord. ${shopNote}`,
   }),
   item({
@@ -442,7 +448,7 @@ export const stockProducts: Product[] = [
     slug: "12v-1amp-dc-pin-adapter",
     manufacturer: "JTC Electrical",
     categoryId: "electrical",
-    mainImage: "real/stock-48.jpg",
+    mainImage: "real/12v-1a-dc-pin-adapter-damoh.jpg",
     description: `12V 1Amp DC pin adapter, shop packed. ${shopNote}`,
   }),
   item({
@@ -452,7 +458,7 @@ export const stockProducts: Product[] = [
     slug: "plasma-1988n-induction",
     manufacturer: "Plasma",
     categoryId: "kitchen",
-    mainImage: "real/stock-50.jpg",
+    mainImage: "real/plasma-1988n-induction-damoh.jpg",
     description: `Plasma 1988N inverter induction cooktop. ${shopNote}`,
     featured: true,
   }),
@@ -463,8 +469,8 @@ export const stockProducts: Product[] = [
     slug: "jetron-phantom-infrared-cooker",
     manufacturer: "Jetron",
     categoryId: "kitchen",
-    mainImage: "real/stock-52.jpg",
-    images: ["real/stock-52.jpg", "real/stock-51.jpg"],
+    mainImage: "real/jetron-phantom-infrared-cooker-damoh.jpg",
+    images: ["real/jetron-phantom-infrared-cooker-damoh.jpg", "real/jetron-cooker-grill-damoh.jpg"],
     description: `Jetron Phantom 2200W soft-touch infrared cooker. ${shopNote}`,
   }),
   item({
@@ -474,7 +480,7 @@ export const stockProducts: Product[] = [
     slug: "stylo-dry-iron",
     manufacturer: "Stylo",
     categoryId: "irons",
-    mainImage: "real/stock-53.jpg",
+    mainImage: "real/stylo-dry-iron-damoh.jpg",
     description: `Stylo dry iron for daily use. ${shopNote}`,
   }),
   item({
@@ -484,7 +490,7 @@ export const stockProducts: Product[] = [
     slug: "steam-iron",
     manufacturer: "JTC Appliances",
     categoryId: "irons",
-    mainImage: "real/stock-54.jpg",
+    mainImage: "real/steam-iron-damoh.jpg",
     description: `Steam irons in multiple colours at the Damoh counter. ${shopNote}`,
   }),
   item({
@@ -494,7 +500,7 @@ export const stockProducts: Product[] = [
     slug: "sb-421-soundbar",
     manufacturer: "JTC Sound",
     categoryId: "sound-pa",
-    mainImage: "real/stock-55.jpg",
+    mainImage: "real/sb-421-soundbar-damoh.jpg",
     description: `SB-421 soundbar, 38" bar, 6.5" woofer, Bluetooth, HDMI ARC. ${shopNote}`,
     featured: true,
   }),
@@ -505,7 +511,7 @@ export const stockProducts: Product[] = [
     slug: "dotsun-mega-phone",
     manufacturer: "Dotsun",
     categoryId: "sound-pa",
-    mainImage: "real/stock-56.jpg",
+    mainImage: "real/dotsun-mega-phone-damoh.jpg",
     description: `Dotsun Bluetooth megaphone with USB/TF, FM and folding handle. ${shopNote}`,
   }),
 ];
