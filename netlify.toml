@@ -1,7 +1,7 @@
 [build]
   # Drop a restored Next cache before compiling. Production publishes were
   # failing with no log while the same tree built on deploy previews.
-  command = "rm -rf .next && npm run build"
+  command = "npm cache clean --force && rm -rf .next node_modules/.cache && npm run build"
   publish = ".next"
 
 [build.environment]
