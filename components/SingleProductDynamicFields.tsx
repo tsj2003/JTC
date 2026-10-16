@@ -16,6 +16,7 @@ import BuyNowSingleProductBtn from "./BuyNowSingleProductBtn";
 
 const SingleProductDynamicFields = ({ product }: { product: Product }) => {
   const [quantityCount, setQuantityCount] = useState<number>(1);
+  if (!(product.price > 0)) return null;
   return (
     <>
       <QuantityInput

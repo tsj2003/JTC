@@ -1,5 +1,85 @@
 export const newArrivals: Product[] = [
   {
+    id: "66",
+    title: "Rechargeable LED Searchlight Torch with Solar Panel and Side Lamp",
+    titleHi: "रिचार्जेबल एलईडी सर्चलाइट टॉर्च, सोलर पैनल और साइड लैंप के साथ",
+    price: 0,
+    rating: 0,
+    description:
+      "Rechargeable LED searchlight torch with solar panel and side lamp at Juneja Trading Corporation, Damoh. Hindi: रिचार्जेबल एलईडी सर्चलाइट टॉर्च, सोलर पैनल और साइड लैंप के साथ. Big reflector, LED side panel, solar charging, and a carry handle. For kisan night field work and emergency use. Call for today's price.",
+    mainImage: "products/searchlight-torch-front.webp",
+    imageAlt:
+      "Rechargeable LED searchlight torch with a large reflector and carry handle at Juneja Trading Corporation, Damoh",
+    images: [
+      "products/searchlight-torch-side.webp",
+      "products/searchlight-torch-solar.webp",
+    ],
+    imageAlts: [
+      "Side view of a rechargeable LED searchlight torch with an LED side panel at Juneja Trading Corporation, Damoh",
+      "Solar panel on a rechargeable LED searchlight torch at Juneja Trading Corporation, Damoh",
+    ],
+    slug: "rechargeable-led-searchlight-torch",
+    manufacturer: "",
+    categoryId: "torch",
+    category: { name: "torch" },
+    categoryLabel: "Kisan / Emergency lights",
+    inStock: 1,
+  },
+  {
+    id: "67",
+    title: "Zebronics ZEB-BT2750RUF 4.1 Speaker Home Theatre",
+    titleHi: "ज़ेब्रोनिक्स ZEB-BT2750RUF 4.1 स्पीकर होम थिएटर",
+    price: 0,
+    rating: 0,
+    description:
+      "Zebronics ZEB-BT2750RUF 4.1 speaker home theatre at Juneja Trading Corporation, Damoh. Hindi: ज़ेब्रोनिक्स ZEB-BT2750RUF 4.1 स्पीकर होम थिएटर. 70W RMS, Bluetooth, USB, FM, remote, Made in India. Call for today's price.",
+    mainImage: "products/zebronics-zeb-bt2750ruf.webp",
+    imageAlt:
+      "Zebronics ZEB-BT2750RUF 4.1 home theatre speaker with subwoofer and satellites at Juneja Trading Corporation, Damoh",
+    slug: "zebronics-zeb-bt2750ruf-home-theatre",
+    manufacturer: "Zebronics",
+    categoryId: "sound-speakers",
+    category: { name: "sound-speakers" },
+    categoryLabel: "Sound / Home theatre",
+    inStock: 1,
+  },
+  {
+    id: "68",
+    title: "RR Lighting Avidite Neo 9W High Beam LED Bulb",
+    titleHi: "आरआर लाइटिंग एविडाइट नियो 9W हाई बीम एलईडी बल्ब",
+    price: 0,
+    rating: 0,
+    description:
+      "RR Lighting Avidite Neo 9W high beam LED bulb at Juneja Trading Corporation, Damoh. Hindi: आरआर लाइटिंग एविडाइट नियो 9W हाई बीम एलईडी बल्ब. B22 cap, 1 star mark on the pack. Wholesale rates are available. Call for today's price.",
+    mainImage: "products/rr-avidite-neo-9w-led.webp",
+    imageAlt:
+      "RR Lighting Avidite Neo 9W high beam LED bulb, B22, at Juneja Trading Corporation, Damoh",
+    slug: "rr-avidite-neo-9w-led-bulb",
+    manufacturer: "RR Lighting",
+    categoryId: "led-bulb",
+    category: { name: "led-bulb" },
+    categoryLabel: "LED bulbs",
+    inStock: 1,
+  },
+  {
+    id: "69",
+    title: "Globeam Noori Kisan Solar Torch",
+    titleHi: "ग्लोबीम नूरी किसान सोलर टॉर्च",
+    price: 0,
+    rating: 0,
+    description:
+      "Globeam Noori kisan solar torch at Juneja Trading Corporation, Damoh. Hindi: ग्लोबीम नूरी किसान सोलर टॉर्च. The pack is marked desh ka number 1 kisan solar torch. Call for today's price.",
+    mainImage: "products/globeam-noori-kisan-torch.webp",
+    imageAlt:
+      "Globeam Noori kisan solar torch pack at Juneja Trading Corporation, Damoh",
+    slug: "globeam-noori-kisan-solar-torch",
+    manufacturer: "Globeam",
+    categoryId: "torch",
+    category: { name: "torch" },
+    categoryLabel: "Kisan torches",
+    inStock: 1,
+  },
+  {
     id: "61",
     title: "Yoroto YO-J15 Cube Speaker",
     price: 1700,

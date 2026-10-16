@@ -119,7 +119,7 @@ const coreLandings: Record<string, Landing> = {
           "Submersible cable and pipe fittings (confirm with shop)",
           "Battery and manual sprayers (confirm with shop)",
           "Solar pumps and solar DC options",
-          "Long-range rechargeable kisan torches for night field work",
+          "Long-range rechargeable kisan torches for night field work, including the Globeam Noori kisan solar torch",
           "Solar and electric jhatka machines to keep neelgai and other animals out of the crop",
           "Pump and motor repair",
         ],
@@ -127,6 +127,7 @@ const coreLandings: Record<string, Landing> = {
     ],
     links: [
       { href: "/kisan-torch-damoh", label: "Best kisan torch in Damoh" },
+      { href: "/product/globeam-noori-kisan-solar-torch", label: "Globeam Noori kisan solar torch" },
       { href: "/jhatka-machine-damoh", label: "Jhatka machine in Damoh" },
       { href: "/hi/kisan-agri-damoh", label: "यह पेज हिन्दी में" },
     ],
@@ -180,6 +181,7 @@ const coreLandings: Record<string, Landing> = {
           "Switches, sockets, MCBs, extension boards",
           "Ceiling, table, pedestal and rechargeable fans (Atomberg, Orient, Crompton, Havells, Usha and others)",
           "LED bulbs, battens and street lights (Philips, Surya, Havells and others)",
+          "RR Lighting Avidite Neo 9W high beam LED bulb, B22, 1 star. Wholesale rates are available.",
           "Water heaters, immersion rods and room heaters",
           "Bulk orders for contractors and electricians",
         ],
@@ -188,8 +190,13 @@ const coreLandings: Record<string, Landing> = {
     faqs: [
       {
         question: "Do you take bulk orders?",
-        answer: "Yes. Call +91 99267 59557 for contractor and bulk orders.",
+        answer: "Yes. Call +91 99267 59557 for contractor and bulk orders. Wholesale rates are available on LED bulbs, including the RR Lighting Avidite Neo 9W.",
       },
+    ],
+    links: [
+      { href: "/led-bulb-wholesale-damoh", label: "LED bulb wholesale in Damoh" },
+      { href: "/product/rr-avidite-neo-9w-led-bulb", label: "RR Avidite Neo 9W LED bulb, wholesale rates available" },
+      { href: "/hi/electricals-damoh", label: "यह पेज हिन्दी में" },
     ],
   },
   "repair-damoh": {
@@ -235,7 +242,7 @@ const coreLandings: Record<string, Landing> = {
       {
         heading: festiveHeading,
         paragraphs: [
-          "Juneja Trading Corporation keeps festive lighting for homes, shops and decorators in Damoh.",
+          "Juneja Trading Corporation keeps festive lighting for homes, shops and decorators in Damoh. Torches on this counter include the rechargeable LED searchlight with a big reflector, an LED side panel, solar charging and a carry handle.",
         ],
       },
       {
@@ -273,6 +280,12 @@ const coreLandings: Record<string, Landing> = {
         question: "Do you sell Diwali lights wholesale?",
         answer: "Retail and bulk. Call for today's rates.",
       },
+    ],
+    links: [
+      { href: "/product/rechargeable-led-searchlight-torch", label: "Rechargeable LED searchlight torch with solar panel" },
+      { href: "/emergency-light-damoh", label: "Emergency lights and torches in Damoh" },
+      { href: "/kisan-torch-damoh", label: "Best kisan torch in Damoh" },
+      { href: "/hi/diwali-lights-damoh", label: "यह पेज हिन्दी में" },
     ],
   },
   "ceiling-fans-damoh": {

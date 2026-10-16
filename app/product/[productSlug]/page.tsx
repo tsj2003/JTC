@@ -53,12 +53,15 @@ function productJsonLd(product: Product) {
     "@type": "Product",
     name: product.title,
     description: product.description,
-    image: `${SITE_URL}/${product.mainImage}`,
+    image: [product.mainImage, ...(product.images || [])].map((path) => `${SITE_URL}/${path}`),
     sku: product.slug,
     category: product.categoryLabel || product.category?.name,
   };
   if (product.manufacturer) {
     data.brand = { "@type": "Brand", name: product.manufacturer };
+  }
+  if (product.titleHi) {
+    data.alternateName = product.titleHi;
   }
   const price = publishedPrice(product);
   if (price != null) {
@@ -122,7 +125,7 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
                     src={`/${imageItem.image}`}
                     width={80}
                     height={80}
-                    alt={sanitize(imageAlt) || ""}
+                    alt={sanitize(product.imageAlts?.[key] || imageAlt) || ""}
                     className="size-20 object-cover"
                   />
                 ))}
@@ -131,6 +134,9 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
           </div>
           <div className="flex w-full max-w-xl flex-col gap-5 text-black">
             <h1 className="text-3xl max-sm:text-2xl">{sanitize(product?.title)}</h1>
+            {product.titleHi ? (
+              <p className="font-hindi text-xl text-brand-ink">{product.titleHi}</p>
+            ) : null}
             {price != null ? (
               <p className="text-2xl font-semibold text-brand-ink">{formatPrice(price)}</p>
             ) : (

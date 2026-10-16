@@ -28,7 +28,7 @@ export const localSeoPages: Record<string, Landing> = {
         heading: "Brands stocked",
         paragraphs: [
           "Portable speakers with a published price include Yoroto and SoRoo. The Yoroto YO-J15 cube speaker is a portable Bluetooth speaker with a ring light, TWS, a stated 50W output (1200W PMPO), an 8-inch woofer and a wireless mic. The SoRoo K1 Series is a wireless speaker with TWS, Bluetooth, FM, USB, TF card, AUX and a rechargeable battery. Larger PA amplifiers and horn speakers include Ahuja and other names; confirm the dealer status and the exact model with the shop, because stock rotates.",
-          "Home theatre packages and soundbars are not limited to one badge. Bring the TV size and the room size, and the counter will show what is actually in Damoh that week. If you already own an older amplifier, bring the model number. Repair and a new purchase are often decided at the same visit.",
+          "Home theatre packages and soundbars are not limited to one badge. Bring the TV size and the room size, and the counter will show what is actually in Damoh that week. On the shelf now is the Zebronics ZEB-BT2750RUF 4.1 speaker home theatre: 70W RMS, Bluetooth, USB, FM, a remote, and Made in India. Hindi name: ज़ेब्रोनिक्स ZEB-BT2750RUF 4.1 स्पीकर होम थिएटर. Call for today's price. If you already own an older amplifier, bring the model number. Repair and a new purchase are often decided at the same visit.",
         ],
       },
       {
@@ -69,6 +69,7 @@ export const localSeoPages: Record<string, Landing> = {
       { href: "/amplifier-damoh", label: "Amplifier shop in Damoh" },
       { href: "/led-tv-damoh", label: "LED TV shop in Damoh" },
       { href: "/repair-damoh", label: "On-the-spot repair in Damoh" },
+      { href: "/product/zebronics-zeb-bt2750ruf-home-theatre", label: "Zebronics ZEB-BT2750RUF 4.1 home theatre" },
       { href: "/product/yoroto-yo-j15-cube-speaker", label: "Yoroto YO-J15 cube speaker, ₹1,700" },
       { href: "/product/soroo-k1-wireless-speaker", label: "SoRoo K1 wireless speaker, ₹699" },
       { href: "/hi/sound-home-theatre-damoh", label: "यह पेज हिन्दी में" },
@@ -390,7 +391,7 @@ export const localSeoPages: Record<string, Landing> = {
       {
         heading: "Wholesale LED bulbs at the Damoh shop",
         paragraphs: [
-          "LED bulb wholesale in Damoh is a counter conversation, not a catalogue price frozen online. Philips, Surya, Havells and other bulbs, battens and street lights are the names the electrical section keeps, subject to stock. A contractor fitting a row of shops and a family replacing one room bulb are both served. Call " +
+          "LED bulb wholesale in Damoh is a counter conversation, not a catalogue price frozen online. Philips, Surya, Havells and other bulbs, battens and street lights are the names the electrical section keeps, subject to stock. One bulb on the counter is the RR Lighting Avidite Neo 9W high beam LED bulb, B22, with a 1 star mark on the pack. Hindi name: आरआर लाइटिंग एविडाइट नियो 9W हाई बीम एलईडी बल्ब. Wholesale rates are available. A contractor fitting a row of shops and a family replacing one room bulb are both served. Call " +
             phone +
             " with the wattage and the quantity for today's rate.",
           "Festive lighting sits beside the bulbs in season: jhalar, fairy lights, torches, emergency lights, emergency bulbs and LED bulbs. If the order is emergency lights rather than ordinary bulbs, the emergency light page is the direct one. Ceiling fans for the same job are on the ceiling fan page.",
@@ -409,6 +410,7 @@ export const localSeoPages: Record<string, Landing> = {
       { href: "/emergency-light-damoh", label: "Emergency light shop in Damoh" },
       { href: "/ceiling-fans-damoh", label: "Ceiling fan shop in Damoh" },
       { href: "/diwali-lights-damoh", label: "Diwali lights in Damoh" },
+      { href: "/product/rr-avidite-neo-9w-led-bulb", label: "RR Avidite Neo 9W LED bulb, wholesale rates available" },
       { href: "/hi/led-bulb-wholesale-damoh", label: "यह पेज हिन्दी में" },
     ],
     faqs: [
@@ -436,7 +438,7 @@ export const localSeoPages: Record<string, Landing> = {
       {
         heading: "Emergency lights, bulbs and torches",
         paragraphs: [
-          "Power cuts are why Damoh houses keep an emergency light on the hook. The shop stocks rechargeable emergency lights, emergency bulbs, torches and chargers. Festive seasons add jhalar and fairy lights on the same floor, but an emergency light is a year-round counter. Tell the staff whether you want a light that stays plugged in a corridor or a torch you can carry to the roof.",
+          "Power cuts are why Damoh houses keep an emergency light on the hook. The shop stocks rechargeable emergency lights, emergency bulbs, torches and chargers. One torch on the counter is the rechargeable LED searchlight with a big reflector, an LED side panel, solar charging and a carry handle, for kisan work and for the house. Hindi name: रिचार्जेबल एलईडी सर्चलाइट टॉर्च, सोलर पैनल और साइड लैंप के साथ. Festive seasons add jhalar and fairy lights on the same floor, but an emergency light is a year-round counter. Tell the staff whether you want a light that stays plugged in a corridor or a torch you can carry to the roof.",
           "Today's price is at the counter. Call " +
             phone +
             " with the type you want. Brands rotate. The shop will not invent a fixed range. Many small repairs, including chargers and rechargeable lights, are done on the spot at Ghanta Ghar.",
@@ -453,6 +455,7 @@ export const localSeoPages: Record<string, Landing> = {
       { href: "/led-bulb-wholesale-damoh", label: "LED bulb wholesale in Damoh" },
       { href: "/electricals-damoh", label: "Electrical shop in Damoh" },
       { href: "/diwali-lights-damoh", label: "Diwali and festive lights in Damoh" },
+      { href: "/product/rechargeable-led-searchlight-torch", label: "Rechargeable LED searchlight torch with solar panel" },
       { href: "/repair-damoh", label: "On-the-spot repair in Damoh" },
       { href: "/hi/emergency-light-damoh", label: "यह पेज हिन्दी में" },
     ],
@@ -575,7 +578,7 @@ export const localSeoPages: Record<string, Landing> = {
         heading: "Long-range rechargeable LED torches for night field work",
         paragraphs: [
           "A kisan torch is not the small light that hangs in a corridor. Farmers around Damoh use a long-range rechargeable LED torch when the pump runs after dark, when a bund has to be walked, or when the far end of the plot has to be seen from the path. The beam has to reach across a field, and the battery has to last the night without a pocket full of cells.",
-          "Juneja Trading Corporation stocks rechargeable LED torches for that work on the kisan and electrical counter at Ghanta Ghar. Household emergency lights and short torches are a different shelf. If the light is for the house during a power cut, ask for an emergency light. If it is for the field, ask for a kisan torch and say how far the beam needs to throw.",
+          "Juneja Trading Corporation stocks rechargeable LED torches for that work on the kisan and electrical counter at Ghanta Ghar. Two you can see now: the rechargeable LED searchlight torch with a big reflector, LED side panel, solar charging and a carry handle, and the Globeam Noori kisan solar torch. The Globeam pack is marked desh ka number 1 kisan solar torch. Hindi names: रिचार्जेबल एलईडी सर्चलाइट टॉर्च, सोलर पैनल और साइड लैंप के साथ, and ग्लोबीम नूरी किसान सोलर टॉर्च. Household emergency lights and short torches are a different shelf. If the light is for the house during a power cut, ask for an emergency light. If it is for the field, ask for a kisan torch and say how far the beam needs to throw.",
           "Models on the counter change. Call " +
             phone +
             " and describe the job: night irrigation, a long walk between plots, or a light you can charge in the village and carry out. The staff will say what is actually in the shop that day.",
@@ -599,6 +602,8 @@ export const localSeoPages: Record<string, Landing> = {
     links: [
       { href: "/kisan-agri-damoh", label: "Kisan pumps and motors in Damoh" },
       { href: "/jhatka-machine-damoh", label: "Jhatka machine in Damoh" },
+      { href: "/product/rechargeable-led-searchlight-torch", label: "Rechargeable LED searchlight torch with solar panel" },
+      { href: "/product/globeam-noori-kisan-solar-torch", label: "Globeam Noori kisan solar torch" },
       { href: "/emergency-light-damoh", label: "Emergency lights and household torches" },
       { href: "/hi/kisan-torch-damoh", label: "यह पेज हिन्दी में" },
     ],
