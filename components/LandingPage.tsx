@@ -1,4 +1,4 @@
-import { brand } from "@/lib/brand";
+import { brand, whatsappEnquiryHref } from "@/lib/brand";
 import { sharedFaqs } from "@/lib/faqs";
 import type { Landing } from "@/lib/landings";
 import { visitLine } from "@/lib/landings";
@@ -71,6 +71,38 @@ const LandingPage = ({ page }: { page: Landing }) => {
       </header>
       {page.showEmi ? <EmiSection /> : null}
       <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+        {page.enquiryName ? (
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a
+              href={brand.phoneHref}
+              className="inline-flex min-h-12 items-center justify-center bg-brand-ink px-5 py-3 text-sm font-bold text-brand-cream"
+            >
+              {lang === "hi" ? "कॉल करें" : "Call"} {brand.phone}
+            </a>
+            <a
+              href={brand.phone2Href}
+              className="inline-flex min-h-12 items-center justify-center border border-brand-ink px-5 py-3 text-sm font-bold"
+            >
+              {lang === "hi" ? "कॉल करें" : "Call"} {brand.phone2}
+            </a>
+            <a
+              href={whatsappEnquiryHref(brand.phoneRaw, page.enquiryName)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 items-center justify-center bg-[#0E6E62] px-5 py-3 text-sm font-bold text-white hover:bg-[#075E54]"
+            >
+              WhatsApp {brand.phone}
+            </a>
+            <a
+              href={whatsappEnquiryHref(brand.phone2Raw, page.enquiryName)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 items-center justify-center border border-[#075E54] px-5 py-3 text-sm font-bold text-[#075E54] hover:bg-[#0E6E62] hover:text-white"
+            >
+              WhatsApp {brand.phone2}
+            </a>
+          </div>
+        ) : null}
         {page.sections.map((section) => (
           <section key={section.heading} className="mt-10 first:mt-0">
             <h2 className="font-display text-4xl text-brand-ink">{section.heading}</h2>
@@ -146,6 +178,9 @@ const LandingPage = ({ page }: { page: Landing }) => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
+          {page.trademarkNote ? (
+            <p className="mt-6 text-sm leading-6 text-brand-soot/80">{page.trademarkNote}</p>
+          ) : null}
         </section>
       </div>
     </article>

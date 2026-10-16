@@ -11,7 +11,7 @@ import toast from "react-hot-toast";
 import { useWishlistStore } from "@/app/_zustand/wishlistStore";
 import apiClient from "@/lib/api";
 import { brand } from "@/lib/brand";
-import { serviceLinks } from "@/lib/nav";
+import { brandLinks, serviceLinks } from "@/lib/nav";
 import FestiveBanner from "./FestiveBanner";
 import WhatsAppGroupButton from "./WhatsAppGroupButton";
 
@@ -113,6 +113,25 @@ const Header = () => {
           <nav aria-label="Categories" className="border-t border-brand-ink/10">
             <ul className="mx-auto flex max-w-screen-2xl gap-2 overflow-x-auto px-4 py-3 sm:px-8">
               {serviceLinks.map((item) => (
+                <li key={item.href} className="shrink-0">
+                  <Link
+                    href={item.href}
+                    className={`inline-flex min-h-11 items-center px-3 text-sm font-semibold ${
+                      pathname === item.href ? "bg-brand-ink text-brand-cream" : "text-brand-ink hover:text-brand-copper"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <nav aria-label="Brands" className="border-t border-brand-ink/10">
+            <ul className="mx-auto flex max-w-screen-2xl gap-2 overflow-x-auto px-4 py-3 sm:px-8">
+              <li className="shrink-0 self-center pr-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-copper">
+                Brands
+              </li>
+              {brandLinks.map((item) => (
                 <li key={item.href} className="shrink-0">
                   <Link
                     href={item.href}

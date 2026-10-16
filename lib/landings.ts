@@ -31,6 +31,8 @@ export type Landing = {
   sections: LandingSection[];
   faqs: LandingFaq[];
   links?: LandingLink[];
+  enquiryName?: string;
+  trademarkNote?: string;
 };
 
 const visitHours = `${brand.hoursNote}. Home delivery across Damoh.`;

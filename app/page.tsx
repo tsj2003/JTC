@@ -1,5 +1,6 @@
 import { CategoryMenu, Hero, Incentives, IntroducingSection, ProductsSection } from "@/components";
 import BrandMarquee from "@/components/BrandMarquee";
+import BrandsWeSell from "@/components/BrandsWeSell";
 import { EmiSection } from "@/components/EmiNotice";
 import FestiveHighlights from "@/components/FestiveHighlights";
 import OfferTicker from "@/components/OfferTicker";
@@ -28,6 +29,7 @@ export default function Home() {
       <EmiSection />
       <FestiveHighlights />
       <BrandMarquee />
+      <BrandsWeSell />
       <ShopUpdates />
       <IntroducingSection />
       <ServiceLinks />

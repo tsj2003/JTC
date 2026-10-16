@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { brand } from "@/lib/brand";
 import { ceilingFansHeading, festiveHeading, festiveItemsHeading } from "@/lib/copy";
+import { brandStoreSlugs } from "@/lib/brand-stores";
 import { landings } from "@/lib/landings";
 
 export const SITE_URL = "https://steady-pika-d49d5d.netlify.app";
@@ -15,6 +16,14 @@ function hreflangFor(path: string): Record<string, string> | undefined {
       en: `${SITE_URL}/`,
       hi: `${SITE_URL}/hi`,
       "x-default": `${SITE_URL}/`,
+    };
+  }
+  const brandSlug = path.match(/^\/(?:hi\/)?brands\/([^/]+)$/);
+  if (brandSlug && brandStoreSlugs.has(brandSlug[1])) {
+    return {
+      en: `${SITE_URL}/brands/${brandSlug[1]}`,
+      hi: `${SITE_URL}/hi/brands/${brandSlug[1]}`,
+      "x-default": `${SITE_URL}/brands/${brandSlug[1]}`,
     };
   }
   const slug = path.startsWith("/hi/") ? path.slice(4) : path.replace(/^\//, "");

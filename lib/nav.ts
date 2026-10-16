@@ -18,6 +18,17 @@ export const categoryLinks = [
   { name: "Repair", href: "/repair-damoh" },
 ] as const;
 
+export const brandLinks = [
+  { name: "Havells", href: "/brands/havells-store-damoh" },
+  { name: "LG", href: "/brands/lg-store-damoh" },
+  { name: "Haier", href: "/brands/haier-store-damoh" },
+  { name: "Samsung", href: "/brands/samsung-store-damoh" },
+  { name: "Sony", href: "/brands/sony-store-damoh" },
+  { name: "Zebronics", href: "/brands/zebronics-store-damoh" },
+  { name: "Usha", href: "/brands/usha-store-damoh" },
+  { name: "Celcore", href: "/brands/celcore-store-damoh" },
+] as const;
+
 export const serviceLinks = [
   ...categoryLinks,
   { name: "Catalogue", href: "/shop" },
