@@ -12,8 +12,7 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Trailing-slash duplicates go to the canonical URL without a slash.
-[[redirects]]
-  from = "/*/"
-  to = "/:splat"
-  status = 301
+# Do not 301 /path/ to /path in this file. Netlify matches both forms to the
+# same rule, so the redirect loops. Next.js canonicalizes the trailing slash.
+[build.processing.html]
+  pretty_urls = false
