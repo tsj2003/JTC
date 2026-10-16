@@ -175,6 +175,9 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
             <a href={brand.phone2Href} className="font-semibold text-brand-copper">
               Call {brand.phone2}
             </a>
+            <a href={brand.emailHref} className="font-semibold text-brand-copper">
+              {brand.email}
+            </a>
           </div>
         </div>
         <div className="py-12">

@@ -68,6 +68,7 @@ export const localSeoPagesHi: Record<string, Landing> = {
       { href: "/product/zebronics-zeb-bt2750ruf-home-theatre", label: "ज़ेब्रोनिक्स ZEB-BT2750RUF 4.1 स्पीकर होम थिएटर" },
       { href: "/product/yoroto-yo-j15-cube-speaker", label: "योरोटो वाईओ-जे15, ₹1,700" },
       { href: "/product/soroo-k1-wireless-speaker", label: "सोरू के1, ₹699" },
+      { href: "/hi/sasta-speaker-damoh", label: "दमोह में सस्ता और अच्छा स्पीकर – ₹699 से" },
       { href: "/sound-home-theatre-damoh", label: "This page in English" },
     ],
     faqs: [
@@ -574,6 +575,78 @@ export const localSeoPagesHi: Record<string, Landing> = {
         question: "क्या झटका मशीन लगाने और रिपेयर में मदद मिलती है?",
         answer:
           "काउंटर अर्थिंग, लाइव तार और इंसुलेटर समझाता है। खेत पर जाना तभी तय होता है जब आप पूछें और खर्च पक्का हो। रिपेयर के लिए मशीन घंटा घर, आज़ाद मार्केट की दुकान पर ले आइए।",
+      },
+    ],
+  },
+  "sasta-speaker-damoh": {
+    slug: "sasta-speaker-damoh",
+    path: "/hi/sasta-speaker-damoh",
+    lang: "hi",
+    title: "दमोह में सस्ता और अच्छा स्पीकर | ₹699 से | Bluetooth speaker Damoh | JTC",
+    description:
+      "दमोह में सस्ता और अच्छा स्पीकर, घंटा घर। SoRoo K1 ₹699, Yoroto YO-J15 ₹1,700, Zebronics BT2750RUF 4.1 का दाम कॉल पर। best price in Damoh, low price speaker Damoh, Bluetooth speaker Damoh। ईमेल satpaljuneja11@gmail.com।",
+    h1: "दमोह में सस्ता और अच्छा स्पीकर – ₹699 से",
+    hindi: "Sasta aur accha speaker Damoh – Speakers from ₹699",
+    intro:
+      "जुनेजा ट्रेडिंग कारपोरेशन, घंटा घर, आज़ाद मार्केट पर low price speaker Damoh और Bluetooth speaker Damoh एक ही काउंटर पर हैं। छपे हुए दाम में best price in Damoh SoRoo K1 का ₹699 है। ईमेल satpaljuneja11@gmail.com।",
+    products: [
+      {
+        name: "SoRoo K1 Series Wireless Speaker",
+        description:
+          "ब्लूटूथ स्पीकर, TWS, FM, USB, TF कार्ड, AUX और रिचार्जेबल बैटरी। दाम ₹699। MRP ₹699।",
+        image: "products/soroo-k1-wireless-speaker-damoh.webp",
+        sku: "soroo-k1-wireless-speaker",
+        brandName: "SoRoo",
+        price: 699,
+        mrp: 699,
+        href: "/product/soroo-k1-wireless-speaker",
+        priceLabel: "₹699",
+      },
+      {
+        name: "Yoroto YO-J15 Cube Speaker",
+        description:
+          "ब्लूटूथ स्पीकर, रिंग लाइट, TWS, 50W (1200W PMPO), 8 इंच वूफर और वायरलेस माइक। दाम ₹1,700।",
+        image: "products/yoroto-yo-j15-cube-speaker-damoh.webp",
+        sku: "yoroto-yo-j15-cube-speaker",
+        brandName: "Yoroto",
+        price: 1700,
+        href: "/product/yoroto-yo-j15-cube-speaker",
+        priceLabel: "₹1,700",
+      },
+      {
+        name: "Zebronics ZEB-BT2750RUF 4.1 Speaker Home Theatre",
+        description:
+          "ज़ेब्रोनिक्स BT2750RUF 4.1 होम थिएटर: 70W RMS, ब्लूटूथ, USB, FM, रिमोट, मेड इन इंडिया। आज का दाम कॉल पर पूछें।",
+        image: "products/zebronics-home-theatre-zeb-bt2750ruf-damoh.webp",
+        sku: "zebronics-zeb-bt2750ruf-home-theatre",
+        brandName: "Zebronics",
+        href: "/product/zebronics-zeb-bt2750ruf-home-theatre",
+        priceLabel: "Call for today's price",
+      },
+    ],
+    sections: [
+      {
+        heading: "₹699 से कौन से स्पीकर छपे हैं",
+        paragraphs: [
+          "SoRoo K1 का दाम ₹699 है और MRP भी ₹699 है। Yoroto YO-J15 का दाम ₹1,700 है। दोनों Bluetooth speaker Damoh काउंटर पर सुन सकते हैं। Zebronics ZEB-BT2750RUF 4.1 होम थिएटर का दाम इस पेज पर नहीं छपा। Call for today's price।",
+          "low price speaker Damoh खोजने वाले अक्सर छोटे ब्लूटूथ स्पीकर और बड़े होम थिएटर को एक साथ पूछते हैं। छपा हुआ best price in Damoh SoRoo का ₹699 है। बड़ा सेट होम थिएटर वाले पेज पर है, उसका दाम काउंटर बताता है। ईमेल satpaljuneja11@gmail.com।",
+        ],
+      },
+    ],
+    links: [
+      { href: "/hi/sound-home-theatre-damoh", label: "दमोह में होम थिएटर" },
+      { href: "/sound-home-theatre-damoh", label: "Home theatre shop in Damoh" },
+      { href: "/hi/brands/zebronics-store-damoh", label: "दमोह में ज़ेब्रोनिक्स" },
+      { href: "/product/soroo-k1-wireless-speaker", label: "SoRoo K1, ₹699" },
+      { href: "/product/yoroto-yo-j15-cube-speaker", label: "Yoroto YO-J15, ₹1,700" },
+      { href: "/product/zebronics-zeb-bt2750ruf-home-theatre", label: "Zebronics BT2750RUF 4.1, call for today's price" },
+      { href: "/sasta-speaker-damoh", label: "This page in English" },
+    ],
+    faqs: [
+      {
+        question: "दमोह में सस्ता स्पीकर कहाँ मिलेगा?",
+        answer:
+          "जुनेजा ट्रेडिंग कारपोरेशन, शॉप नंबर 6, आज़ाद मार्केट, घंटा घर, दमोह। SoRoo K1 ₹699। Yoroto YO-J15 ₹1,700। Zebronics BT2750RUF 4.1 का दाम कॉल पर। ईमेल satpaljuneja11@gmail.com।",
       },
     ],
   },

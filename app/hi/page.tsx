@@ -68,6 +68,8 @@ export default function HindiHomePage() {
             <br />
             फ़ोन: <a href={brand.phoneHref}>{brand.phone}</a>, <a href={brand.phone2Href}>{brand.phone2}</a>
             <br />
+            ईमेल: <a href={brand.emailHref}>{brand.email}</a>
+            <br />
             हर दिन सुबह 10 बजे से रात 9:30 बजे तक खुला। दमोह में होम डिलीवरी।
           </address>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

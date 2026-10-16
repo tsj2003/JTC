@@ -127,6 +127,7 @@ export const storeJsonLd = {
     {
       "@type": "ContactPoint",
       telephone: "+91-99267-59557",
+      email: brand.email,
       contactType: "sales",
       areaServed: "IN",
       availableLanguage: ["hi", "en"],
@@ -134,6 +135,7 @@ export const storeJsonLd = {
     {
       "@type": "ContactPoint",
       telephone: "+91-83191-71236",
+      email: brand.email,
       contactType: "customer service",
     },
   ],

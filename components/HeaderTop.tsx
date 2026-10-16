@@ -33,7 +33,7 @@ const HeaderTop = () => {
               {brand.phone2}
             </a>
           </li>
-          <li className="hidden sm:block">
+          <li>
             <a href={brand.emailHref} className="flex min-h-11 items-center gap-x-2 font-semibold">
               <FaRegEnvelope className="text-brand-amber" />
               {brand.email}

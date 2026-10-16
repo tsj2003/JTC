@@ -1,6 +1,6 @@
 import { brand, whatsappEnquiryHref } from "@/lib/brand";
 import { sharedFaqs } from "@/lib/faqs";
-import type { Landing } from "@/lib/landings";
+import type { Landing, LandingProduct } from "@/lib/landings";
 import { visitLine } from "@/lib/landings";
 import { SITE_URL } from "@/lib/seo";
 import Image from "next/image";
@@ -11,6 +11,50 @@ import HinglishFaq from "./HinglishFaq";
 import { hinglishFaqsFor } from "@/lib/hinglish-faqs";
 import ReviewButton from "./ReviewButton";
 import WhatsAppGroupButton from "./WhatsAppGroupButton";
+
+function speakerProductsJsonLd(products: LandingProduct[]) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": products.map((product) => {
+      const data: Record<string, unknown> = {
+        "@type": "Product",
+        name: product.name,
+        description: product.description,
+        image: [`${SITE_URL}/${product.image}`],
+        sku: product.sku,
+        url: `${SITE_URL}${product.href}`,
+      };
+      if (product.brandName) {
+        data.brand = { "@type": "Brand", name: product.brandName };
+      }
+      if (product.price != null && product.price > 0) {
+        const offer: Record<string, unknown> = {
+          "@type": "Offer",
+          priceCurrency: "INR",
+          price: String(product.price),
+          availability: "https://schema.org/InStock",
+          url: `${SITE_URL}${product.href}`,
+          seller: {
+            "@type": "ElectronicsStore",
+            "@id": `${SITE_URL}/#store`,
+            name: brand.name,
+            email: brand.email,
+          },
+        };
+        if (product.mrp) {
+          offer.priceSpecification = {
+            "@type": "UnitPriceSpecification",
+            price: String(product.mrp),
+            priceCurrency: "INR",
+            priceType: "https://schema.org/MSRP",
+          };
+        }
+        data.offers = offer;
+      }
+      return data;
+    }),
+  };
+}
 
 const LandingPage = ({ page }: { page: Landing }) => {
   const lang = page.lang ?? "en";
@@ -48,6 +92,14 @@ const LandingPage = ({ page }: { page: Landing }) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c") }}
       />
+      {page.products && page.products.length > 0 ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(speakerProductsJsonLd(page.products)).replace(/</g, "\\u003c"),
+          }}
+        />
+      ) : null}
       <header className="bg-brand-ink px-4 py-12 text-brand-cream sm:px-8">
         <div className="mx-auto max-w-3xl">
           <nav aria-label="Breadcrumb" className="text-sm text-brand-cream/80">
@@ -118,6 +170,26 @@ const LandingPage = ({ page }: { page: Landing }) => {
               WhatsApp {brand.phone2}
             </a>
           </div>
+        ) : null}
+        {page.products && page.products.length > 0 ? (
+          <section className="mt-0">
+            <h2 className="font-display text-4xl text-brand-ink">
+              {lang === "hi" ? "काउंटर पर ये स्पीकर" : "Speakers on the counter"}
+            </h2>
+            <ul className="mt-6 space-y-6">
+              {page.products.map((product) => (
+                <li key={product.sku} className="border border-brand-ink/15 bg-white p-5">
+                  <h3 className="text-2xl font-semibold">
+                    <Link href={product.href} className="text-brand-copper hover:underline">
+                      {product.name}
+                    </Link>
+                  </h3>
+                  <p className="mt-2 text-xl font-semibold text-brand-ink">{product.priceLabel}</p>
+                  <p className="mt-2 text-lg leading-8 text-brand-soot">{product.description}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
         ) : null}
         {page.sections.map((section) => (
           <section key={section.heading} className="mt-10 first:mt-0">

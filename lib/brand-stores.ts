@@ -152,11 +152,13 @@ const specs: BrandSpec[] = [
       { href: "/sound-home-theatre-damoh", label: "Home theatre shop in Damoh" },
       { href: "/dj-sound-system-damoh", label: "DJ sound system shop in Damoh" },
       { href: "/product/zebronics-zeb-bt2750ruf-home-theatre", label: "Zebronics ZEB-BT2750RUF 4.1 home theatre" },
+      { href: "/sasta-speaker-damoh", label: "Sasta aur accha speaker Damoh – Speakers from ₹699" },
     ],
     linksHi: [
       { href: "/hi/sound-home-theatre-damoh", label: "दमोह में होम थिएटर" },
       { href: "/hi/dj-sound-system-damoh", label: "दमोह में डीजे साउंड" },
       { href: "/product/zebronics-zeb-bt2750ruf-home-theatre", label: "ज़ेब्रोनिक्स ZEB-BT2750RUF 4.1 होम थिएटर" },
+      { href: "/hi/sasta-speaker-damoh", label: "दमोह में सस्ता और अच्छा स्पीकर – ₹699 से" },
     ],
   },
   {
