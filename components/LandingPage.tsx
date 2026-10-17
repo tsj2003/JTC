@@ -9,8 +9,10 @@ import { EmiSection } from "./EmiNotice";
 import FaqList from "./FaqList";
 import HinglishFaq from "./HinglishFaq";
 import { hinglishFaqsFor } from "@/lib/hinglish-faqs";
+import OfferBadges from "./OfferBadges";
 import ReviewButton from "./ReviewButton";
 import WhatsAppGroupButton from "./WhatsAppGroupButton";
+import { categoryOfferLine } from "@/lib/offer-copy";
 
 function speakerProductsJsonLd(products: LandingProduct[]) {
   return {
@@ -65,6 +67,19 @@ const LandingPage = ({ page }: { page: Landing }) => {
     lang === "hi"
       ? "हर दिन सुबह 10 बजे से रात 9:30 बजे तक खुला। दमोह में होम डिलीवरी।"
       : visitLine;
+  const plain = [
+    page.intro,
+    page.h1,
+    ...page.sections.flatMap((section) => [
+      section.heading,
+      ...(section.paragraphs ?? []),
+      ...(section.items ?? []),
+    ]),
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const rateMentions =
+    lang === "hi" ? (plain.match(/थोक रेट/g) || []).length : (plain.match(/wholesale rate/gi) || []).length;
   const homePath = lang === "hi" ? "/hi" : "/";
   const homeName = lang === "hi" ? "होम" : "Home";
   const breadcrumbJsonLd = {
@@ -139,8 +154,12 @@ const LandingPage = ({ page }: { page: Landing }) => {
       ) : null}
       {page.showEmi ? <EmiSection /> : null}
       <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+        <OfferBadges lang={lang} />
+        {rateMentions < 2 ? (
+          <p className={`mt-4 text-lg leading-8 ${lang === "hi" ? "font-hindi" : ""}`}>{categoryOfferLine(lang)}</p>
+        ) : null}
         {page.enquiryName ? (
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
               href={brand.phoneHref}
               className="inline-flex min-h-12 items-center justify-center bg-brand-ink px-5 py-3 text-sm font-bold text-brand-cream"
