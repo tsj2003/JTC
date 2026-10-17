@@ -43,6 +43,7 @@ const photoBySlug: Record<string, ShopPhoto> = {
   "ceiling-fans-damoh": shopFansTorches,
   "kisan-torch-damoh": shopFansTorches,
   "emergency-light-damoh": shopFansTorches,
+  "torch-repair-damoh": shopFansTorches,
 };
 
 export function withShopImage<T extends { slug: string }>(

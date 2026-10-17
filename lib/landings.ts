@@ -225,10 +225,13 @@ const coreLandings: Record<string, Landing> = {
       "Electronics repair shop in Damoh. On-the-spot repair of fans, mixers, irons, sound systems and lights at Juneja Trading Corporation, Ghanta Ghar, since 1960. Open Mon–Sun 10:00–21:30.",
     h1: "On-the-spot repair in Damoh",
     hindi: "हाथों-हाथ रिपेयरिंग — दमोह, घंटा घर।",
+    intro:
+      "Torch repair is the first job at this counter: rechargeable torches, kisan torches, solar torches, searchlights and emergency lights, fixed on the spot while you wait.",
     sections: [
       {
         heading: "What we offer",
         items: [
+          "Torch repair in Damoh: rechargeable, kisan, solar, searchlight and emergency lights, on the spot while you wait",
           "Hand-to-hand repair: many small items fixed while you wait (confirm item types with shop)",
           "Fans, mixer grinders, irons, induction cooktops",
           "Amplifiers, speakers and sound systems",
@@ -237,6 +240,10 @@ const coreLandings: Record<string, Landing> = {
           "Honest advice: repair or replace",
         ],
       },
+    ],
+    links: [
+      { href: "/torch-repair-damoh", label: "Torch Repair in Damoh – On-the-Spot, Hand-to-Hand" },
+      { href: "/hi/repair-damoh", label: "यह पेज हिन्दी में" },
     ],
     faqs: [
       {

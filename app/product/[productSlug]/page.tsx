@@ -4,6 +4,7 @@ import {
   SingleProductDynamicFields,
 } from "@/components";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
 import { sanitize } from "@/lib/sanitize";
@@ -142,6 +143,13 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
           <div className="flex w-full max-w-xl flex-col gap-5 text-black">
             <h1 className="text-3xl max-sm:text-2xl">{sanitize(product?.title)}</h1>
             <OfferBadges lang="both" />
+            {product.slug === "rechargeable-led-searchlight-torch" ? (
+              <p className="text-lg">
+                <Link href="/torch-repair-damoh" className="font-semibold text-brand-copper hover:underline">
+                  Torch Repair in Damoh – On-the-Spot, Hand-to-Hand
+                </Link>
+              </p>
+            ) : null}
             {product.titleHi ? (
               <p className="font-hindi text-xl text-brand-ink">{product.titleHi}</p>
             ) : null}

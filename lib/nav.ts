@@ -17,6 +17,7 @@ export const categoryLinks = [
   { name: "Kisan torch", href: "/kisan-torch-damoh" },
   { name: "Jhatka machine", href: "/jhatka-machine-damoh" },
   { name: "Electricals", href: "/electricals-damoh" },
+  { name: "Torch repair", href: "/torch-repair-damoh" },
   { name: "Repair", href: "/repair-damoh" },
 ] as const;
 

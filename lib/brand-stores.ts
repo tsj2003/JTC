@@ -197,12 +197,14 @@ const specs: BrandSpec[] = [
     noteHi:
       "सेलकोर दमोह और मध्य प्रदेश की लाइट और टॉर्च की ब्रांड है। इस काउंटर पर इसका मतलब टॉर्च, इमरजेंसी लाइट और एलईडी बल्ब है।",
     links: [
+      { href: "/torch-repair-damoh", label: "Torch Repair in Damoh – On-the-Spot, Hand-to-Hand" },
       { href: "/kisan-torch-damoh", label: "Best kisan torch in Damoh" },
       { href: "/emergency-light-damoh", label: "Emergency light shop in Damoh" },
       { href: "/led-bulb-wholesale-damoh", label: "LED bulb wholesale in Damoh" },
       { href: "/diwali-lights-damoh", label: "Diwali lights in Damoh" },
     ],
     linksHi: [
+      { href: "/hi/torch-repair-damoh", label: "दमोह में टॉर्च रिपेयरिंग – हाथोंहाथ ठीक" },
       { href: "/hi/kisan-torch-damoh", label: "दमोह में किसान टॉर्च" },
       { href: "/hi/emergency-light-damoh", label: "दमोह में इमरजेंसी लाइट" },
       { href: "/hi/led-bulb-wholesale-damoh", label: "दमोह में एलईडी बल्ब थोक" },
