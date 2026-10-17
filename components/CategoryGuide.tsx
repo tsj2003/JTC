@@ -1,6 +1,8 @@
 import FaqList from "@/components/FaqList";
 import HinglishFaq from "@/components/HinglishFaq";
+import OfferBadges from "@/components/OfferBadges";
 import { hinglishFaqsFor } from "@/lib/hinglish-faqs";
+import { categoryOfferLine } from "@/lib/offer-copy";
 import type { ShopCategoryCopy } from "@/lib/shop-category-copy";
 import Link from "next/link";
 
@@ -14,16 +16,18 @@ const CategoryGuide = ({ copy }: { copy: ShopCategoryCopy }) => {
       <h2 id="category-guide-title" className="mt-2 font-display text-4xl">
         {copy.title}
       </h2>
+      <div className="mt-4">
+        <OfferBadges lang="both" />
+      </div>
+      <p className="mt-4 text-lg leading-8 text-brand-soot">{categoryOfferLine("en")}</p>
+      <p lang="hi" className="mt-2 font-hindi text-lg leading-8 text-brand-soot">
+        {categoryOfferLine("hi")}
+      </p>
       {copy.paragraphs.map((paragraph) => (
         <p key={paragraph.slice(0, 48)} className="mt-4 text-lg leading-8 text-brand-soot">
           {paragraph}
         </p>
       ))}
-      <p className="mt-4 text-lg leading-8 text-brand-soot">
-        Juneja Trading Corporation is retail and wholesale in Damoh, and one of the biggest wholesalers in the town.
-        Shopkeepers and electricians ask for the thok vikreta (थोक विक्रेता) counter when they need a wholesale rate on this
-        category. Call or WhatsApp for the rate list. No wholesale price is printed on this page.
-      </p>
       <ul className="mt-6 flex flex-col gap-2">
         <li>
           <Link href="/wholesale-electronics-damoh" className="font-semibold text-brand-copper hover:underline">

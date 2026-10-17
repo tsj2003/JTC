@@ -1,5 +1,6 @@
 import type { Landing } from "@/lib/landings";
 import { localSeoPagesHi } from "@/lib/local-seo-pages-hi";
+import { withOfferMeta } from "@/lib/offer-copy";
 import { withShopImage } from "@/lib/shop-photos";
 
 const shop = "जुनेजा ट्रेडिंग कारपोरेशन, शॉप नंबर 6, आज़ाद मार्केट, घंटा घर, मड़िया पंगरहा, दमोह";
@@ -382,6 +383,6 @@ const coreHindiLandings: Record<string, Landing> = {
 export const hindiLandings: Record<string, Landing> = Object.fromEntries(
   Object.entries({ ...coreHindiLandings, ...localSeoPagesHi }).map(([slug, page]) => [
     slug,
-    withShopImage(page, "hi"),
+    withOfferMeta(withShopImage(page, "hi")),
   ]),
 );

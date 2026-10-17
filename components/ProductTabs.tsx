@@ -12,6 +12,7 @@
 
 import React, { useState } from "react";
 import { formatCategoryName } from "@/utils/categoryFormating";
+import { productOfferSentence } from "@/lib/offer-copy";
 import { sanitize, sanitizeHtml } from "@/lib/sanitize";
 
 const ProductTabs = ({ product }: { product: Product }) => {
@@ -48,6 +49,9 @@ const ProductTabs = ({ product }: { product: Product }) => {
             }}
           />
         )}
+        {currentProductTab === 0 && product?.title ? (
+          <p className="mt-4 text-lg leading-8">{productOfferSentence(product.title)}</p>
+        ) : null}
 
         {currentProductTab === 1 && (
           <div className="overflow-x-auto">

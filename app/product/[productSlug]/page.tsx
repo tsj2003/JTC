@@ -11,6 +11,9 @@ import { EmiBadge } from "@/components/EmiNotice";
 import { brand, formatPrice, whatsappEnquiryHref } from "@/lib/brand";
 import { getCatalogBySlug } from "@/lib/catalog";
 import { publishedPrice } from "@/lib/new-arrivals";
+import FaqList from "@/components/FaqList";
+import OfferBadges from "@/components/OfferBadges";
+import { offerMeta, productSastaFaq } from "@/lib/offer-copy";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
 import type { Metadata } from "next";
 
@@ -40,7 +43,9 @@ export async function generateMetadata({ params }: SingleProductPageProps): Prom
       : product.priceLabel || brand.askPrice;
   return pageMetadata({
     title: `${product.title} in Damoh | Juneja Trading Corporation`,
-    description: `${product.description} ${priceLabel}. ${brand.emiAvailable}. ${brand.emiTerms} ${brand.nap}.`,
+    description: offerMeta(
+      `${product.description} ${priceLabel}. ${brand.emiAvailable}. ${brand.emiTerms} ${brand.nap}.`,
+    ),
     path: `/product/${product.slug}`,
     image: {
       url: `/${product.mainImage}`,
@@ -136,6 +141,7 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
           </div>
           <div className="flex w-full max-w-xl flex-col gap-5 text-black">
             <h1 className="text-3xl max-sm:text-2xl">{sanitize(product?.title)}</h1>
+            <OfferBadges lang="both" />
             {product.titleHi ? (
               <p className="font-hindi text-xl text-brand-ink">{product.titleHi}</p>
             ) : null}
@@ -182,6 +188,7 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
         </div>
         <div className="py-12">
           <ProductTabs product={product} />
+          <FaqList faqs={[productSastaFaq(product)]} heading="FAQ" className="mt-12" />
         </div>
       </div>
     </div>

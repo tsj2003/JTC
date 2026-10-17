@@ -1,5 +1,6 @@
 import LandingPage from "@/components/LandingPage";
 import { hindiBrandStores } from "@/lib/brand-stores";
+import { offerMeta } from "@/lib/offer-copy";
 import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -24,7 +25,7 @@ export async function generateMetadata({
   }
   return pageMetadata({
     title: page.title,
-    description: page.description,
+    description: offerMeta(page.description),
     path: page.path,
   });
 }

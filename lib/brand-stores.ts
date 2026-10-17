@@ -1,4 +1,5 @@
 import type { Landing, LandingLink } from "@/lib/landings";
+import { withOfferMeta } from "@/lib/offer-copy";
 
 const trademarkEn =
   "Havells, LG, Haier, Samsung, Sony, Zebronics, Usha, Celcore and other brand names are trademarks of their owners. Juneja Trading Corporation is an independent shop in Damoh.";
@@ -320,11 +321,11 @@ function hindiPage(spec: BrandSpec): Landing {
 }
 
 export const brandStores: Record<string, Landing> = Object.fromEntries(
-  specs.map((spec) => [spec.slug, englishPage(spec)]),
+  specs.map((spec) => [spec.slug, withOfferMeta(englishPage(spec))]),
 );
 
 export const hindiBrandStores: Record<string, Landing> = Object.fromEntries(
-  specs.map((spec) => [spec.slug, hindiPage(spec)]),
+  specs.map((spec) => [spec.slug, withOfferMeta(hindiPage(spec))]),
 );
 
 export const brandStoreSlugs = new Set(specs.map((spec) => spec.slug));

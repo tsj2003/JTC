@@ -1,6 +1,7 @@
 import { brand } from "@/lib/brand";
 import { ceilingFansHeading, festiveHeading, festiveItemsHeading } from "@/lib/copy";
 import { localSeoPages } from "@/lib/local-seo-pages";
+import { withOfferMeta } from "@/lib/offer-copy";
 import { withShopImage } from "@/lib/shop-photos";
 
 export type LandingSection = {
@@ -409,7 +410,7 @@ const coreLandings: Record<string, Landing> = {
 export const landings: Record<string, Landing> = Object.fromEntries(
   Object.entries({ ...coreLandings, ...localSeoPages }).map(([slug, page]) => [
     slug,
-    withShopImage(page, "en"),
+    withOfferMeta(withShopImage(page, "en")),
   ]),
 );
 
