@@ -292,6 +292,38 @@ const topics: Record<string, LandingFaq[]> = {
       ),
     },
   ],
+  "torch-repair-damoh": [
+    {
+      question: "Damoh mein torch repair kahan hota hai?",
+      answer: reply(
+        "Rechargeable torch, kisan torch, solar torch, searchlight and emergency light repair is done on the spot, hand to hand, while you wait.",
+      ),
+    },
+    {
+      question: "torch ki battery kitne ki padti hai?",
+      answer: reply(
+        "A genuine battery is available at a wholesale rate. Today's battery price is not printed on this page, so ask on the phone before you come.",
+      ),
+    },
+    {
+      question: "charging torch charge nahi ho rahi kya karein?",
+      answer: reply(
+        "Bring the torch and the charger. The counter checks the battery, the charging lead, the switch and the LED while you wait. Do not open a sealed cell at home.",
+      ),
+    },
+    {
+      question: "kisan torch repair Damoh",
+      answer: reply(
+        "Kisan torch and solar torch repair, including a weak beam or a torch that will not charge, is done at the torch counter.",
+      ),
+    },
+    {
+      question: "emergency light repair Damoh",
+      answer: reply(
+        "Emergency light repair, including a light that no longer holds a charge, is done at the same counter as the torches.",
+      ),
+    },
+  ],
   "wholesale-electronics-damoh": block(
     `Wholesale rates for shopkeepers and electricians on LED bulbs, fans, wires, torches, speakers and Diwali lights. JTC is one of the biggest wholesalers in Damoh, a thok vikreta (थोक विक्रेता). The rate list is not printed. Call or WhatsApp 99267 59557. Email ${brand.email}.`,
     [

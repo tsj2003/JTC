@@ -455,6 +455,7 @@ export const localSeoPages: Record<string, Landing> = {
       },
     ],
     links: [
+      { href: "/torch-repair-damoh", label: "Torch Repair in Damoh – On-the-Spot, Hand-to-Hand" },
       { href: "/led-bulb-wholesale-damoh", label: "LED bulb wholesale in Damoh" },
       { href: "/electricals-damoh", label: "Electrical shop in Damoh" },
       { href: "/diwali-lights-damoh", label: "Diwali and festive lights in Damoh" },
@@ -603,6 +604,7 @@ export const localSeoPages: Record<string, Landing> = {
       },
     ],
     links: [
+      { href: "/torch-repair-damoh", label: "Torch Repair in Damoh – On-the-Spot, Hand-to-Hand" },
       { href: "/kisan-agri-damoh", label: "Kisan pumps and motors in Damoh" },
       { href: "/jhatka-machine-damoh", label: "Jhatka machine in Damoh" },
       { href: "/product/rechargeable-led-searchlight-torch", label: "Rechargeable LED searchlight torch with solar panel" },
@@ -870,6 +872,75 @@ export const localSeoPages: Record<string, Landing> = {
         question: "Where is the wholesale counter?",
         answer:
           "Juneja Trading Corporation, Shop No. 6, Azad Market, Ghanta Ghar, Madiya Pangarha, Damoh 470661. Open every day 10:00 AM to 9:30 PM.",
+      },
+    ],
+  },
+  "torch-repair-damoh": {
+    slug: "torch-repair-damoh",
+    path: "/torch-repair-damoh",
+    title: "Torch Repair in Damoh | On-the-Spot, Hand-to-Hand | Juneja Trading Corporation",
+    description:
+      "Torch repair in Damoh at Juneja Trading Corporation, Ghanta Ghar. Rechargeable torch, kisan torch, solar torch, searchlight and emergency light repair while you wait. Battery replacement, charging problems, LED and switch repair, solar panel and charger fixes. Genuine batteries at wholesale rates. Call " +
+      brand.phone +
+      ".",
+    h1: "Torch Repair in Damoh – On-the-Spot, Hand-to-Hand",
+    hindi: "दमोह में टॉर्च रिपेयरिंग – हाथोंहाथ ठीक",
+    intro:
+      "Juneja Trading Corporation repairs torches at the counter in Ghanta Ghar, Damoh, while you wait. Bring a rechargeable torch, a kisan torch, a solar torch, a searchlight or an emergency light. Many small jobs are finished hand to hand, on the spot.",
+    sections: [
+      {
+        heading: "Torches repaired at the Damoh counter",
+        paragraphs: [
+          "The repair covers a rechargeable torch, a kisan torch, a solar torch, a searchlight and an emergency light. Farmers bring a long-range light that has gone dim. Households bring an emergency light that no longer holds a charge after a power cut. A searchlight with a side lamp is the same counter.",
+          "Tell the shop what the light used to do. A beam that is short, a light that dies in an hour, and a torch that will not switch on are different jobs. The counter looks at the piece in front of you instead of guessing from a phone photo.",
+        ],
+      },
+      {
+        heading: "Battery, charging, LED, switch, solar panel and charger",
+        items: [
+          "Battery replacement when the cell no longer holds a charge",
+          "Charging problems, including a torch that does not take a charge",
+          "LED and bulb replacement when the beam is dead and the battery is not",
+          "Switch repair when the button sticks or does nothing",
+          "Solar panel and charger fixes when the panel, the lead or the adapter is the fault",
+        ],
+      },
+      {
+        heading: "Brands repaired, and genuine batteries",
+        paragraphs: [
+          "The counter takes Globeam, Celcore, Persona, Homelite, Eveready, Pigeon and Rocklight, and other torch brands you bring in. Celcore is a lights and torch name from Damoh and Madhya Pradesh. Globeam includes the Noori kisan solar torch. Stock of a spare part depends on the model, so bring the torch.",
+          "Genuine batteries are sold at wholesale rates. The battery price is not printed on this page, because it moves with the cell. Call " +
+            brand.phone +
+            " or " +
+            brand.phone2 +
+            ", or WhatsApp, and ask for today's rate. Email " +
+            brand.email +
+            ". A figure that is not on this page is not a price.",
+          "Fast on-the-spot repair means many small jobs are done while you wait at Shop No. 6, Azad Market, Ghanta Ghar, Damoh 470661. A job that needs a part the shop does not have is not promised for the same hour. The counter says so. Open every day from 10:00 AM to 9:30 PM.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/kisan-torch-damoh", label: "Kisan torch in Damoh" },
+      { href: "/emergency-light-damoh", label: "Emergency lights in Damoh" },
+      { href: "/repair-damoh", label: "On-the-spot repair in Damoh" },
+      { href: "/brands/celcore-store-damoh", label: "Celcore torches in Damoh" },
+      { href: "/product/rechargeable-led-searchlight-torch", label: "Rechargeable LED searchlight torch" },
+      { href: "/product/globeam-noori-kisan-solar-torch", label: "Globeam Noori kisan solar torch" },
+      { href: "/hi/torch-repair-damoh", label: "यह पेज हिन्दी में" },
+    ],
+    faqs: [
+      {
+        question: "Where is torch repair in Damoh?",
+        answer:
+          "Juneja Trading Corporation, Shop No. 6, Azad Market, Ghanta Ghar, Damoh 470661. Rechargeable, kisan, solar, searchlight and emergency lights. Open every day 10:00 AM to 9:30 PM.",
+      },
+      {
+        question: "Do you fit a genuine battery?",
+        answer:
+          "Yes. Genuine batteries are available at a wholesale rate. Call " +
+          brand.phone +
+          " for today's rate. No battery price is printed on this page.",
       },
     ],
   },

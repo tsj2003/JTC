@@ -167,4 +167,18 @@ export const storeJsonLd = {
     name,
   })),
   sameAs: [brand.whatsappGroupUrl, brand.mapsUrl],
+  makesOffer: {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "Service",
+      name: "Torch Repair in Damoh",
+      serviceType: "Torch Repair",
+      url: `${SITE_URL}/torch-repair-damoh`,
+      provider: { "@id": `${SITE_URL}/#store` },
+      areaServed: {
+        "@type": "City",
+        name: "Damoh",
+      },
+    },
+  },
 };
