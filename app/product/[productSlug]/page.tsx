@@ -11,9 +11,10 @@ import { sanitize } from "@/lib/sanitize";
 import { EmiBadge } from "@/components/EmiNotice";
 import { brand, formatPrice, whatsappEnquiryHref } from "@/lib/brand";
 import { getCatalogBySlug } from "@/lib/catalog";
-import { publishedPrice } from "@/lib/new-arrivals";
+import { publishedPrice, publishedPriceRange } from "@/lib/new-arrivals";
 import FaqList from "@/components/FaqList";
 import OfferBadges from "@/components/OfferBadges";
+import { hinglishFaqsFor } from "@/lib/hinglish-faqs";
 import { offerMeta, productSastaFaq } from "@/lib/offer-copy";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
 import type { Metadata } from "next";
@@ -38,8 +39,10 @@ export async function generateMetadata({ params }: SingleProductPageProps): Prom
       path: `/product/${paramsAwaited?.productSlug || ""}`,
     });
   }
-  const priceLabel =
-    publishedPrice(product) != null
+  const range = publishedPriceRange(product);
+  const priceLabel = range
+    ? `₹${range.low}–${range.high}. From ₹${range.low}`
+    : publishedPrice(product) != null
       ? formatPrice(publishedPrice(product))
       : product.priceLabel || brand.askPrice;
   return pageMetadata({
@@ -71,8 +74,19 @@ function productJsonLd(product: Product) {
   if (product.titleHi) {
     data.alternateName = product.titleHi;
   }
+  const range = publishedPriceRange(product);
   const price = publishedPrice(product);
-  if (price != null) {
+  if (range) {
+    data.offers = {
+      "@type": "AggregateOffer",
+      priceCurrency: "INR",
+      lowPrice: String(range.low),
+      highPrice: String(range.high),
+      offerCount: "1",
+      availability: "https://schema.org/InStock",
+      url: `${SITE_URL}/product/${product.slug}`,
+    };
+  } else if (price != null) {
     const offer: Record<string, unknown> = {
       "@type": "Offer",
       priceCurrency: "INR",
@@ -108,6 +122,8 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
 
   const imageAlt = product.imageAlt || `${product.title}, Damoh`;
   const price = publishedPrice(product);
+  const range = publishedPriceRange(product);
+  const diwaliPage = range != null;
 
   return (
     <div className="bg-white">
@@ -150,11 +166,24 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
                 </Link>
               </p>
             ) : null}
+            {diwaliPage ? (
+              <p className="text-lg">
+                <Link href="/diwali-lights-damoh" className="font-semibold text-brand-copper hover:underline">
+                  Diwali Jhalar & Lights in Damoh – Wholesale Rate
+                </Link>
+              </p>
+            ) : null}
             {product.titleHi ? (
               <p className="font-hindi text-xl text-brand-ink">{product.titleHi}</p>
             ) : null}
             {price != null ? (
               <p className="text-2xl font-semibold text-brand-ink">{formatPrice(price)}</p>
+            ) : range ? (
+              <p className="text-2xl font-semibold text-brand-ink">
+                <span className="block">₹{range.low}–{range.high}</span>
+                <span className="mt-1 block text-xl">From ₹{range.low}</span>
+                <span className="mt-1 block text-base font-semibold text-brand-copper">Wholesale rates on bulk.</span>
+              </p>
             ) : (
               <p className="text-xl font-semibold text-brand-copper">{product.priceLabel || brand.askPrice}</p>
             )}
@@ -196,7 +225,11 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
         </div>
         <div className="py-12">
           <ProductTabs product={product} />
-          <FaqList faqs={[productSastaFaq(product)]} heading="FAQ" className="mt-12" />
+          <FaqList
+            faqs={[productSastaFaq(product), ...hinglishFaqsFor(product.slug)]}
+            heading="FAQ"
+            className="mt-12"
+          />
         </div>
       </div>
     </div>

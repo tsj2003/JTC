@@ -90,14 +90,72 @@ const topics: Record<string, LandingFaq[]> = {
       "on the spot repair ki dukan Damoh",
     ],
   ),
-  "diwali-lights-damoh": block(
-    "Jhalar, fairy lights, torches, emergency lights, and LED bulbs are stocked for the festive season. Call for today's price.",
-    [
-      "Diwali light Damoh mein kahan milegi?",
-      "jhalar ki dukan Damoh",
-      "fairy light ka rate kya hai Damoh",
-    ],
-  ),
+  "diwali-lights-damoh": [
+    {
+      question: "diwali jhalar kitne ki hai",
+      answer: reply(
+        "The five jhalar and light strings on this page are ₹100–120. From ₹100. Wholesale rates on bulk.",
+      ),
+    },
+    {
+      question: "wholesale jhalar damoh",
+      answer: reply(
+        "Shopkeepers and decorators can ask for a wholesale rate on bulk. The printed counter range for these strings is ₹100–120. From ₹100.",
+      ),
+    },
+    {
+      question: "led ladi",
+      answer: reply(
+        "LED ladi on this counter is the 3 colour serial light, the crystal cap string, the silicone flower string, the 12 metre 40 LED white-wire jhalar, and the diya light string. Each is ₹100–120.",
+      ),
+    },
+    {
+      question: "serial light",
+      answer: reply(
+        "The serial light is the plug-in 3 colour LED rice/pixel jhalar: warm white, yellow and blue. It is ₹100–120. From ₹100.",
+      ),
+    },
+  ],
+  "diwali-led-jhalar-3-colour-damoh": [
+    {
+      question: "3 colour serial light Damoh mein kitne ki hai?",
+      answer: reply(
+        "The plug-in LED rice/pixel jhalar, warm white, yellow and blue, is ₹100–120. From ₹100. Wholesale rates on bulk.",
+      ),
+    },
+  ],
+  "diwali-crystal-led-jhalar-damoh": [
+    {
+      question: "crystal LED jhalar Damoh mein kitne ki hai?",
+      answer: reply(
+        "The crystal/diamond-cap LED jhalar on a yellow wire is ₹100–120. From ₹100. Wholesale rates on bulk.",
+      ),
+    },
+  ],
+  "diwali-silicone-flower-led-jhalar-damoh": [
+    {
+      question: "silicone flower LED ladi Damoh kitne ki hai?",
+      answer: reply(
+        "The multicolour silicone flower LED string light is ₹100–120. From ₹100. Wholesale rates on bulk.",
+      ),
+    },
+  ],
+  "diwali-12m-40-led-white-jhalar-damoh": [
+    {
+      question: "12 metre 40 LED jhalar Damoh kitne ki hai?",
+      answer: reply(
+        "The 12 metre, 40 LED white-wire jhalar (3-chip) is ₹100–120. From ₹100. Wholesale rates on bulk.",
+      ),
+    },
+  ],
+  "diwali-diya-led-light-string-damoh": [
+    {
+      question: "diya LED toran Damoh mein kitne ki hai?",
+      answer: reply(
+        "The red and gold diya-shaped LED light string, also used as a toran, is ₹100–120. From ₹100. Wholesale rates on bulk.",
+      ),
+    },
+  ],
   "appliances-damoh": block(
     "Fridge, washing machine, mixer, and other home appliances are on the appliance counter. Bajaj Finance EMI available. EMI subject to Bajaj Finance eligibility and terms.",
     [
@@ -147,7 +205,7 @@ const topics: Record<string, LandingFaq[]> = {
     ],
   ),
   "festive-lights": block(
-    "Jhalar, fairy lights, and decorative series are in the festive-lights section. Call for today's price.",
+    "Five photographed jhalar strings are ₹100–120, from ₹100, with wholesale rates on bulk. Other festive pieces are call for today's price.",
     ["Diwali light Damoh mein kahan milegi?", "jhalar series ka rate kya hai?", "fairy light ki dukan Damoh"],
   ),
   earbuds: block(

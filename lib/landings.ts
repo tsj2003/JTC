@@ -259,57 +259,75 @@ const coreLandings: Record<string, Landing> = {
   "diwali-lights-damoh": {
     slug: "diwali-lights-damoh",
     path: "/diwali-lights-damoh",
-    title: `Diwali Lights Shop in Damoh | ${festiveHeading} | JTC Since 1960`,
-    description: `Diwali lights shop in Damoh. ${festiveHeading}. ${festiveItemsHeading}. ${ceilingFansHeading}. Jhalar, fairy lights and LED diyas at Juneja Trading Corporation, Ghanta Ghar, since 1960.`,
-    h1: "Diwali lights in Damoh",
-    hindi: "दिवाली झालर, फेयरी लाइट, एलईडी दीया — दमोह में।",
+    title: `Diwali Jhalar & Lights in Damoh | Wholesale Rate | Juneja Trading Corporation`,
+    description: `Diwali jhalar and lights in Damoh at a wholesale rate. Five strings are ₹100–120, from ₹100, with wholesale rates on bulk: 3 colour LED rice serial light, crystal LED jhalar, silicone flower string, 12 metre 40 LED white jhalar, and a diya LED light string. ${festiveHeading}. ${brand.nap}.`,
+    h1: "Diwali Jhalar & Lights in Damoh – Wholesale Rate",
+    hindi: "दमोह में दिवाली झालर और लाइट्स – थोक रेट",
+    intro:
+      "This season's jhalar is on the counter at Juneja Trading Corporation, Shop No. 6, Azad Market, Ghanta Ghar, Damoh 470661. All five strings below are ₹100–120. From ₹100. Wholesale rates on bulk for shopkeepers and decorators. " +
+      festiveHeading +
+      ". The same visit covers " +
+      festiveItemsHeading +
+      ". " +
+      ceilingFansHeading +
+      " are on the fan counter if the room needs air as well as light.",
+    enquiryName: "Diwali jhalar",
     sections: [
       {
-        heading: festiveHeading,
+        heading: "Five jhalar and light strings, ₹100–120",
         paragraphs: [
-          "Juneja Trading Corporation keeps festive lighting for homes, shops and decorators in Damoh. Torches on this counter include the rechargeable LED searchlight with a big reflector, an LED side panel, solar charging and a carry handle.",
+          "Five lights are priced for this festive window. The 3 colour LED rice jhalar is a plug-in serial light with warm white, yellow and blue strings. The crystal LED jhalar has diamond-shaped caps on a yellow wire. The silicone flower LED string light is multicolour. The white-wire jhalar is 12 metres, with 40 LEDs, and it is a 3-chip string. The diya LED light string is red and gold, diya-shaped, and it is hung as a light string or a toran. Both diya photographs are of that one string. Ask the counter which bag is in stock that morning, and bring a doorway measurement if the run has to match a particular length.",
+          "The printed price on every one of these five is ₹100–120. From ₹100. A single string for a balcony and a bundle for a lane are not the same conversation. Wholesale rates on bulk are given at the counter or on the phone. The figure for a larger quantity is not printed here, because it depends on how many you take. Call " +
+            brand.phone +
+            " or " +
+            brand.phone2 +
+            ", or WhatsApp either number, and say which string and how many. Email " +
+            brand.email +
+            ".",
+          "Join our WhatsApp group for new arrivals & offers: " +
+            brand.whatsappGroupUrl +
+            ". The group is where the shop posts what has just come in during these weeks. The shop is open every day from 10:00 AM to 9:30 PM. Home delivery covers Damoh. Customers also come from Hatta, Pathariya, Tendukheda, Jabera and Batiyagarh. " +
+            brand.emiAvailable +
+            ". " +
+            brand.emiTerms +
+            ".",
         ],
       },
       {
-        heading: festiveItemsHeading,
-        items: [
-          "Festive lighting",
-          "Jhalar",
-          "Fairy lights",
-          "Torches",
-          "Emergency lights",
-          "Emergency bulbs",
-          "LED bulbs",
-        ],
-      },
-      {
-        heading: ceilingFansHeading,
+        heading: "Serial light, LED ladi, and how to choose",
         paragraphs: [
-          "Ceiling fans are stocked alongside the festive lights. See the ceiling fan page or ask at the counter.",
-        ],
-      },
-      {
-        heading: "What we offer",
-        items: [
-          "LED jhalar and string lights (multi-colour and warm white)",
-          "Rope and neon rope lights",
-          "Fairy lights, USB fairy lights with remote, lantern and milky-ball lights",
-          "Meteor rain and decorative fruit lights",
-          "LED diyas",
-          "Wholesale for shops and decorators (confirm with shop)",
+          "A serial light is the rice or pixel jhalar: small lamps close together, here in warm white, yellow and blue, and it plugs in. An LED ladi is the same family of string. Use the crystal string when you want the diamond caps to catch the light on a yellow wire. Use the silicone flowers when the front of the shop should read as multicolour blossoms rather than a plain line of lamps. Use the 12 metre 40 LED white-wire jhalar when you already know the run is about twelve metres and you want a 3-chip white-wire string. Use the diya string when the decoration should read as a row of red and gold diyas, including across a doorway as a toran.",
+          festiveHeading +
+            " is this counter. " +
+            festiveItemsHeading +
+            " stay beside the new strings. A jhalar does not replace an emergency light in a power cut. If the house also needs a torch or an emergency bulb, ask for those in the same visit. " +
+            ceilingFansHeading +
+            " are stocked for rooms and shops; the fan page is linked below. The shop has served Damoh since 1960.",
         ],
       },
     ],
     faqs: [
       {
-        question: "Do you sell Diwali lights wholesale?",
-        answer: "Retail and bulk. Call for today's rates.",
+        question: "What does a Diwali jhalar cost in Damoh?",
+        answer:
+          "The five strings on this page are ₹100–120. From ₹100. Wholesale rates on bulk. Call " +
+          brand.phone +
+          " for a larger quantity.",
+      },
+      {
+        question: "Can I buy jhalar wholesale in Damoh?",
+        answer:
+          "Yes. Shopkeepers and decorators can ask Juneja Trading Corporation, Ghanta Ghar, for a wholesale rate on bulk. The printed counter range for these five strings is ₹100–120.",
       },
     ],
     links: [
-      { href: "/product/rechargeable-led-searchlight-torch", label: "Rechargeable LED searchlight torch with solar panel" },
+      { href: "/product/diwali-led-jhalar-3-colour-damoh", label: "3 Colour LED Rice Jhalar (Serial Light) — ₹100–120" },
+      { href: "/product/diwali-crystal-led-jhalar-damoh", label: "Crystal LED Jhalar — ₹100–120" },
+      { href: "/product/diwali-silicone-flower-led-jhalar-damoh", label: "Silicone Flower LED String Light — ₹100–120" },
+      { href: "/product/diwali-12m-40-led-white-jhalar-damoh", label: "12 Metre 40 LED White Jhalar — ₹100–120" },
+      { href: "/product/diwali-diya-led-light-string-damoh", label: "Diya LED Light String — ₹100–120" },
+      { href: "/ceiling-fans-damoh", label: ceilingFansHeading },
       { href: "/emergency-light-damoh", label: "Emergency lights and torches in Damoh" },
-      { href: "/kisan-torch-damoh", label: "Best kisan torch in Damoh" },
       { href: "/hi/diwali-lights-damoh", label: "यह पेज हिन्दी में" },
     ],
   },

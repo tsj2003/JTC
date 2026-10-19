@@ -18,13 +18,18 @@ const pages: ShopCategoryCopy[] = [
     title: "Festive lights in Damoh",
     titleHi: "दमोह में दिवाली लाइट और झालर",
     paragraphs: [
-      "Damoh's best for Diwali lighting is the festive counter at Juneja Trading Corporation. Festive lighting, jhalar, fairy lights, torches, emergency lights, emergency bulbs and LED bulbs are what households ask for when Ghanta Ghar starts putting up lights. The shop keeps string lights, lantern lights, rope lights, rice lights, LED diyas and decoration sets that have been photographed in the Damoh shop. A set that looks right in a lane may be the wrong length for a balcony, so bring the measurement or describe the front of the house.",
+      "Damoh's best for Diwali lighting is the festive counter at Juneja Trading Corporation. Festive lighting, jhalar, fairy lights, torches, emergency lights, emergency bulbs and LED bulbs are what households ask for when Ghanta Ghar starts putting up lights. Five strings photographed in the shop are ₹100–120, from ₹100, with wholesale rates on bulk: the plug-in 3 colour LED rice serial light, the crystal LED jhalar on a yellow wire, the multicolour silicone flower string, the 12 metre 40 LED white-wire jhalar (3-chip), and the red and gold diya light string. The shop also keeps lantern lights, rope lights and other decoration sets. A set that looks right in a lane may be the wrong length for a balcony, so bring the measurement or describe the front of the house.",
       "Jhalar and fairy lights are sold for homes, shops and temporary stalls. Some strings are USB, some are mains, and some are sold as multi-colour decoration sets. The catalogue names include lantern string lights, meteor rain lights, neon rope and jari ladi. Stock turns over in the weeks before Diwali, so a colour that was here last week may need a fresh call. Torches and emergency lights sit near the same floor because a power cut does not wait for the festival to end. " +
         visit,
     ],
     links: [
-      { href: "/diwali-lights-damoh", label: "Diwali lights in Damoh" },
-      { href: "/hi/diwali-lights-damoh", label: "दिवाली लाइट, हिन्दी में" },
+      { href: "/diwali-lights-damoh", label: "Diwali Jhalar & Lights in Damoh – Wholesale Rate" },
+      { href: "/hi/diwali-lights-damoh", label: "दमोह में दिवाली झालर और लाइट्स – थोक रेट" },
+      { href: "/product/diwali-led-jhalar-3-colour-damoh", label: "3 Colour LED Rice Jhalar — ₹100–120" },
+      { href: "/product/diwali-crystal-led-jhalar-damoh", label: "Crystal LED Jhalar — ₹100–120" },
+      { href: "/product/diwali-silicone-flower-led-jhalar-damoh", label: "Silicone Flower LED String — ₹100–120" },
+      { href: "/product/diwali-12m-40-led-white-jhalar-damoh", label: "12 Metre 40 LED White Jhalar — ₹100–120" },
+      { href: "/product/diwali-diya-led-light-string-damoh", label: "Diya LED Light String — ₹100–120" },
       { href: "/emergency-light-damoh", label: "Emergency lights in Damoh" },
     ],
     faqs: [

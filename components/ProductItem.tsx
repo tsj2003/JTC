@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { sanitize } from "@/lib/sanitize";
 import { brand, formatPrice } from "@/lib/brand";
-import { publishedPrice } from "@/lib/new-arrivals";
+import { publishedPrice, publishedPriceRange } from "@/lib/new-arrivals";
 
 const ProductItem = ({
   product,
@@ -13,6 +13,7 @@ const ProductItem = ({
   color: string;
 }) => {
   const price = publishedPrice(product);
+  const range = publishedPriceRange(product);
   return (
     <div className="flex w-full flex-col items-center gap-y-2 border border-brand-ink/10 bg-white p-4">
       <Link href={`/product/${product.slug}`} className="relative h-48 w-full">
@@ -49,6 +50,11 @@ const ProductItem = ({
           <>
             <span className="block">{formatPrice(price)}</span>
             {product.mrp ? <span className="block font-normal">MRP {formatPrice(product.mrp)}</span> : null}
+          </>
+        ) : range ? (
+          <>
+            <span className="block">₹{range.low}–{range.high}</span>
+            <span className="block">From ₹{range.low}</span>
           </>
         ) : (
           <>
