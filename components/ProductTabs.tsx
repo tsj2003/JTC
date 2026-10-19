@@ -49,6 +49,9 @@ const ProductTabs = ({ product }: { product: Product }) => {
             }}
           />
         )}
+        {currentProductTab === 0 && product?.descriptionHi ? (
+          <p className="mt-4 font-hindi text-lg leading-8">{product.descriptionHi}</p>
+        ) : null}
         {currentProductTab === 0 && product?.title ? (
           <p className="mt-4 text-lg leading-8">{productOfferSentence(product.title)}</p>
         ) : null}

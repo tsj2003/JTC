@@ -1,6 +1,6 @@
 import { brand, formatPrice } from "@/lib/brand";
 import type { LandingFaq } from "@/lib/landings";
-import { publishedPrice } from "@/lib/new-arrivals";
+import { diwaliWholesaleNote, publishedPrice } from "@/lib/new-arrivals";
 
 export const enOfferBadge =
   "Wholesale Rate • Lowest Price in Damoh • Genuine Best Quality • Brand Warranty";
@@ -35,12 +35,16 @@ export function productSastaFaq(product: {
   slug: string;
   price: number;
   mrp?: number;
+  priceLow?: number;
+  priceHigh?: number;
 }): LandingFaq {
   const price = publishedPrice(product);
   const priceLine =
-    price != null
-      ? ` The printed price is ${formatPrice(price)}${product.mrp ? ` (MRP ${formatPrice(product.mrp)})` : ""}.`
-      : " Call for today's price.";
+    product.priceLow && product.priceHigh
+      ? ` The printed price is ₹${product.priceLow}–${product.priceHigh}. From ₹${product.priceLow}. ${diwaliWholesaleNote}`
+      : price != null
+        ? ` The printed price is ${formatPrice(price)}${product.mrp ? ` (MRP ${formatPrice(product.mrp)})` : ""}.`
+        : " Call for today's price.";
   return {
     question: `${product.title} Damoh mein sabse sasta kahan milega?`,
     answer: `${product.title} is at ${brand.name} (JTC), Ghanta Ghar, Azad Market, Damoh. Call 99267 59557 or 83191 71236.${priceLine} The shop is open from 10 AM.`,

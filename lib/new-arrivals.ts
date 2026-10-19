@@ -1,4 +1,147 @@
+export const diwaliPriceLow = 100;
+export const diwaliPriceHigh = 120;
+export const diwaliPriceRangeLabel = "₹100–120";
+export const diwaliPriceFromLabel = "From ₹100";
+export const diwaliWholesaleNote = "Wholesale rates on bulk.";
+
+const diwaliPrice = {
+  price: 0,
+  priceLow: diwaliPriceLow,
+  priceHigh: diwaliPriceHigh,
+  priceLabel: diwaliPriceRangeLabel,
+  rating: 0,
+  inStock: 1,
+  manufacturer: "",
+  categoryId: "festive-lights",
+  category: { name: "festive-lights" },
+  categoryLabel: "Diwali lights",
+};
+
 export const newArrivals: Product[] = [
+  {
+    id: "71",
+    title: "3 Colour LED Rice Jhalar (Serial Light)",
+    titleHi: "थ्री कलर एलईडी राइस झालर (सीरियल लाइट)",
+    description:
+      "Plug-in LED rice/pixel jhalar, also called a serial light, at Juneja Trading Corporation, Ghanta Ghar, Damoh. Warm white, yellow and blue strings. " +
+      diwaliPriceRangeLabel +
+      ". " +
+      diwaliPriceFromLabel +
+      ". " +
+      diwaliWholesaleNote,
+    descriptionHi:
+      "प्लग-इन एलईडी राइस/पिक्सल झालर, जिसे सीरियल लाइट भी कहते हैं। वार्म व्हाइट, पीली और नीली लड़ियाँ। " +
+      diwaliPriceRangeLabel +
+      "। " +
+      diwaliPriceFromLabel +
+      "। थोक में थोक रेट।",
+    mainImage: "products/diwali-led-jhalar-3-colour-damoh.jpg",
+    imageAlt:
+      "Plug-in LED rice jhalar in warm white, yellow and blue at Juneja Trading Corporation, Ghanta Ghar, Damoh",
+    slug: "diwali-led-jhalar-3-colour-damoh",
+    colors: "Warm white, yellow and blue",
+    ...diwaliPrice,
+  },
+  {
+    id: "72",
+    title: "Crystal LED Jhalar",
+    titleHi: "क्रिस्टल एलईडी झालर",
+    description:
+      "Crystal/diamond-cap LED jhalar on a yellow wire at Juneja Trading Corporation, Ghanta Ghar, Damoh. " +
+      diwaliPriceRangeLabel +
+      ". " +
+      diwaliPriceFromLabel +
+      ". " +
+      diwaliWholesaleNote,
+    descriptionHi:
+      "पीले तार पर क्रिस्टल/डायमंड-कैप एलईडी झालर। " +
+      diwaliPriceRangeLabel +
+      "। " +
+      diwaliPriceFromLabel +
+      "। थोक में थोक रेट।",
+    mainImage: "products/diwali-crystal-led-jhalar-damoh.jpg",
+    imageAlt:
+      "Crystal diamond-cap LED jhalar on a yellow wire at Juneja Trading Corporation, Ghanta Ghar, Damoh",
+    slug: "diwali-crystal-led-jhalar-damoh",
+    colors: "Yellow wire, clear diamond caps",
+    ...diwaliPrice,
+  },
+  {
+    id: "73",
+    title: "Silicone Flower LED String Light",
+    titleHi: "सिलिकॉन फ्लावर एलईडी स्ट्रिंग लाइट",
+    description:
+      "Multicolour silicone flower LED string light at Juneja Trading Corporation, Ghanta Ghar, Damoh. " +
+      diwaliPriceRangeLabel +
+      ". " +
+      diwaliPriceFromLabel +
+      ". " +
+      diwaliWholesaleNote,
+    descriptionHi:
+      "मल्टीकलर सिलिकॉन फ्लावर एलईडी स्ट्रिंग लाइट। " +
+      diwaliPriceRangeLabel +
+      "। " +
+      diwaliPriceFromLabel +
+      "। थोक में थोक रेट।",
+    mainImage: "products/diwali-silicone-flower-led-jhalar-damoh.jpg",
+    imageAlt:
+      "Multicolour silicone flower LED string light at Juneja Trading Corporation, Ghanta Ghar, Damoh",
+    slug: "diwali-silicone-flower-led-jhalar-damoh",
+    colors: "Multicolour",
+    ...diwaliPrice,
+  },
+  {
+    id: "74",
+    title: "12 Metre 40 LED White Jhalar",
+    titleHi: "12 मीटर 40 एलईडी व्हाइट झालर",
+    description:
+      "12 metre, 40 LED white-wire jhalar (3-chip) at Juneja Trading Corporation, Ghanta Ghar, Damoh. " +
+      diwaliPriceRangeLabel +
+      ". " +
+      diwaliPriceFromLabel +
+      ". " +
+      diwaliWholesaleNote,
+    descriptionHi:
+      "12 मीटर, 40 एलईडी, सफेद तार वाली झालर (3-चिप)। " +
+      diwaliPriceRangeLabel +
+      "। " +
+      diwaliPriceFromLabel +
+      "। थोक में थोक रेट।",
+    mainImage: "products/diwali-12m-40-led-white-jhalar-damoh.jpg",
+    imageAlt:
+      "12 metre 40 LED white-wire jhalar at Juneja Trading Corporation, Ghanta Ghar, Damoh",
+    slug: "diwali-12m-40-led-white-jhalar-damoh",
+    colors: "White wire",
+    ...diwaliPrice,
+  },
+  {
+    id: "75",
+    title: "Diya LED Light String",
+    titleHi: "दीया एलईडी लाइट स्ट्रिंग",
+    description:
+      "Diya-shaped red and gold LED light string, also hung as a toran, at Juneja Trading Corporation, Ghanta Ghar, Damoh. " +
+      diwaliPriceRangeLabel +
+      ". " +
+      diwaliPriceFromLabel +
+      ". " +
+      diwaliWholesaleNote,
+    descriptionHi:
+      "दीये की शक्ल वाली लाल और सुनहरी एलईडी लाइट स्ट्रिंग, तोरण की तरह भी। " +
+      diwaliPriceRangeLabel +
+      "। " +
+      diwaliPriceFromLabel +
+      "। थोक में थोक रेट।",
+    mainImage: "products/diwali-diya-led-light-string-damoh.jpg",
+    imageAlt:
+      "Red and gold diya-shaped LED light string at Juneja Trading Corporation, Ghanta Ghar, Damoh",
+    images: ["products/diwali-diya-led-light-string-2-damoh.jpg"],
+    imageAlts: [
+      "Second view of the red and gold diya LED light string at Juneja Trading Corporation, Ghanta Ghar, Damoh",
+    ],
+    slug: "diwali-diya-led-light-string-damoh",
+    colors: "Red and gold",
+    ...diwaliPrice,
+  },
   {
     id: "70",
     title: "Surya Mosquito Racket Pro",
@@ -193,4 +336,19 @@ const pricedArrivalSlugs = new Set(newArrivals.map((product) => product.slug));
 export function publishedPrice(product: { slug: string; price: number }): number | null {
   if (!pricedArrivalSlugs.has(product.slug) || !(product.price > 0)) return null;
   return product.price;
+}
+
+export function publishedPriceRange(product: {
+  priceLow?: number;
+  priceHigh?: number;
+}): { low: number; high: number } | null {
+  if (
+    typeof product.priceLow === "number" &&
+    typeof product.priceHigh === "number" &&
+    product.priceLow > 0 &&
+    product.priceHigh >= product.priceLow
+  ) {
+    return { low: product.priceLow, high: product.priceHigh };
+  }
+  return null;
 }

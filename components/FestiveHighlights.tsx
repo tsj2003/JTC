@@ -18,8 +18,9 @@ const FestiveHighlights = () => {
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-8">
         <h2 className="font-display text-4xl sm:text-6xl">{festiveHeading}</h2>
         <p className="mt-4 max-w-3xl text-lg text-brand-cream/85">
-          The Damoh counter is stocked for the festive season. Ask for jhalar, fairy lights, torches,
-          emergency lights, emergency bulbs and LED bulbs.
+          The Damoh counter is stocked for the festive season. Five jhalar and light strings are ₹100–120.
+          From ₹100. Wholesale rates on bulk. Ask for jhalar, fairy lights, torches, emergency lights,
+          emergency bulbs and LED bulbs.
         </p>
         <ul className="mt-6 flex flex-wrap gap-2">
           {items.map((item) => (
