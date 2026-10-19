@@ -1,5 +1,6 @@
 [build]
   # Drop a restored Next cache before compiling. Production publishes were
+# Republish after the Diwali production deploy was skipped before the build started.
   # failing with no log while the same tree built on deploy previews.
   command = "npm cache clean --force && rm -rf .next node_modules/.cache && npm run build"
   publish = ".next"
